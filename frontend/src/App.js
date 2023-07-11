@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
 //Component imports
+import Header from "./Components/Header";
 import Footer from "./Components/Footer"
 import NavBar from "./Components/Nav"
 //Route imports
@@ -20,6 +21,7 @@ function App() {
   return (
     
     <div className="App">
+      <Header/>
       <NavBar/>
       <Routes>
         <Route exact path="/" element={<Home />} />
