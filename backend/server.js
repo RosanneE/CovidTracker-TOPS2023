@@ -9,7 +9,8 @@ const app = express();
 const port = process.env.PORT || 3030;
 
 // Use the `db` object to perform database operations
-const db = knex(knexConfig.development);
+// const db = knex(knexConfig.development);
+const db = require("./db")
 
 // ========================
 // Middleware
