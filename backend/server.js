@@ -6,8 +6,8 @@ const knexConfig = require("./knexfile");
 const app = express();
 
 // Define the port the server will run on.
-const port = process.env.PORT || 3030;
-
+const port =  3030;
+// process.env.PORT ||
 // Use the `db` object to perform database operations
 // const db = knex(knexConfig.development);
 const db = require("./db")
@@ -37,6 +37,11 @@ app.get("/users", async (req, res) => {
     res.status(500).json({ message: "Error retrieving users!" });
   }
 });
+// GET route to retrieve application's IP
+app.get("/myip", (req,res) => {
+  const clientIP = req.ip;
+  res.send("Your IP address is " + clientIP)
+})
 
 // POST route to create a new user
 app.post("/users", async (req, res) => {

@@ -9,11 +9,26 @@ module.exports = {
     client: "postgresql",
     connection: {
       host: process.env.HOST,
-      user: process.env.USER,
+      port: 5423,
+      user: "mainuser1",
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
     },
     debug: true,
+    pool: {
+      propagateCreateError: false,
+      min: 0,
+      max: 20,
+    },
+    migrations: {
+      onError: function (error, _obj, _qb) {
+        if (error.code === "ETIMEOUT") {
+          console.error("Connection timeout occured:", error)
+        } else {
+          console.error("Error occurred during migration:", error)
+        }
+      }
+    }
   },
 
   staging: {
