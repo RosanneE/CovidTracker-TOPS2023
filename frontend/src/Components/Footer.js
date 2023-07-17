@@ -1,7 +1,11 @@
+
+
 function Footer() {
   return (
     <footer>
-     Footer
+     <div>
+     <FontAwesomeIcon icon="fa-brands fa-square-facebook" />
+     </div>
     </footer>
   );
 }
