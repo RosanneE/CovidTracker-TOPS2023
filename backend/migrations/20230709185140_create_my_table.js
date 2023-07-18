@@ -10,7 +10,7 @@ exports.up = function (knex) {
       table.string("email").unique();
       table.string("site_origin");
       table.string("home_link");
-      table.string("postive_test_link");
+      table.string("positive_test_link");
       table.string("negative_test_link");
       table.string("more_info_link");
       // Add other columns as needed
