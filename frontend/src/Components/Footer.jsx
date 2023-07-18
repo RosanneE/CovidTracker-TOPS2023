@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
      <div>
-     <FontAwesomeIcon icon="fa-brands fa-square-facebook" />
+     {/* <FontAwesomeIcon icon="fa-brands fa-square-facebook" /> */}
      </div>
     </footer>
   );
