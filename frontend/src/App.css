@@ -1,3 +1,5 @@
+/* CSS for all pages */
+
 .App {
   text-align: center;
 }
@@ -24,10 +26,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +33,186 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* NAV  */
+.nav-container {
+  display: flex;
+  flex-direction:row ;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin-left: 100px;
+  /* width: 100%; */
+  /* background-color: rgba(255, 255, 255, 0.966); */
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  text-decoration: none;
+  /* color: black; */
+  font-size: 22px;
+}
+
+.nav-list-item {
+  list-style: none;
+  text-decoration: none;
+  color: #00426B;
+  /* transition: transform 1s ease-in-out; */
+}
+
+/* footer */
+
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Noto+Sans:wght@400;600&display=swap");
+
+h1 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h2 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h3 {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 120% */
+}
+
+.blueButton {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  border: none;
+  border-radius: 30px;
+  background: #0058b7;
+  height: 60px;
+  padding: 20px 69px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.blueButton:hover {
+  cursor: pointer;
+}
+
+.dissolveEffect {
+  opacity: 1;
+  transition: opacity 100ms ease-out;
+}
+
+.dissolveEffect:active {
+  opacity: 0;
+}
+
+/* Partner White Label Page CSS */
+
+.whyUseMMTCHeader1 {
+  margin-bottom: 18px;
+}
+
+.whyUseMMTCHeader3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.partnerWMMTC {
+  display: flex;
+  padding: 125px 272px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.partneringOptions {
+  height: 1363px;
+  padding: 110px 165px 130px 159px;
+  align-items: center;
+  background: #f7f9fa;
+}
+
+.partnerWMMTC p,
+.partneringOptions p,
+.exploreTheTool p,
+.whyUseMMTC p {
+  color: #00426b;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+}
+
+.partneringTd {
+  vertical-align: top;
+  padding: 0px 50px 100px;
+  width: 500px;
+}
+
+.partneringTd p {
+  text-align: left;
+}
+
+.partnerUl {
+  list-style-image: url("./Images/Vector.png");
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+}
+
+.whyUseMMTCUl {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+}
+
+.whyUseMMTCUl {
+  list-style: none;
+}
+
+.whyUseMMTCUl li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whyUseMMTCUl li img {
+  width: 64px;
+  height: 64px;
+  padding: 30px;
+}
+
+.whyUseMMTCLi {
+  flex: 1;
+  text-align: left;
 }
