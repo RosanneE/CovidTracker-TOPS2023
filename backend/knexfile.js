@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 // Update with your config settings.
 
 /**
@@ -11,15 +10,19 @@ module.exports = {
     connection: {
       host: process.env.HOST,
       port: process.env.PORT,
-      user: "ruhamay",
+      user: process.env.RDSUSER,
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
     },
     debug: true,
-    pool:{
-      propagateCreateError: false,
-      min: 0,
-      max: 20,
+    migrations: {
+      onError: function (error, _obj, _qb) {
+        if (error.code === "ETIMEOUT") {
+          console.error("Connection timeout occured:", error)
+        } else {
+          console.error("Error occurred during migration:", error)
+        }
+      }
     }
   },
 
