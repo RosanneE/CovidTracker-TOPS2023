@@ -13,6 +13,7 @@ exports.up = function (knex) {
       table.string("postive_test_link");
       table.string("negative_test_link");
       table.string("more_info_link");
+      table.timestamps(true);
       // Add other columns as needed
     })
     .catch((err) => console.error(err));
