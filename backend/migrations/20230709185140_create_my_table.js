@@ -7,6 +7,7 @@ exports.up = function (knex) {
     .createTable("users", function (table) {
       table.increments("id").primary();
       table.string("org_name");
+      table.string("contact_name")
       table.string("email").unique();
       table.string("site_origin");
       table.string("home_link");

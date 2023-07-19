@@ -1,15 +1,16 @@
 const express = require("express");
 const { Client } = require("pg");
-
+// const knex = require()
 // Create a new Express application
 const app = express();
+require("dotenv").config();
 
 // Define the port the server will run on.
 const port = process.env.PORT || 3030;
 
 // Create a new PostgreSQL client
 const client = new Client({
-  user: process.env.USER,
+  user: process.env.RDSUSER,
   host: process.env.HOST,
   database: process.env.DATABASE,
   password: process.env.PASSWORD,
@@ -50,18 +51,12 @@ app.get("/", async (req, res) => {
     res.status(500).json({ message: "Error retrieving users!" });
   }
 });
-// GET route to retrieve application's IP
-app.get("/myip", (req,res) => {
-  const clientIP = req.ip;
-  res.send("Your IP address is " + clientIP)
-})
 
 // POST route to create a new user
 app.post("/users", async (req, res) => {
   try {
-    console.log(req.body);
-    // Extract the user data from the request body
     const {
+      contact_name,
       org_name,
       email,
       site_origin,
@@ -70,11 +65,11 @@ app.post("/users", async (req, res) => {
       negative_test_link,
       more_info_link,
     } = req.body;
-
     // Insert the new user into the database
     const query =
-      "INSERT INTO users (org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *";
+      "INSERT INTO users (contact_name, org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *";
     const values = [
+      contact_name,
       org_name,
       email,
       site_origin,
@@ -82,6 +77,8 @@ app.post("/users", async (req, res) => {
       positive_test_link,
       negative_test_link,
       more_info_link,
+      new Date(),
+      new Date(),
     ];
     const result = await client.query(query, values);
     const newUser = result.rows[0];

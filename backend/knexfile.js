@@ -10,16 +10,11 @@ module.exports = {
     connection: {
       host: process.env.HOST,
       port: process.env.PORT,
-      user: "mainuser1",
+      user: process.env.RDSUSER,
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
     },
     debug: true,
-    pool: {
-      propagateCreateError: false,
-      min: 0,
-      max: 20,
-    },
     migrations: {
       onError: function (error, _obj, _qb) {
         if (error.code === "ETIMEOUT") {
