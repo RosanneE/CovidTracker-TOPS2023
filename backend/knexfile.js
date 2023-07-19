@@ -9,15 +9,11 @@ module.exports = {
   development: {
     client: "postgresql",
     connection: {
-      // host: process.env.HOST,
-      host: "covidtracker-tops2023.czbzzxuijlwf.us-east-1.rds.amazonaws.com",
-      // port: process.env.PORT,
-      port: 5423,
+      host: process.env.HOST,
+      port: process.env.PORT,
       user: "ruhamay",
-      // password: process.env.PASSWORD,
-      password:"Dolphin73Mango$",
-      // database: process.env.DATABASE,
-      database:"CovidTracker"
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE,
     },
     debug: true,
     pool:{
