@@ -61,20 +61,20 @@ app.post("/users", async (req, res) => {
       email,
       site_origin,
       home_link,
-      postive_test_link,
+      positive_test_link,
       negative_test_link,
       more_info_link,
     } = req.body;
 
     // Insert the new user into the database
     const query =
-      "INSERT INTO users (org_name, email, site_origin, home_link, postive_test_link, negative_test_link, more_info_link) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *";
+      "INSERT INTO users (org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *";
     const values = [
       org_name,
       email,
       site_origin,
       home_link,
-      postive_test_link,
+      positive_test_link,
       negative_test_link,
       more_info_link,
     ];
