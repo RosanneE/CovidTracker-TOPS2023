@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -32,6 +33,10 @@
     transform: rotate(360deg);
   }
 }
+ home-page {
+  height: 100vh;
+ }
+
 /* NAV  */
 .nav-container {
   display: flex;
