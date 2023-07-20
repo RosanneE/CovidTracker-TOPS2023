@@ -1,15 +1,32 @@
 const express = require("express");
-const knex = require("knex");
-const knexConfig = require("./knexfile");
+const { Client } = require("pg");
 
 // Create a new Express application
 const app = express();
 
+require("dotenv").config();
+
 // Define the port the server will run on.
 const port = process.env.PORT || 3030;
 
-// Use the `db` object to perform database operations
-const db = knex(knexConfig.development);
+// Create a new PostgreSQL client
+const client = new Client({
+  user: process.env.RDSUSER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT,
+});
+
+// Connect to the PostgreSQL database
+client
+  .connect()
+  .then(() => {
+    console.log("Connected to the database");
+  })
+  .catch((err) => {
+    console.error("Error connecting to the database", err);
+  });
 
 // ========================
 // Middleware
@@ -22,14 +39,13 @@ app.use(express.json());
 // Route handlers
 // ========================
 
-// Define a route handler for GET requests made to the root path ('/').
-app.get("/", (req, res) => res.send("Hello World!"));
-
 // GET route to retrieve all the users
-app.get("/users", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     // Retrieve the users from the database
-    const users = await db.select().from("users");
+    const query = "SELECT * FROM users";
+    const result = await client.query(query);
+    const users = result.rows;
     res.json(users);
   } catch (err) {
     console.error("Error retrieving users!", err);
@@ -40,9 +56,35 @@ app.get("/users", async (req, res) => {
 // POST route to create a new user
 app.post("/users", async (req, res) => {
   try {
-    console.log(req.body);
-    // Create a new user from the data sent in the POST body
-    const newUser = await db("users").insert(req.body).returning("*");
+    const {
+      contact_name,
+      org_name,
+      email,
+      site_origin,
+      home_link,
+      positive_test_link,
+      negative_test_link,
+      more_info_link,
+    } = req.body;
+
+    // Insert the new user into the database
+    const query =
+      "INSERT INTO users (contact_name, org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *";
+    const values = [
+      contact_name,
+      org_name,
+      email,
+      site_origin,
+      home_link,
+      positive_test_link,
+      negative_test_link,
+      more_info_link,
+      new Date(),
+      new Date(),
+    ];
+    const result = await client.query(query, values);
+    const newUser = result.rows[0];
+
     // Send the newly created user back as JSON
     res.status(201).json(newUser);
   } catch (err) {

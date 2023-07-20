@@ -1,3 +1,4 @@
+require("dotenv").config();
 // Update with your config settings.
 
 /**
@@ -8,11 +9,21 @@ module.exports = {
     client: "postgresql",
     connection: {
       host: process.env.HOST,
-      user: process.env.USER,
+      port: process.env.PORT,
+      user: process.env.RDSUSER,
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
     },
     debug: true,
+    migrations: {
+      onError: function (error, _obj, _qb) {
+        if (error.code === "ETIMEOUT") {
+          console.error("Connection timeout occured:", error)
+        } else {
+          console.error("Error occurred during migration:", error)
+        }
+      }
+    }
   },
 
   staging: {

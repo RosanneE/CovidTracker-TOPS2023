@@ -1,3 +1,67 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Noto+Sans:wght@400;600&display=swap");
+
+h1 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h2 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h3 {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 120% */
+}
+
+.blueButton {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+  border: none;
+  border-radius: 30px;
+  background: #0058b7;
+  height: 60px;
+  padding: 20px 69px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 20px;
+}
+
+.blueButton:hover {
+  cursor: pointer;
+}
+
+.dissolveEffect {
+  opacity: 1;
+  transition: opacity 100ms ease-out;
+}
+
+.dissolveEffect:active {
+  opacity: 0;
+}
+
 .App {
   text-align: center;
   height: 100%;
@@ -45,6 +109,12 @@
   align-items: center;
   padding: 20px;
   margin-left: 100px;
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 64px;
+  font-style: normal;
+  line-height: normal;
   /* width: 100%; */
   /* background-color: rgba(255, 255, 255, 0.966); */
 }
@@ -64,6 +134,7 @@
   list-style: none;
   text-decoration: none;
   color: #00426B;
+  font-weight: 500;
   /* transition: transform 1s ease-in-out; */
 }
 

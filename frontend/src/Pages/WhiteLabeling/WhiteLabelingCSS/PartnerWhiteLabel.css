@@ -1,0 +1,149 @@
+/* Partner White Label Page CSS */
+
+.whyUseMMTCHeader1 {
+    margin-bottom: 18px;
+  }
+  
+  .whyUseMMTCHeader3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  
+  .partnerWMMTC {
+    display: flex;
+    padding: 125px 272px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .partneringOptions {
+    padding: 110px 165px 130px 159px;
+    background: #f7f9fa;
+  }
+
+  .imageHover {
+    transition: transform 0.2s ease;
+  }
+
+  .imageHover:hover {
+    transform: scale(1.05);
+  }
+  
+  .partnerWMMTC p,
+  .partneringOptions p,
+  .exploreTheTool p,
+  .whyUseMMTC p {
+    color: #00426b;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 150% */
+  }
+  
+  .partneringTd {
+    vertical-align: top;
+    padding: 0px 50px 50px;
+    width: 500px;
+  }
+  
+  .partneringTd p {
+    text-align: left;
+  }
+  
+  .partnerUl {
+    color: #00426b;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 150% */
+  }
+
+  .partnerUl p {
+    padding: 0px 20px 0px;
+  }
+
+  .partnerUl li {
+    background: url("../../../Images/Vector.png") no-repeat left center; 
+    padding: 5px 10px 5px 25px;
+        list-style: none;
+        margin: 0;
+        vertical-align: middle;
+  }
+
+  .exploreTheTool {
+    padding: 80px;
+    align-items: center;
+    background: #CBE5FD;
+    position: relative;
+    background-image: url("../../../Images/ellipsebg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .exploreTheTool img {
+    position: absolute;
+  }
+
+  .top-left {
+    top: 37px;
+    left: 164px;
+  }
+  
+  .top-right {
+    top: 37px;
+    right: 164px;
+  }
+  
+  .bottom-left {
+    bottom: 37px;
+    left: 164px;
+  }
+  
+  .bottom-right {
+    bottom: 37px;
+    right: 164px;
+  }
+  
+  
+  .whyUseMMTCUl {
+    color: #00426b;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 150% */
+  }
+  
+.whyUseMMTC {
+  padding: 110px 165px 130px 159px;
+}
+
+.whyUseMMTC p {
+  padding: 20px;
+}
+
+  .whyUseMMTCUl {
+    list-style: none;
+  }
+  
+  .whyUseMMTCUl li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .whyUseMMTCUl li img {
+    width: 64px;
+    height: 64px;
+    padding: 30px;
+  }
+  
+  .whyUseMMTCLi {
+    flex: 1;
+    text-align: left;
+  }
+  
