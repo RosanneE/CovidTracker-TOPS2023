@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 //White Labeling Routes
 // import DesignStart from "./Pages/WhiteLabeling/DesignStart"
 import PartnerWhiteLabel from "./Pages/WhiteLabeling/PartnerWhiteLabel"
+import RequestConfirmation from "./Pages/WhiteLabeling/RequestConfirmation";
 // import SiteBuildA from "./Pages/WhiteLabeling/SiteBuildA"
 // import SiteBuildB from "./Pages/WhiteLabeling/SiteBuildB"
 // import SiteBuildC from "./Pages/WhiteLabeling/SiteBuildC"
@@ -29,6 +30,7 @@ function App() {
         <Route path="/SiteBuildB" element={<SiteBuildB />} />
         <Route path="/SiteBuildC" element={<SiteBuildC />} />
         <Route path="/SiteBuildD" element={<SiteBuildD />} /> */}
+        <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
       </Routes>
       <Footer/>
     </div>
