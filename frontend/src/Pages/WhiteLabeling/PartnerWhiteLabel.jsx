@@ -1,10 +1,15 @@
 //PARTNER/WHITELABEL PAGE
 
 import React from "react";
-import vector from "../../Images/Vector.png";
 import ellipse from "../../Images/Ellipse 5.png";
 import screenshot1 from "../../Images/Screen Shot 2023-05-21 at 10.28 1.png";
 import screenshot2 from "../../Images/Screen Shot 2023-05-21 at 10.28 2.png";
+import "./WhiteLabelingCSS/PartnerWhiteLabel.css"
+import vector1 from "../../Images/Vector 1.png";
+import vector2 from "../../Images/Vector 2.png";
+import vector3 from "../../Images/Vector 3.png";
+import vector4 from "../../Images/Vector 4.png";
+
 
 function PartnerPage(props) {
   return (
@@ -39,7 +44,7 @@ function PartnerPage(props) {
                   <img
                     src={screenshot1}
                     alt="Stand-alone site sample screenshot"
-                    width="500" height="312"
+                    width="500" height="312" className="imageHover"
                   />
                 </p>
                 <p>We recommend this option if:</p>
@@ -71,7 +76,7 @@ function PartnerPage(props) {
                   <img
                     src={screenshot2}
                     alt="Modal pop-up sample screenshot"
-                    width="500" height="312"
+                    width="500" height="312" className="imageHover"
                   />
                 </p>
                 <p>We recommend this option if:</p>
@@ -99,9 +104,13 @@ function PartnerPage(props) {
 {/* ------------------------------------------------------------ */}
 
       <div className="exploreTheTool">
+  <img src={vector1} class="top-left" alt="Top left border"/>
+  <img src={vector3} class="top-right" alt="Top right border"/>
+  <img src={vector2} class="bottom-left" alt="Bottom left border"/>
+  <img src={vector4} class="bottom-right" alt="Bottom right border"/>
         <h2>Explore the Tool</h2>
         <p>
-          Want to know more about how reporting works --- and what a stand-alone
+          Want to know more about how reporting works --- and what a stand-alone<br/>
           site or modal pop-up looks like? Take a look.
         </p>
         <button className="blueButton dissolveEffect">Explore Site Demo</button>
@@ -169,23 +178,6 @@ function PartnerPage(props) {
             </li>
           </ul>
         </div>
-      </div>
-
-{/* ------------------------------------------------------------ */}
-
-      <div className="stillHaveQuestions">
-        <img
-          src="https://i.imgur.com/sUFH1Aq.png"
-          alt="Still have questions?"
-          width="40"
-          height="40"
-        />
-        <h2>Still Have Questions?</h2>
-        <p>
-          We're here to help. Find out more about how you can install and use
-          this free resource.
-        </p>
-        <button>Talk with us</button>
       </div>
     </>
   );
