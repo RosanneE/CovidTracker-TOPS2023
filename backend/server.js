@@ -1,8 +1,9 @@
 const express = require("express");
 const { Client } = require("pg");
-// const knex = require()
+
 // Create a new Express application
 const app = express();
+
 require("dotenv").config();
 
 // Define the port the server will run on.
@@ -65,6 +66,7 @@ app.post("/users", async (req, res) => {
       negative_test_link,
       more_info_link,
     } = req.body;
+
     // Insert the new user into the database
     const query =
       "INSERT INTO users (contact_name, org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *";
