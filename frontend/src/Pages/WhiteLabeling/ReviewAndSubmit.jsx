@@ -8,7 +8,6 @@ function ReviewAndSubmit() {
     email: "",
     phone: "",
   });
-  const [testResult, setTestResult] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -18,9 +17,9 @@ function ReviewAndSubmit() {
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+//   function handleSubmit(event) {
+//     event.preventDefault();
+//   }
 
   return (
     <table className="reviewAndSubmit">
