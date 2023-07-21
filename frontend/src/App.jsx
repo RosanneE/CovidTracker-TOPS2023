@@ -13,7 +13,7 @@ import PartnerWhiteLabel from "./Pages/WhiteLabeling/PartnerWhiteLabel"
 // import SiteBuildA from "./Pages/WhiteLabeling/SiteBuildA"
 // import SiteBuildB from "./Pages/WhiteLabeling/SiteBuildB"
 // import SiteBuildC from "./Pages/WhiteLabeling/SiteBuildC"
-// import SiteBuildD from "./Pages/WhiteLabeling/SiteBuildD"
+import ReviewAndSubmit from "./Pages/WhiteLabeling/ReviewAndSubmit"
 
 
 function App() {
@@ -27,8 +27,8 @@ function App() {
         <Route path="/PartnerWhiteLabel" element={<PartnerWhiteLabel />} />
         {/* <Route path="/SiteBuildA" element={<SiteBuildA />} />
         <Route path="/SiteBuildB" element={<SiteBuildB />} />
-        <Route path="/SiteBuildC" element={<SiteBuildC />} />
-        <Route path="/SiteBuildD" element={<SiteBuildD />} /> */}
+        <Route path="/SiteBuildC" element={<SiteBuildC />} />*/
+        <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} /> }
       </Routes>
       <Footer/>
     </div>
