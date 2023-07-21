@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReviewAndSubmitPic from "../../Images/ReviewAndSubmitPic.png";
 import LeftArrow from "../../Images/LeftArrow.png";
+import "./WhiteLabelingCSS/ReviewAndSubmit.css"
 
 function ReviewAndSubmit() {
   const [contactInfo, setContactInfo] = useState({
@@ -22,13 +23,15 @@ function ReviewAndSubmit() {
   }
 
   return (
-    <table>
+    <table className="reviewAndSubmit">
         <tr>
             <td>
     <div>
-      <h1>Review & Submit</h1>
-      <h2>Please review your contact information</h2>
-      <a href="/">Edit info</a>
+    <div className="reviewAndSubmitDiv">
+      <h3>Review & Submit</h3>
+      <p>Please review your contact information</p>
+      <p style={{textAlign:'right'}}><a  href="/">Edit info</a></p>
+      
       <div>
         <label>Contact Name</label>
         <input
@@ -65,7 +68,8 @@ function ReviewAndSubmit() {
           onChange={handleChange}
         />
       </div>
-      <div>
+      </div>
+      <div className="goBack">
         <p><img src={LeftArrow} alt="Left arrow"/>
         <a href="/">Go back</a></p>
         <button className="blueButton dissolveEffect">Submit request</button>
@@ -73,7 +77,7 @@ function ReviewAndSubmit() {
       
     </div>
     </td>
-    <td><img src={ReviewAndSubmitPic} alt="Review And Submit pic"/></td>
+    <td><img style={{maxWidth:"100%", width:"50rem"}}src={ReviewAndSubmitPic} alt="Review And Submit pic"/></td>
     </tr>
     </table>
   );
