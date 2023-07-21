@@ -8,7 +8,6 @@ function ReviewAndSubmit() {
     email: "",
     phone: "",
   });
-  const [testResult, setTestResult] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -18,9 +17,9 @@ function ReviewAndSubmit() {
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+//   function handleSubmit(event) {
+//     event.preventDefault();
+//   }
 
   return (
     <table className="reviewAndSubmit">
@@ -69,10 +68,11 @@ function ReviewAndSubmit() {
         />
       </div>
       </div>
-      <div className="goBack">
-        <p><img src={LeftArrow} alt="Left arrow"/>
-        <a href="/">Go back</a></p>
-        <button className="blueButton dissolveEffect">Submit request</button>
+      <div className="goBackSubmit">
+        <div className="goBack">
+        <p><img style={{paddingRight:"0.5rem"}} src={LeftArrow} alt="Left arrow"/>
+        <a href="/">Go back</a></p></div>
+        <button style={{marginRight:"none"}}className="blueButton dissolveEffect">Submit request</button>
       </div>
       
     </div>
