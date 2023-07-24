@@ -41,10 +41,10 @@ function PartnerPage(props) {
                   organizations logo and custom URL.
                 </p>
                 <p>
-                  <img
+                  <img style={{maxWidth:"100%", width:"31.25rem"}}
                     src={screenshot1}
                     alt="Stand-alone site sample screenshot"
-                    width="500" height="312" className="imageHover"
+                    className="imageHover"
                   />
                 </p>
                 <p>We recommend this option if:</p>
@@ -74,9 +74,10 @@ function PartnerPage(props) {
                 </p>
                 <p>
                   <img
+                    style={{maxWidth:"100%", width:"31.25rem"}}
                     src={screenshot2}
                     alt="Modal pop-up sample screenshot"
-                    width="500" height="312" className="imageHover"
+                    className="imageHover"
                   />
                 </p>
                 <p>We recommend this option if:</p>
