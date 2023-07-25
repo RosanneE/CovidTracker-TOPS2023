@@ -25,10 +25,10 @@ function App() {
         <Route exact path="/" element={<Home />} />
         {/* <Route path="/DesignStart" element={<DesignStart />} /> */}
         <Route path="/PartnerWhiteLabel" element={<PartnerWhiteLabel />} />
-        {/* <Route path="/SiteBuildA" element={<SiteBuildA />} /> */
+        {/* <Route path="/SiteBuildA" element={<SiteBuildA />} /> */}
         <Route path="/SiteBuildB" element={<SiteBuildB />} />
-        <Route path="/SiteBuildC" element={<SiteBuildC />} />
-        <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} /> }
+        {/* <Route path="/SiteBuildC" element={<SiteBuildC />} /> */}
+        <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} /> 
       </Routes>
       <Footer/>
     </div>
