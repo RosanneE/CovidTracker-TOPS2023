@@ -1,0 +1,84 @@
+.bBacktoPartnerPage {
+  margin-left: 90px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 50px;
+}
+
+.bHeader > p {
+  margin-bottom: 50px;
+}
+
+
+.bForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f7f9fa;
+  width: 100%;
+  height: 841px;
+}
+
+.bForm > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+input {
+  width: 70%;
+  border-radius: 7px;
+  border: 1px solid #8D8D8D;
+  padding: 10px;
+  margin: 20px;
+  
+}
+
+label {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 36px; /* 120% */
+}
+
+p {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 15px;
+}
+
+.bFormLabel {
+  text-align: left;
+  width: 70%;
+}
+
+.bContinueButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 70%;
+}
+
+
+.formHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 50%;
+}
