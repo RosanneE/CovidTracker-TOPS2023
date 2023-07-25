@@ -1,5 +1,5 @@
 import React from "react";
-import "./WhiteLabelingCSS/SiteBuildB.css";
+import "./SiteBuildB.css";
 import { useState } from "react"
 import statusBar from "../../Images/SiteBuildStatusBarB.png"
 
