@@ -1,24 +1,24 @@
 /* Partner White Label Page CSS */
 
 .whyUseMMTCHeader1 {
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
   }
   
   .whyUseMMTCHeader3 {
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin-top: 0rem;
+    margin-bottom: 0.625rem;
   }
   
   .partnerWMMTC {
     display: flex;
-    padding: 125px 272px;
+    padding: 7.813rem 17rem;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
   }
   
   .partneringOptions {
-    padding: 110px 165px 130px 159px;
+    padding: 6.875rem 5.313rem 6.875rem 5.313rem;
     background: #f7f9fa;
   }
 
@@ -37,16 +37,16 @@
     color: #00426b;
     text-align: center;
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 150% */
+    line-height: 2.313rem; /* 150% */
   }
   
   .partneringTd {
     vertical-align: top;
-    padding: 0px 50px 50px;
-    width: 500px;
+    padding: 0rem 3.125rem 3.125rem;
+    width: 31.25rem;
   }
   
   .partneringTd p {
@@ -56,26 +56,26 @@
   .partnerUl {
     color: #00426b;
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 150% */
+    line-height: 1.688rem; /* 150% */
   }
 
   .partnerUl p {
-    padding: 0px 20px 0px;
+    padding: 0rem 1.25rem 0rem;
   }
 
   .partnerUl li {
     background: url("../../../Images/Vector.png") no-repeat left center; 
-    padding: 5px 10px 5px 25px;
+    padding: 0.313rem 0.625rem 0.313rem 1.563rem;
         list-style: none;
         margin: 0;
         vertical-align: middle;
   }
 
   .exploreTheTool {
-    padding: 80px;
+    padding: 5rem;
     align-items: center;
     background: #CBE5FD;
     position: relative;
@@ -89,41 +89,42 @@
   }
 
   .top-left {
-    top: 37px;
-    left: 164px;
+    top: 2.313rem;
+    left: 10.25rem;
   }
   
   .top-right {
-    top: 37px;
-    right: 164px;
+    top: 2.313rem;
+    right: 10.25rem;
   }
   
   .bottom-left {
-    bottom: 37px;
-    left: 164px;
+    bottom: 2.313rem;
+    left: 10.25rem;
   }
   
   .bottom-right {
-    bottom: 37px;
-    right: 164px;
+    bottom: 2.313rem;
+    right: 10.25rem;
   }
   
   
   .whyUseMMTCUl {
     color: #00426b;
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 150% */
+    line-height: 1.688rem; /* 150% */
+    padding-inline-start: 0rem;
   }
   
 .whyUseMMTC {
-  padding: 110px 165px 130px 159px;
+  padding: 5.875rem 7.313rem 5.875rem 7.313rem;
 }
 
 .whyUseMMTC p {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
   .whyUseMMTCUl {
@@ -133,13 +134,13 @@
   .whyUseMMTCUl li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
   }
   
   .whyUseMMTCUl li img {
-    width: 64px;
-    height: 64px;
-    padding: 30px;
+    width: 4rem;
+    height: 4rem;
+    padding: 1.875rem;
   }
   
   .whyUseMMTCLi {
