@@ -11,7 +11,7 @@ import Home from "./Pages/Home";
 // import DesignStart from "./Pages/WhiteLabeling/DesignStart"
 import PartnerWhiteLabel from "./Pages/WhiteLabeling/PartnerWhiteLabel"
 // import SiteBuildA from "./Pages/WhiteLabeling/SiteBuildA"
-// import SiteBuildB from "./Pages/WhiteLabeling/SiteBuildB"
+import SiteBuildB from "./Pages/WhiteLabeling/SiteBuildB"
 // import SiteBuildC from "./Pages/WhiteLabeling/SiteBuildC"
 import ReviewAndSubmit from "./Pages/WhiteLabeling/ReviewAndSubmit"
 
@@ -25,9 +25,9 @@ function App() {
         <Route exact path="/" element={<Home />} />
         {/* <Route path="/DesignStart" element={<DesignStart />} /> */}
         <Route path="/PartnerWhiteLabel" element={<PartnerWhiteLabel />} />
-        {/* <Route path="/SiteBuildA" element={<SiteBuildA />} />
+        {/* <Route path="/SiteBuildA" element={<SiteBuildA />} /> */
         <Route path="/SiteBuildB" element={<SiteBuildB />} />
-        <Route path="/SiteBuildC" element={<SiteBuildC />} />*/
+        <Route path="/SiteBuildC" element={<SiteBuildC />} />
         <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} /> }
       </Routes>
       <Footer/>
