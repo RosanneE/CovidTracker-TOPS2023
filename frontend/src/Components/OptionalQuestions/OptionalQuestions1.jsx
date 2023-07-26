@@ -8,6 +8,10 @@ export default function OptionalQuestions1(props) {
     const questions = [
         { id: 'q1', text: 'Have you had any symptoms?', options: ['No', 'Yes', 'Not sure'] },
         { id: 'q2', text: 'What was your sex assigned at birth?', options: ['Male', 'Female', 'Other'] },
+        { id: 'q3', text: 'What is your race?', options: ['American Indian or Alaska Native ', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', 'White', 'Other'] },
+        { id: 'q4', text: 'What is your ethnicity?', options: ['Hispanic or Latino', 'Not Hispanic or Latino'] },
+        { id: 'q5', text: 'Would you like text/SMS reminder to test again in 48 hours?', options: ['Yes', 'No'] },
+
         // Add more questions here
     ];
 
@@ -22,15 +26,17 @@ export default function OptionalQuestions1(props) {
     }
 
     return (
-        <div className="optional-questions1">
+        <div className="">
+            <div className="">
             <h3>Optional Questions</h3>
             <Form onSubmit={handleSubmit}>
                 {questions.map(question => (
-                    <div key={question.id}>
-                        <p>{question.text}</p>
+                    <div className="questionsDiv" key={question.id}>
+                        <p className="optionalQuestions">{question.text}</p>
                         <ButtonGroup toggle>
                             {question.options.map((option, idx) => (
                                 <Button 
+                                    className="optionButtons"
                                     key={idx}
                                     type="radio"
                                     variant={answers[question.id] === option.toLowerCase() ? "primary" : "secondary"}
@@ -44,10 +50,14 @@ export default function OptionalQuestions1(props) {
                         </ButtonGroup>
                     </div>
                 ))}
-                <Button variant="primary" type="submit">
-                    Submit
+                <div className="nextButtonDiv">
+                <Button className="nextButton" type="Next">
+                    Next
                 </Button>
+                </div>
             </Form>
         </div>
+        </div>
+
     );
 }

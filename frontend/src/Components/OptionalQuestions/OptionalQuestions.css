@@ -1,4 +1,78 @@
-.radio-button-group {
-    display: flex;
-    justify-content: space-between;
+.btn-primary {
+    --bs-btn-color: #00426B;
+    --bs-btn-bg: #52EAFF;
+    --bs-btn-border-color: #D9D9D9;
+    --bs-btn-hover-color: #00426B;
+    --bs-btn-hover-bg: #52EAFF;
+    --bs-btn-hover-border-color: #52EAFF;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #52EAFF;
+    --bs-btn-active-bg: #52EAFF;
+    --bs-btn-active-border-color: #52EAFF;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: #00426B;
+    --bs-btn-disabled-bg: #52EAFF;
+    --bs-btn-disabled-border-color: #D9D9D9;
+}
+
+
+.btn-secondary {
+    --bs-btn-color: #00426B;
+    --bs-btn-bg: #ffffff;
+    --bs-btn-border-color: #D9D9D9;
+    --bs-btn-hover-color: #00426B;
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #D9D9D9;
+    --bs-btn-focus-shadow-rgb: 130,138,145;
+    --bs-btn-active-color: #00426B;
+    --bs-btn-active-bg: #52EAFF;
+    --bs-btn-active-border-color: #D9D9D9;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6c757d;
+    --bs-btn-disabled-border-color: #6c757d;
+}
+
+
+.nextButton {
+    color: #FFF;
+    font-family: Noto Sans;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    width: 32rem;
+    border-radius: 2rem;
+    background: #0058B7;
+    margin-bottom: 3rem;
+    }
+        
+
+.optionalQuestions{
+    color: #00426B;
+    font-family: Noto Sans;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: left;
+
+}
+
+.optionButtons {
+    font-family: Noto Sans;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    margin-bottom: 2rem;
+}
+
+.questionsDiv {
+    width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-group {
+    width: 42rem;
 }
