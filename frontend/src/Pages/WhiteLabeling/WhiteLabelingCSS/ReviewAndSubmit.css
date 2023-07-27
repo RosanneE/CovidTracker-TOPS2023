@@ -25,7 +25,7 @@ label {
     line-height: 1.6875rem; /* 192.857% */
 }
 
-input {
+.reviewAndSubmitInput {
     background: none;
     border-bottom: 1px solid #8D8D8D;
     border-top: none;

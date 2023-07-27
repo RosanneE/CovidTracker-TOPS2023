@@ -34,6 +34,7 @@ function ReviewAndSubmit() {
       <div>
         <label>Contact Name</label>
         <input
+          className="reviewAndSubmitInput"
           type="text"
           name="contactName"
           value={contactInfo.contactName}
@@ -43,6 +44,7 @@ function ReviewAndSubmit() {
       <div>
         <label>Organization Name</label>
         <input
+          className="reviewAndSubmitInput"
           type="text"
           name="org_name"
           value={contactInfo.org_name}
@@ -52,6 +54,7 @@ function ReviewAndSubmit() {
       <div>
         <label>Email</label>
         <input
+          className="reviewAndSubmitInput"
           type="email"
           name="email"
           value={contactInfo.email}
@@ -61,6 +64,7 @@ function ReviewAndSubmit() {
       <div>
         <label>Home Link</label>
         <input
+          className="reviewAndSubmitInput"
           type="text"
           name="home_link"
           value={contactInfo.email}
