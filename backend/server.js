@@ -40,7 +40,7 @@ app.use(express.json());
 // ========================
 
 // GET route to retrieve all the users
-app.get("/", async (req, res) => {
+app.get("/users", async (req, res) => {
   try {
     // Retrieve the users from the database
     const query = "SELECT * FROM users";
