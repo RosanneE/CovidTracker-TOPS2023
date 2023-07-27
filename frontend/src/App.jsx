@@ -11,6 +11,7 @@ import Home from "./Pages/Home";
 //Pages Routes
 // import DesignStart from "./Pages/WhiteLabeling/DesignStart"
 import PartnerWhiteLabel from "./Pages/WhiteLabeling/PartnerWhiteLabel"
+import RequestConfirmation from "./Pages/WhiteLabeling/RequestConfirmation";
 // import SiteBuildA from "./Pages/WhiteLabeling/SiteBuildA"
 import RequestSite from "./Pages/RequestSitePage/RequestSite";
 // import SiteBuildC from "./Pages/WhiteLabeling/SiteBuildC"
@@ -35,6 +36,7 @@ function App() {
         <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} />
         <Route path="/OptionalQuestions" element={<OptionalQuestions />} /> 
         <Route path="/CriticalQuestions" element={<CriticalQuestions />} /> 
+        <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
       </Routes>
       <Footer/>
     </div>
