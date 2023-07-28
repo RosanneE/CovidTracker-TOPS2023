@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ReviewAndSubmitPic from "../../Images/ReviewAndSubmitPic.png";
 import LeftArrow from "../../Images/LeftArrow.png";
 import "./WhiteLabelingCSS/ReviewAndSubmit.css"
+import { FormContext } from "../../Context/FormContext";
+
 
 function ReviewAndSubmit() {
   const [contactInfo, setContactInfo] = useState({
@@ -9,14 +11,15 @@ function ReviewAndSubmit() {
     phone: "",
   });
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setContactInfo({
-      ...contactInfo,
-      [name]: value,
-    });
-  }
+  // function handleChange(event) {
+  //   const { name, value } = event.target;
+  //   setContactInfo({
+  //     ...contactInfo,
+  //     [name]: value,
+  //   });
+  // }
 
+  const { newSite, handleChange, handleSubmit } =useContext(FormContext)
 //   function handleSubmit(event) {
 //     event.preventDefault();
 //   }
