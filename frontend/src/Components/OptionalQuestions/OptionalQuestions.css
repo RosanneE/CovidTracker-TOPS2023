@@ -52,7 +52,7 @@
   font-family: Noto Sans;
   font-size: 1.3rem;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 3rem;
   text-align: left;
 }
 
@@ -61,7 +61,6 @@
   font-size: 1.3rem;
   font-weight: 400;
   padding: 0.8rem 3rem 0.8rem 3rem;
-  margin-bottom: 2rem;
 }
 
 .questionsDiv {
@@ -79,11 +78,10 @@
 .two-columns {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .two-columns .optionButtons {
-  flex: 1 0 48%;
+  flex-basis: 45%;
   border-radius: 0;
   margin-bottom: 0;
 }
@@ -91,21 +89,13 @@
 /* Target the first button of the group */
 .two-columns .optionButtons:first-child {
   border-top-left-radius: 10px;
-}
-
-/* Target the second button of the group */
-.two-columns .optionButtons:nth-child(2) {
   border-top-right-radius: 10px !important;
-}
-
-/* Target the second last button of the group */
-.two-columns .optionButtons:nth-last-child(2) {
-  border-bottom-left-radius: 10px; /* Adjust according to your needs */
 }
 
 /* Target the last button of the group */
 .two-columns .optionButtons:last-child {
-  border-bottom-right-radius: 10px; /* Adjust according to your needs */
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px !important;
 }
 
 #optionalQuestionsBackArrow {

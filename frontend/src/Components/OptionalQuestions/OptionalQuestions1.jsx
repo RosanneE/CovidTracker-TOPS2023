@@ -35,8 +35,6 @@ export default function OptionalQuestions1(props) {
       text: "Would you like text/SMS reminder to test again in 48 hours?",
       options: ["Yes", "No"],
     },
-
-    // Add more questions here
   ];
 
   function handleChange(questionId, option) {
@@ -60,7 +58,7 @@ export default function OptionalQuestions1(props) {
   return (
     <div className="">
       <div className="">
-        <div id="optionalQuestionsBackArrow">
+        <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow">
           <img src={backArrow} alt="Back Arrow" />
           <h3>Optional Questions</h3>
         </div>
@@ -88,7 +86,11 @@ export default function OptionalQuestions1(props) {
             </div>
           ))}
           <div className="nextButtonDiv">
-            <Button id="optionalQuestionsNextButton" type="Next">
+            <Button
+              id="optionalQuestionsNextButton"
+              style={{ marginTop: "2.5rem" }}
+              type="Next"
+            >
               Next
             </Button>
           </div>

@@ -29,7 +29,7 @@ export default function OptionalQuestionsInfo(props) {
         </p>
       </div>
       <div className="nextButtonDiv">
-        <Button id="optionalQuestionsNextButton" type="Next">
+        <Button id="optionalQuestionsNextButton" style={{ marginTop: "1.5rem" }} type="Next">
           Next
         </Button>
       </div>
