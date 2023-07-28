@@ -1,82 +1,144 @@
 .questionNumber {
-color: #000;
-font-family: Noto Sans;
-font-size: 1.3rem;
-font-weight: 400;
-display: flex;
-justify-content: space-between;
-width: 22rem;
-margin-left: auto;
-margin-right: auto;
-padding-top: 3rem;
+  color: #000;
+  font-family: Noto Sans;
+  font-size: 1.3rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+}
+
+.critQuestionsH3 {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4rem; /* 120% */
+  width: 14rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testTable {
+  margin-left: auto;
+  margin-right: auto;
+  width: 35rem;
+  margin-top: 4rem;
+  text-align: center;
 }
 
 .question {
-color: #00426B;
-font-family: Bitter;
-font-size: 2.45506rem;
-font-weight: 500;
-line-height: 2.03713rem;
+  color: #00426b;
+  font-family: Bitter;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.03713rem;
 }
 
 .questionAnswer {
-padding: 5rem;
+  padding: 5rem;
 }
 
 .asterisk {
-color: #900000;
-font-family: Bitter;
-font-size: 2.45506rem;
-font-weight: 500;
+  color: #900000;
+  font-family: Bitter;
+  font-size: 2.45506rem;
+  font-weight: 500;
 }
 
 .nextButton {
-color: #FFF;
-font-family: Noto Sans;
-font-size: 1.3rem;
-font-style: normal;
-font-weight: 600;
-border: none;
-padding: 1rem;
-width: 32rem;
-border-radius: 2rem;
-background: #DDE5ED;
-margin-bottom: 3rem;
+  color: #fff;
+  font-family: Noto Sans;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+  width: 32rem;
+  border-radius: 2rem;
+  background: #dde5ed;
+  margin-bottom: 3rem;
 }
 
-.selectButtonLeft, .selectButtonMiddle, .selectButtonRight {
-color: #00426B;
-background: #FFF;
-border: none;
-font-family: Noto Sans;
-font-size: 1.3rem;
-font-weight: 400;
-border: 1px solid #D9D9D9;
-padding: 0.8rem 3rem 0.8rem 3rem;
-margin-top: 2rem;
+.selectButtonLeft,
+.selectButtonMiddle,
+.selectButtonRight {
+  color: #00426b;
+  background: #fff;
+  border: none;
+  font-family: Noto Sans;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border: 1px solid #d9d9d9;
+  padding: 0.8rem 3rem 0.8rem 3rem;
+  margin-top: 2rem;
 }
 
 .selectButtonLeft {
-    border-radius: 1rem 0rem 0rem 1rem;
+  border-radius: 1rem 0rem 0rem 1rem;
 }
 
 .selectButtonRight {
-    border-radius: 0rem 1rem 1rem 0rem;
+  border-radius: 0rem 1rem 1rem 0rem;
 }
 
-.nextButton:hover, .selectButtonLeft:hover, .selectButtonMiddle:hover, .selectButtonRight:hover {
-    cursor: pointer;
+.nextButton:hover,
+.selectButtonLeft:hover,
+.selectButtonMiddle:hover,
+.selectButtonRight:hover {
+  cursor: pointer;
 }
 
 .reqQuestionsInput {
-border-radius: 0.8rem;
-border: 1px solid #D9D9D9;
-background: #FFF;
-color: #00426B;
-font-family: Noto Sans;
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-padding: 1rem;
-width: 20rem;
+  border-radius: 0.8rem;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  padding: 1rem;
+  width: 20rem;
+}
+
+.positiveNegative {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem; /* 100% */
+  border: none;
+  border-radius: 1.875rem;
+  background: #0058b7;
+  padding: 0.8rem 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 2rem;
+}
+
+.positiveNegative:hover {
+  cursor: pointer;
+}
+
+.otherButton {
+  border: none;
+  color: #0058b7;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  background: none;
+}
+
+.otherButton:hover {
+  cursor: pointer;
 }
