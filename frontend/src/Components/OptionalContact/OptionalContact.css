@@ -32,28 +32,15 @@
   --bs-btn-disabled-border-color: #6c757d;
 }
 
-#optionalQuestionsNextButton {
-  color: #fff;
+.optionalContactQuestion {
+  color: #000;
   font-family: Noto Sans;
   font-size: 1.3rem;
-  font-style: normal;
-  font-weight: 600;
-  border: none;
-  padding: 1rem;
-  width: 32rem;
-  border-radius: 2rem;
-  background: #0058b7;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.optionalQuestions {
-  color: #00426b;
-  font-family: Noto Sans;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-top: 3rem;
+  font-weight: 400;
+  line-height: normal;
   text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .optionButtons {
@@ -61,6 +48,7 @@
   font-size: 1.3rem;
   font-weight: 400;
   padding: 0.8rem 3rem 0.8rem 3rem;
+  margin-bottom: 6rem;
 }
 
 .questionsDiv {
@@ -73,29 +61,6 @@
 
 .btn-group {
   width: 42rem;
-}
-
-.two-columns {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.two-columns .optionButtons {
-  flex-basis: 45%;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-
-/* Target the first button of the group */
-.two-columns .optionButtons:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px !important;
-}
-
-/* Target the last button of the group */
-.two-columns .optionButtons:last-child {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px !important;
 }
 
 #optionalQuestionsBackArrow {
@@ -112,7 +77,15 @@
   margin-right: 2rem;
 }
 
-.optionalH3 {
-  color: #00426b;
-  font-family: Bitter;
+i {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+#optionalContactImage {
+  width: 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -60,7 +60,7 @@ export default function OptionalQuestions1(props) {
       <div className="">
         <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow">
           <img src={backArrow} alt="Back Arrow" />
-          <h3>Optional Questions</h3>
+          <h3 className="optionalH3">Optional Questions</h3>
         </div>
         <Form onSubmit={handleSubmit}>
           {questions.map((question) => (
@@ -85,19 +85,15 @@ export default function OptionalQuestions1(props) {
               </ButtonGroup>
             </div>
           ))}
-          <div className="nextButtonDiv">
-            <Button
-              id="optionalQuestionsNextButton"
-              style={{ marginTop: "2.5rem" }}
-              type="Next"
-            >
-              Next
-            </Button>
-          </div>
-          <a style={{ display: "block", marginBottom: "1.5rem" }} href="/">
-            Skip & Submit
-          </a>
         </Form>
+        <div className="nextButtonDiv">
+          <Button id="optionalQuestionsNextButton" style={{ marginTop: "2.5rem" }} type="Next">
+            Next
+          </Button>
+        </div>
+        <a style={{ display: "block", marginBottom: "1.5rem" }} href="/">
+          Skip & Submit
+        </a>
       </div>
     </div>
   );
