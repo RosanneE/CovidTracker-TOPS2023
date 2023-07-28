@@ -10,13 +10,22 @@ export default function RequestSite(props) {
     home_link: "",
     positive_test_link: "",
     negative_test_link: "",
-    more_info_link: "",
+    more_info_link: "", 
 
     });
+
+    const handleChange = (event) => {
+        setNewSite({
+            ...newSite,
+            [event.target.name] : event.target.value,
+        })
+    }
     
     return (
         <div>
            
-            <SiteBuildB/>
+            <SiteBuildB
+            handleChange={handleChange}
+            newSite={newSite}/>
         </div>
     )}

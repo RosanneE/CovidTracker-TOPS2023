@@ -3,10 +3,8 @@ import "./SiteBuildB.css"
 import statusBar from "../../../Images/SiteBuildStatusBarB.png";
 
 
-export default function SiteBuildB(setNewSite, newSite) {
-  function handleChange(evt){
-    setNewSite(...newSite)
-  }
+export default function SiteBuildB(props) {
+  
 
 
 
@@ -46,9 +44,9 @@ export default function SiteBuildB(setNewSite, newSite) {
           </div>
           <input type="text" 
             id="postiveTestLink"
-            name="positiveTest"
-            value={newSite.positiveTest}
-            onChange={handleChange}
+            name="positive_test_link"
+            value={props.newSite.positiveTest}
+            onChange={props.handleChange}
             className="siteBuildFormInput" 
           />
           <div className="siteBuildFormLabel">
@@ -61,9 +59,9 @@ export default function SiteBuildB(setNewSite, newSite) {
           </div>
           <input type="text" 
             id="negativeTestLink"
-            name="negativeTest"
-            value={newSite.negativeTest}
-            onChange={handleChange}
+            name="negative_test_link"
+            value={props.newSite.negative_test_link}
+            onChange={props.handleChange}
             className="siteBuildFormInput"  
           />
           <div className="siteBuildFormLabel">
@@ -77,9 +75,9 @@ export default function SiteBuildB(setNewSite, newSite) {
           </div>
           <input type="text" 
             id="furtherInformation"
-            name="furtherInfo"
-            value={newSite.furtherInfo}
-            onChange={handleChange}
+            name="more_info_link"
+            value={props.newSite.more_info_link}
+            onChange={props.handleChange}
             className="siteBuildFormInput"  
           />
           <div className="siteBuildContinueButton">
