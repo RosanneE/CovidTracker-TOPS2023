@@ -1,12 +1,43 @@
 /* Partner White Label Page CSS */
 
+*, ::after, ::before {
+  box-sizing: inherit !important;
+}
+
+.partnerH2 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.partnerH3 {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 4rem; /* 120% */
+  text-align: left;
+}
+
 .whyUseMMTCHeader1 {
     margin-bottom: 1.125rem;
+    color: #00426b;
+    text-align: center;
+    font-family: Bitter;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
   
   .whyUseMMTCHeader3 {
-    margin-top: 0rem;
-    margin-bottom: 0.625rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   
   .partnerWMMTC {
@@ -144,6 +175,7 @@
   }
   
   .whyUseMMTCLi {
+    margin-bottom: 1rem;
     flex: 1;
     text-align: left;
   }

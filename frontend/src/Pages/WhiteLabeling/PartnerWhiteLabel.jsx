@@ -25,7 +25,7 @@ function PartnerPage(props) {
 {/* ------------------------------------------------------------ */}
 
       <div className="partneringOptions">
-        <h2>Partnering Options</h2>
+        <h2 className="partnerH2">Partnering Options</h2>
         <p>
           It doesn’t have to be complicated. If your tech is limited, simply add
           a link <br/> 
@@ -35,7 +35,7 @@ function PartnerPage(props) {
           <tbody>
             <tr>
               <td className="partneringTd">
-                <h3>Stand-Alone Site</h3>
+                <h3 className="partnerH3">Stand-Alone Site</h3>
                 <p>
                   Let us create a MakeMyTestCount reporting page with your
                   organizations logo and custom URL.
@@ -67,7 +67,7 @@ function PartnerPage(props) {
                 </ul>
               </td>
               <td className="partneringTd">
-                <h3>Modal Pop-Up</h3>
+                <h3 className="partnerH3">Modal Pop-Up</h3>
                 <p>
                   Embed a MakeMyTestCount plug-in on your website with your
                   logo.
@@ -109,7 +109,7 @@ function PartnerPage(props) {
   <img src={vector3} class="top-right" alt="Top right border"/>
   <img src={vector2} class="bottom-left" alt="Bottom left border"/>
   <img src={vector4} class="bottom-right" alt="Bottom right border"/>
-        <h2>Explore the Tool</h2>
+        <h2 className="partnerH2">Explore the Tool</h2>
         <p>
           Want to know more about how reporting works --- and what a stand-alone<br/>
           site or modal pop-up looks like? Take a look.
@@ -120,7 +120,7 @@ function PartnerPage(props) {
 {/* ------------------------------------------------------------ */}
 
       <div className="whyUseMMTC">
-        <h2>Why Use MakeMyTestCount?</h2>
+        <h2 className="partnerH2">Why Use MakeMyTestCount?</h2>
         <p>
           It’s simple, secure, standardized, scalable, and cost- and effort-free
           to you.
