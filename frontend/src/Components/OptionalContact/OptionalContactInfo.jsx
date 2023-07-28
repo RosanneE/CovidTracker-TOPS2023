@@ -56,7 +56,7 @@ export default function OptionalQuestions1(props) {
           <img
             style={{ width: "42rem", marginBottom: "6rem" }}
             src={strength}
-            alt="Back Arrow"
+            alt="Community is Strength sign"
           />
         </div>
       </div>

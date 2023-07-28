@@ -90,3 +90,33 @@ i {
   margin-left: auto;
   margin-right: auto;
 }
+
+.yesContactInfoDiv {
+  width: 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.yesContactInfoDiv .form-label {
+  color: black;
+  font-size: 1rem;
+}
+
+#optionalContactSubmitButton {
+  color: #fff;
+  font-family: Noto Sans;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+  width: 32rem;
+  border-radius: 2rem;
+  background: #dde5ed;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}

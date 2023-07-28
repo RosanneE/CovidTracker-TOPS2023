@@ -1,6 +1,15 @@
-import { Button } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
+import InstagramIcon from "../../Images/InstagramIcon.png";
+import FacebookIcon from "../../Images/FacebookIcon.png";
+import TwitterIcon from "../../Images/TwitterIcon.png";
 
 export default function FinalSubmission() {
+  const iconStyle = {
+    width: "4.25rem",
+    height: "4.25rem",
+    marginBottom: "4rem",
+  };
+
   return (
     <div className="questionsDiv">
       <h3 className="optionalH3">Results Submitted</h3>
@@ -40,9 +49,28 @@ export default function FinalSubmission() {
       </div>
 
       <h3 className="optionalH3">Share</h3>
-      <p className="optionalContactQuestion" style={{ marginTop: "1rem" }}>
+      <p
+        className="optionalContactQuestion"
+        style={{ marginTop: "1rem", marginBottom: "1rem" }}
+      >
         Share MakeMyTestCount with anyone who wants to make their test count
       </p>
+      <div
+        className="socialMediaIconsDiv"
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        <Row>
+          <Col>
+            <img src={InstagramIcon} alt="Instagram" style={iconStyle} />
+          </Col>
+          <Col>
+            <img src={FacebookIcon} alt="Facebook" style={iconStyle} />
+          </Col>
+          <Col>
+            <img src={TwitterIcon} alt="Twitter" style={iconStyle} />
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 }
