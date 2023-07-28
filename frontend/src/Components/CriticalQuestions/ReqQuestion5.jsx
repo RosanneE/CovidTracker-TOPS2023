@@ -11,7 +11,7 @@ export default function ReqQuestion5(props) {
 
     <div className="questionAnswer">
         <p><span className="question">What is your home Zip Code?</span><span className="asterisk">*</span><br/>
-        <input type="text" placeholder="e.g., 11111"></input></p>
+        <input className="reqQuestionsInput" type="text" placeholder="e.g., 11111"></input></p>
     </div>
 
     <div className="nextButtonDiv">

@@ -11,7 +11,7 @@ export default function ReqQuestion4(props) {
 
     <div className="questionAnswer">
         <p><span className="question">How old are you?</span><span className="asterisk">*</span><br/>
-        <input type="text" placeholder="e.g., 44"></input></p>
+        <input className="reqQuestionsInput" type="text" placeholder="e.g., 44"></input></p>
     </div>
 
     <div className="nextButtonDiv">
