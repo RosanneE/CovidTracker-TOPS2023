@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SiteBuildB.css"
 import statusBar from "../../../Images/SiteBuildStatusBarB.png";
+import { FormContext } from "../../../Context/FormContext";
 
 
-export default function SiteBuildB(props) {
-  
-
-
-
+export default function SiteBuildB() {
+  const { newSite, handleChange } = useContext(FormContext);
 
   return(
     <>
@@ -45,8 +43,8 @@ export default function SiteBuildB(props) {
           <input type="text" 
             id="postiveTestLink"
             name="positive_test_link"
-            value={props.newSite.positiveTest}
-            onChange={props.handleChange}
+            value={newSite.positiveTest}
+            onChange={handleChange}
             className="siteBuildFormInput" 
           />
           <div className="siteBuildFormLabel">
@@ -60,8 +58,8 @@ export default function SiteBuildB(props) {
           <input type="text" 
             id="negativeTestLink"
             name="negative_test_link"
-            value={props.newSite.negative_test_link}
-            onChange={props.handleChange}
+            value={newSite.negative_test_link}
+            onChange={handleChange}
             className="siteBuildFormInput"  
           />
           <div className="siteBuildFormLabel">
@@ -76,8 +74,8 @@ export default function SiteBuildB(props) {
           <input type="text" 
             id="furtherInformation"
             name="more_info_link"
-            value={props.newSite.more_info_link}
-            onChange={props.handleChange}
+            value={newSite.more_info_link}
+            onChange={handleChange}
             className="siteBuildFormInput"  
           />
           <div className="siteBuildContinueButton">
