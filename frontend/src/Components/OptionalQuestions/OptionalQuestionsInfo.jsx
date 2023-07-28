@@ -9,7 +9,7 @@ export default function OptionalQuestionsInfo(props) {
           <img src={backArrow} alt="Back Arrow" />
           <h3>Optional Questions</h3>
         </div>
-        <p style={{ textAlign: "left" }}>
+        <p style={{ textAlign: "left", marginTop: "1rem !important" }}>
           Help your community by answering the following optional-questions anonymously. Any
           data that is shared here will be anonymous and not tied to any information that
           identifies you individually.
