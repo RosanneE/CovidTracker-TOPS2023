@@ -1,0 +1,138 @@
+.backtoPartnerPage {
+  margin-left: 90px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.siteBuildHeader > h1 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.siteBuilderHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 50px;
+}
+
+.siteBuilderHeader > p {
+  margin-bottom: 50px;
+}
+
+
+.siteBuildForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f7f9fa;
+  width: 100%;
+  height: 65rem;
+}
+
+.siteBuildForm > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  
+}
+
+.siteBuildFormInput {
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid #8D8D8D;
+  padding: 1rem;
+  margin: 1.5rem;
+  
+}
+
+.siteBuildFormLabel > label {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  margin: 1rem 0 1rem 0;
+  font-style: normal;
+  line-height: 36px; /* 120% */
+}
+
+.siteBuildP {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 1rem;
+}
+
+.siteBuildFormLabel {
+  text-align: left;
+  
+}
+
+.siteBuildContinueButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 70%;
+}
+
+
+.formHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  
+}
+
+.formHeader > h2 {
+  color: #00426b;
+  font-family: Bitter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: .5rem 1rem 1rem 1rem
+}
+
+.siteBuildBlueButton {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem; /* 100% */
+  border: none;
+  border-radius: 1.875rem;
+  background: #0058b7;
+  height: 3.75rem;
+  padding: 1.25rem 4.313rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 1.25rem;
+}
+
+.siteBuildBlueButton:hover {
+  cursor: pointer;
+}
+
+.siteBuildCGrid {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+
+.siteBuildCGrid > form {
+  grid-column: 2;
+}

@@ -7,7 +7,7 @@ export default function OptionalQuestionsInfo(props) {
       <div className="questionsDiv">
         <div id="optionalQuestionsBackArrow">
           <img src={backArrow} alt="Back Arrow" />
-          <h3>Optional Questions</h3>
+          <h3 className="optionalH3">Optional Questions</h3>
         </div>
         <p style={{ textAlign: "left", marginTop: "1rem !important" }}>
           Help your community by answering the following optional-questions anonymously. Any
