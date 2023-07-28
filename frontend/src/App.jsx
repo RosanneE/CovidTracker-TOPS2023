@@ -33,7 +33,7 @@ function App() {
         {/* <Route path="/SiteBuildC" element={<SiteBuildC />} /> */}
         <Route path="/CriticalQuestions" element={<CriticalQuestions />} />
         <Route path="/OptionalQuestions" element={<OptionalQuestions />} />
-        <Route path="/OptionalContactInfo" element={<OptionalContactInfo />} />
+        <Route path="/OptionalContact" element={<OptionalContactInfo />} />
         <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} />
         <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
       </Routes>
