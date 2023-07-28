@@ -3,19 +3,18 @@ import "./SiteBuildB.css"
 import statusBar from "../../../Images/SiteBuildStatusBarB.png";
 
 
-export default function SiteBuildB(setNewSite, newSite) {
+export default function SiteBuildB({setNewSite, newSite, pageNumber, setPageNumber}) {
   function handleChange(evt){
     setNewSite(...newSite)
   }
-
-
 
 
   return(
     <>
 
       <div className="backtoPartnerPage">
-        <a href="#">{"\u003C"} Back to Partner Page </a>
+        {/* don't forget to update this link before production */}
+        <a href="http://localhost:3000/PartnerWhiteLabel">{"\u003C"} Back to Partner Page </a>
       </div>
 
       <div className="siteBuildHeader">
@@ -31,7 +30,7 @@ export default function SiteBuildB(setNewSite, newSite) {
       <div className="siteBuildForm">
         <div className="formHeader">
           <h2>COVID-19 Resources</h2>
-          <a href="#">Skip this step {"\u003E"}</a>
+          <p onClick={() => setPageNumber(2)}>Skip this step {"\u003E"}</p>
         </div>
         <form action="">
           <div className="siteBuildFormLabel">
@@ -83,8 +82,8 @@ export default function SiteBuildB(setNewSite, newSite) {
             className="siteBuildFormInput"  
           />
           <div className="siteBuildContinueButton">
-            <a href="#">{"\u003C"} Go back</a>
-            <button className="siteBuildBlueButton">Continue</button>
+          <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
+            <button className="siteBuildBlueButton" onClick={() => setPageNumber(2)}>Continue</button>
           </div>
         </form>
       </div>
