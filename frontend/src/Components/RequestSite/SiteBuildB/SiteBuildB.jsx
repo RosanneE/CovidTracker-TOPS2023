@@ -1,56 +1,43 @@
 import React from "react";
-import "./SiteBuildB.css";
-import { useState } from "react"
-import statusBar from "../../Images/SiteBuildStatusBarB.png"
+import "./SiteBuildB.css"
+import statusBar from "../../../Images/SiteBuildStatusBarB.png";
 
 
-export default function SiteBuildB() {
-  const [newWebsite, setNewWebsite] = useState({
-    contactName: "",
-    organizationName: "",
-    email: "",
-    siteOrigin: "",
-    homeLink: "",
-    positiveTest: "",
-    negativeTest: "",
-    furtherInfo: "",
-  });
-
-  function handleChange(evt) {
-    setNewWebsite({...newWebsite, [evt.target.name]: evt.target.value});
+export default function SiteBuildB(setNewSite, newSite) {
+  function handleChange(evt){
+    setNewSite(...newSite)
   }
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
-  }
+
+
 
   return(
     <>
 
-      <div className="bBacktoPartnerPage">
+      <div className="backtoPartnerPage">
         <a href="#">{"\u003C"} Back to Partner Page </a>
       </div>
 
-      <div className="bHeader">
+      <div className="siteBuildHeader">
         <h1>Request a Stand-Alone Site </h1>
-        <p>
+        <p className="siteBuildP">
           After you submit this form our team will reach out to you to start the
           the process and clarify any additional details.
         </p>
-        <img src={statusBar} alt="" />
+        <img src={statusBar} alt="" style={{maxWidth:"100%", width:"40.25rem", margin:"2rem"}} />
         
       </div>
       
-      <div className="bForm">
+      <div className="siteBuildForm">
         <div className="formHeader">
           <h2>COVID-19 Resources</h2>
           <a href="#">Skip this step {"\u003E"}</a>
         </div>
         <form action="">
-          <div className="bFormLabel">
+          <div className="siteBuildFormLabel">
 
             <label htmlFor="postiveTestLink">Positive-Test Link</label>
-            <p> 
+            <p className="siteBuildP"> 
               If the user has tested positive, where can they find additional
               instructions? (if the field is left blank, users will be direct to
               the instructions page on MakeMyTestCount.org for users
@@ -60,12 +47,13 @@ export default function SiteBuildB() {
           <input type="text" 
             id="postiveTestLink"
             name="positiveTest"
-            value={newWebsite.positiveTest}
-            onChange={handleChange} 
+            value={newSite.positiveTest}
+            onChange={handleChange}
+            className="siteBuildFormInput" 
           />
-          <div className="bFormLabel">
+          <div className="siteBuildFormLabel">
             <label htmlFor="negativeTestLink">Negative-Test Link</label>
-            <p>
+            <p className="siteBuildP">
               If the user has tested negative, where can they find additional instructions?
               (if this field is left blank, users will be directed to
               the instructions page on MakeMyTestCount.org for users reporting negative results.)
@@ -74,12 +62,13 @@ export default function SiteBuildB() {
           <input type="text" 
             id="negativeTestLink"
             name="negativeTest"
-            value={newWebsite.negativeTest}
-            onChange={handleChange} 
+            value={newSite.negativeTest}
+            onChange={handleChange}
+            className="siteBuildFormInput"  
           />
-          <div className="bFormLabel">
+          <div className="siteBuildFormLabel">
             <label htmlFor="furtherInformation">Link to Further information about COVID-19</label>
-            <p>
+            <p className="siteBuildP">
               Where can the user find additional information? 
               (if this field is left blank, users will be directed 
               to WhenToTest.org for further infomration about COVID-19.)
@@ -89,12 +78,13 @@ export default function SiteBuildB() {
           <input type="text" 
             id="furtherInformation"
             name="furtherInfo"
-            value={newWebsite.furtherInfo}
-            onChange={handleChange} 
+            value={newSite.furtherInfo}
+            onChange={handleChange}
+            className="siteBuildFormInput"  
           />
-          <div className="bContinueButton">
+          <div className="siteBuildContinueButton">
             <a href="#">{"\u003C"} Go back</a>
-            <button className="blueButton">Continue</button>
+            <button className="siteBuildBlueButton">Continue</button>
           </div>
         </form>
       </div>
