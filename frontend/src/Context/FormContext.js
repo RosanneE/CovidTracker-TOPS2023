@@ -15,6 +15,11 @@ export const FormProvider = ({ children }) => {
         positive_test_link: "",
         negative_test_link: "",
         more_info_link: "",
+        logo: "",
+        cover_photo: "",
+        custom_message: "",
+        social_sharing_message: "",
+        color_theme: "",
       });
 
 

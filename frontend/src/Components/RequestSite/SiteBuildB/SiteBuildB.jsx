@@ -4,13 +4,8 @@ import statusBar from "../../../Images/SiteBuildStatusBarB.png";
 import { FormContext } from "../../../Context/FormContext";
 
 
-export default function SiteBuildB( pageNumber, setPageNumber) {
+export default function SiteBuildB({ pageNumber, setPageNumber }) {
   const { newSite, handleChange } = useContext(FormContext);
-  // function handleChange(evt){
-  //   setNewSite(...newSite)
-  // }
-
-
 
 
   return(
