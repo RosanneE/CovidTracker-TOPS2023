@@ -6,8 +6,8 @@ const app = express();
 
 require("dotenv").config();
 
-// Define the port the server will run on.
-const port = process.env.PORT || 3030;
+// Define the port the client server will run on.
+const port = process.env.USERPORT || 3030;
 
 // Create a new PostgreSQL client
 const client = new Client({
@@ -65,11 +65,16 @@ app.post("/users", async (req, res) => {
       positive_test_link,
       negative_test_link,
       more_info_link,
+      logo,
+      cover_photo,
+      custom_message,
+      social_sharing_message,
+      color_theme,
     } = req.body;
 
     // Insert the new user into the database
     const query =
-      "INSERT INTO users (contact_name, org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *";
+      "INSERT INTO users (contact_name, org_name, email, site_origin, home_link, positive_test_link, negative_test_link, more_info_link, created_at, updated_at, logo, cover_photo, custom_message, social_sharing_message, color_theme) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING *";
     const values = [
       contact_name,
       org_name,
@@ -81,6 +86,11 @@ app.post("/users", async (req, res) => {
       more_info_link,
       new Date(),
       new Date(),
+      logo,
+      cover_photo,
+      custom_message,
+      social_sharing_message,
+      color_theme,
     ];
     const result = await client.query(query, values);
     const newUser = result.rows[0];
