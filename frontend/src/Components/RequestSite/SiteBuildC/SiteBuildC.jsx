@@ -4,7 +4,7 @@ import statusBar from "../../../Images/SiteBuildStatusBarC.png";
 import { FormContext } from "../../../Context/FormContext";
 
 
-export default function SiteBuildC({pageNumber, setPageNumber}) {
+export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
   const { newSite, handleChange } = useContext(FormContext);
 
   return(
@@ -98,7 +98,8 @@ export default function SiteBuildC({pageNumber, setPageNumber}) {
 
             <div className="siteBuildContinueButton">
             <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
-              <button className="siteBuildBlueButton" onClick={() => setPageNumber(3)}>Continue</button>
+              {/* <button className="siteBuildBlueButton" onClick={() => setPageNumber(3)}>Continue</button> */}
+              <button className="siteBuildBlueButton" onClick={()=>navigateToReviewAndSubmit()}>Continue</button>
             </div>
           </form>
         </div>
