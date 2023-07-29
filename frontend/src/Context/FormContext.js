@@ -32,7 +32,23 @@ export const FormProvider = ({ children }) => {
 
       const handleSubmit = (event) => {
         event.preventDefault();
-        // form submission goes here
+        
+        const data = JSON.stringify(newSite);
+
+        fetch("http://localhost:5423/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: data,
+        })
+        .then((res) => res.json())
+        .then((newUser) => {
+          console.log("New user created: ", newUser);
+        })
+        .catch((err) => {
+          console.error("Error creating new user: ", err);
+        });
       };
 
       return (
