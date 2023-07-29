@@ -4,6 +4,12 @@ const { Client } = require("pg");
 // Create a new Express application
 const app = express();
 
+// Allow cross-origin requests (frontend)
+const cors = require("cors")
+
+// Enable CORS for all routes
+app.use(cors());
+
 require("dotenv").config();
 
 // Define the port the client server will run on.
