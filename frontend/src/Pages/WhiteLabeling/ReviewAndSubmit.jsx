@@ -1,22 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ReviewAndSubmitPic from "../../Images/ReviewAndSubmitPic.png";
 import LeftArrow from "../../Images/LeftArrow.png";
 import "./WhiteLabelingCSS/ReviewAndSubmit.css"
+import { FormContext } from "../../Context/FormContext";
+
 
 function ReviewAndSubmit() {
-  const [contactInfo, setContactInfo] = useState({
-    email: "",
-    phone: "",
-  });
+  // const [contactInfo, setContactInfo] = useState({
+  //   email: "",
+  //   phone: "",
+  // });
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setContactInfo({
-      ...contactInfo,
-      [name]: value,
-    });
-  }
+  // function handleChange(event) {
+  //   const { name, value } = event.target;
+  //   setContactInfo({
+  //     ...contactInfo,
+  //     [name]: value,
+  //   });
+  // }
 
+  const { newSite, handleChange, handleSubmit } =useContext(FormContext)
 //   function handleSubmit(event) {
 //     event.preventDefault();
 //   }
@@ -37,7 +40,7 @@ function ReviewAndSubmit() {
           className="reviewAndSubmitInput"
           type="text"
           name="contactName"
-          value={contactInfo.contactName}
+          value={newSite.contact_name}
           onChange={handleChange}
         />
       </div>
@@ -47,7 +50,7 @@ function ReviewAndSubmit() {
           className="reviewAndSubmitInput"
           type="text"
           name="org_name"
-          value={contactInfo.org_name}
+          value={newSite.org_name}
           onChange={handleChange}
         />
       </div>
@@ -57,7 +60,7 @@ function ReviewAndSubmit() {
           className="reviewAndSubmitInput"
           type="email"
           name="email"
-          value={contactInfo.email}
+          value={newSite.email}
           onChange={handleChange}
         />
       </div>
@@ -67,7 +70,7 @@ function ReviewAndSubmit() {
           className="reviewAndSubmitInput"
           type="text"
           name="home_link"
-          value={contactInfo.email}
+          value={newSite.email}
           onChange={handleChange}
         />
       </div>

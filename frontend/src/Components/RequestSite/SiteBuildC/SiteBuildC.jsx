@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SiteBuildC.css"
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
+import { FormContext } from "../../../Context/FormContext";
 
 
-export default function SiteBuildC({setNewSite, newSite, pageNumber, setPageNumber}) {
-  function handleChange(evt){
-    setNewSite(...newSite)
-  }
-
-
+export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
+  const { newSite, handleChange } = useContext(FormContext);
 
   return(
     <>
@@ -48,9 +45,9 @@ export default function SiteBuildC({setNewSite, newSite, pageNumber, setPageNumb
               </p>
             </div>
             <input type="text" 
-              id="postiveTestLink"
-              name="positiveTest"
-              value={newSite.positiveTest}
+              id="logo"
+              name="logo"
+              value={newSite.logo}
               onChange={handleChange}
               className="siteBuildFormInput" 
             />
@@ -61,9 +58,9 @@ export default function SiteBuildC({setNewSite, newSite, pageNumber, setPageNumb
               </p>
             </div>
             <input type="text" 
-              id="negativeTestLink"
-              name="negativeTest"
-              value={newSite.negativeTest}
+              id="cover_photo"
+              name="cover_photo"
+              value={newSite.cover_photo}
               onChange={handleChange}
               className="siteBuildFormInput"  
             />
@@ -74,9 +71,9 @@ export default function SiteBuildC({setNewSite, newSite, pageNumber, setPageNumb
               </p>
             </div>
             <input type="text" 
-              id="furtherInformation"
-              name="furtherInfo"
-              value={newSite.furtherInfo}
+              id="custom_message"
+              name="custom_message"
+              value={newSite.custom_message}
               onChange={handleChange}
               className="siteBuildFormInput"  
             />
@@ -88,9 +85,9 @@ export default function SiteBuildC({setNewSite, newSite, pageNumber, setPageNumb
               </p>
             </div>
             <input type="text" 
-              id="furtherInformation"
-              name="furtherInfo"
-              value={newSite.furtherInfo}
+              id="social_sharing_message"
+              name="social_sharing_message"
+              value={newSite.social_sharing_message}
               onChange={handleChange}
               className="siteBuildFormInput"  
             />
@@ -101,7 +98,8 @@ export default function SiteBuildC({setNewSite, newSite, pageNumber, setPageNumb
 
             <div className="siteBuildContinueButton">
             <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
-              <button className="siteBuildBlueButton" onClick={() => setPageNumber(3)}>Continue</button>
+              {/* <button className="siteBuildBlueButton" onClick={() => setPageNumber(3)}>Continue</button> */}
+              <button className="siteBuildBlueButton" onClick={()=>navigateToReviewAndSubmit()}>Continue</button>
             </div>
           </form>
         </div>

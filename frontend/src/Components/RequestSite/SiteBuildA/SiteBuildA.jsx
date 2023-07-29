@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SiteBuildA.css"
 import statusBar from "../../../Images/SiteBuildStatusBarA.png";
+import { FormContext } from "../../../Context/FormContext";
 
 
-export default function SiteBuildA({ newSite, setNewSite, pageNumber, setPageNumber}) {
-  function handleChange(evt){
-    setNewSite(...newSite)
-  }
-
-
+export default function SiteBuildA({ pageNumber, setPageNumber }) {
+  const { newSite, handleChange } = useContext(FormContext);
 
 
   return(
@@ -43,7 +40,7 @@ export default function SiteBuildA({ newSite, setNewSite, pageNumber, setPageNum
           </div>
           <input type="text" 
             id="contact_name"
-            name="conact_name"
+            name="contact_name"
             value={newSite.contact_name}
             onChange={handleChange}
             className="siteBuildFormInput" 
@@ -51,7 +48,7 @@ export default function SiteBuildA({ newSite, setNewSite, pageNumber, setPageNum
 
 
           <div className="siteBuildFormLabel">
-            <label htmlFor="org_name">Organizatoin Name:</label>
+            <label htmlFor="org_name">Organization Name:</label>
           </div>
           <input type="text" 
             id="org_name"
