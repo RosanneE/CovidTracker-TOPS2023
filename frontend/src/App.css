@@ -112,7 +112,8 @@ h3 {
   color: #00426b;
   text-align: center;
   font-family: Bitter;
-  font-size: 64px;
+  /* font-size: 64px; */
+  font-size: 24px;
   font-style: normal;
   line-height: normal;
   /* width: 100%; */
@@ -135,8 +136,77 @@ h3 {
   text-decoration: none;
   color: #00426B;
   font-weight: 500;
+  margin: 0 15px;
+  cursor: pointer;
   /* transition: transform 1s ease-in-out; */
 }
+
+/* Hamburger Menu Styles */
+
+.nav-hamburger {
+  display: none; /* Hide the hamburger menu by default on larger screens */
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 4px;
+  background-color: #00426B;
+  margin: 5px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+/* Media query for smaller screens (mobile) */
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none; /* Hide the menu by default on mobile screens */
+  }
+
+  .nav-hamburger {
+    display: flex; /* Show the hamburger menu on mobile screens */
+    /* align-items: center;
+    justify-content: center;
+    margin-right: 20px; */
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    /* background-color: #1f304f; */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  .nav-list.show {
+    display: flex; /* Show the menu when the hamburger is clicked */
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Adjust this value to control the distance from the top */
+    right: 10px;
+    background-color: #1f304f;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999; /* Ensure the menu is above other content */
+  }
+
+  .nav-list-item {
+    margin: 10px 0;
+  }
+
+  .hamburger-line.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-3px, 6px);
+  }
+
+  .hamburger-line.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-line.open:nth-child(3) {
+    transform: rotate(45deg) translate(-3px, -6px);
+  }
+}
+
 
 /* footer */
 .image-with-border {
