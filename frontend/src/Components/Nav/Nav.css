@@ -1,0 +1,56 @@
+/* Hamburger Menu Styles */
+
+.nav-hamburger {
+    display: none; /* Hide the hamburger menu by default on larger screens */
+    cursor: pointer;
+  }
+  
+  .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: transform 0.3s ease;
+  }
+  /* Media query for smaller screens (mobile) */
+  
+  @media screen and (max-width: 768px) {
+    .nav-list {
+      display: none; /* Hide the menu by default on mobile screens */
+    }
+  
+    .nav-hamburger {
+      display: flex; /* Show the hamburger menu on mobile screens */
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+  
+    .nav-list.show {
+      display: flex; /* Show the menu when the hamburger is clicked */
+      flex-direction: column;
+      position: absolute;
+      top: 80px; /* Adjust this value to control the distance from the top */
+      right: 10px;
+      background-color: #1f304f;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 999; /* Ensure the menu is above other content */
+    }
+  
+    .nav-list-item {
+      margin: 10px 0;
+    }
+  
+    .hamburger-line.open:nth-child(1) {
+      transform: rotate(-45deg) translate(-3px, 6px);
+    }
+  
+    .hamburger-line.open:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger-line.open:nth-child(3) {
+      transform: rotate(45deg) translate(-3px, -6px);
+    }
+  }
