@@ -25,7 +25,7 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
     <div className="">
       <div className="">
         <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow">
-          <img src={backArrow} alt="Back Arrow" />
+          <img src={backArrow} alt="Back Arrow" onClick={()=>setDemoPage(demoPage -1)}/>
           <h3 className="optionalH3">Optional Contact Info</h3>
         </div>
         <Form onSubmit={handleSubmit}>
@@ -58,8 +58,14 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
             src={strength}
             alt="Community is Strength sign"
           />
+
+        <div className="nextButtonDiv">
+          <button className="nextButton" onClick={()=> setDemoPage(demoPage + 1)}>Next</button>
+        </div>
+
         </div>
       </div>
     </div>
   );
 }
+

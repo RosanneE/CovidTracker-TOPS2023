@@ -1,10 +1,16 @@
 import { Form, Row, Col, Button } from "react-bootstrap";
+import backArrow from "../../../../Images/Button - Back to Step 2.png";
 
 export default function YesContactInfo({ demoPage, setDemoPage }) {
   const inputStyle = { marginBottom: "1.5rem", marginRight: "1rem" };
 
   return (
     <div className="yesContactInfoDiv">
+
+        <div style={{ marginBottom: "0.1rem" }} >
+          <img src={backArrow} alt="Back Arrow" onClick={()=>setDemoPage(demoPage -1)}/>
+          <h3 className="optionalH3">Optional Contact Info</h3>
+        </div>
       <Form>
         <Row>
           <Col style={inputStyle}>
@@ -63,7 +69,7 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
           id="optionalContactSubmitButton"
           style={{ marginBottom: "5rem" }}
           type="Submit"
-          onClick={()=> setDemoPage(6)}
+          onClick={()=> setDemoPage(10)}
         >
           Submit
         </Button>

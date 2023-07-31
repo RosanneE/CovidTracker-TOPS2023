@@ -6,8 +6,11 @@ export default function ReqQuestion3({ demoPage, setDemoPage }) {
  return ( 
     <>
     
-    <img src={backArrow} alt="Back Arrow"/>
- 
+   
+    <div className="questionNumber">
+    <img src={backArrow} alt="Back Arrow" onClick={()=>setDemoPage(demoPage -1)}/>
+    Required Question 3 of 5
+    </div>
 
     <div className="questionAnswer">
         <p><span className="question">When did you test?</span><span className="asterisk">*</span><br/>
@@ -16,6 +19,10 @@ export default function ReqQuestion3({ demoPage, setDemoPage }) {
 
     <div className="calendar">
     <ReqQuestionCalendar />
+    </div>
+
+    <div className="nextButtonDiv">
+        <button className="nextButton" onClick={()=> setDemoPage(demoPage + 1)}>Next</button>
     </div>
     </>
 )}

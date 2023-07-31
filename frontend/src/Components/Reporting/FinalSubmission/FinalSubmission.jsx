@@ -2,6 +2,7 @@ import { Button, Row, Col } from "react-bootstrap";
 import InstagramIcon from "../../../Images/InstagramIcon.png";
 import FacebookIcon from "../../../Images/FacebookIcon.png";
 import TwitterIcon from "../../../Images/TwitterIcon.png";
+import backArrow from "../../../Images/Button - Back to Step 2.png"
 
 export default function FinalSubmission({ demoPage, setDemoPage }) {
   const iconStyle = {
@@ -12,6 +13,10 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
 
   return (
     <div className="questionsDiv">
+      <div className="questionNumber">
+        <img src={backArrow} alt="Back Arrow" onClick={()=>setDemoPage(demoPage -1)}/>
+      </div>
+
       <h3 className="optionalH3">Results Submitted</h3>
       <p
         className="optionalContactQuestion"

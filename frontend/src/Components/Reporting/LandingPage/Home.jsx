@@ -1,15 +1,15 @@
-import HomeImg from "../Images/HomeImg.png";
-import { Link } from "react-router-dom";
+import HomeImg from "../../../Images/HomeImg.png";
 
-function Home(props) {
+
+function Home({demoPage, setDemoPage}) {
     return(
       <>
     <div className="home-page" style={{ height: '50rem' }} >
       <img src={HomeImg} alt="HomeImg" style={{ height: '30rem' }}/>  
       <h1 className="home-h1">Took an at-home test?</h1>
-      <Link to="/SiteDemo">
-        <button className="blueButton">REPORT YOUR RESULTS</button>
-      </Link>
+
+        <button className="blueButton" onClick={()=>setDemoPage(1)}>REPORT YOUR RESULTS</button>
+
     </div>
     <section>
       <div className="home-p">
