@@ -1,5 +1,6 @@
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
 import { Button } from "react-bootstrap";
+import "../../OptionalQuestions/OptionalQuestions.css"
 
 export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
   return (

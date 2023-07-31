@@ -1,5 +1,6 @@
 import { Form, Row, Col, Button } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
+import "../../OptionalContact/OptionalContact.css"
 
 export default function YesContactInfo({ demoPage, setDemoPage }) {
   const inputStyle = { marginBottom: "1.5rem", marginRight: "1rem" };

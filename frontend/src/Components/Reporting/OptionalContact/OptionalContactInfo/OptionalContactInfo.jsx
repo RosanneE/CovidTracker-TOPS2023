@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, ButtonGroup } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
 import strength from "../../../../Images/strength.png";
+import "../../OptionalContact/OptionalContact.css"
 
 export default function OptionalContactInfo({ demoPage, setDemoPage }) {
   const [answer, setAnswer] = useState(null);

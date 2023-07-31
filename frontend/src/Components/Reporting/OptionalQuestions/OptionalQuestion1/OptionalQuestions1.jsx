@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, ButtonGroup } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
+import "../../OptionalQuestions/OptionalQuestions.css"
+
 
 export default function OptionalQuestions1({ demoPage, setDemoPage }) {
   const [answers, setAnswers] = useState({});
