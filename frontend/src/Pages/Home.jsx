@@ -1,4 +1,5 @@
 import HomeImg from "../Images/HomeImg.png";
+import { Link } from "react-router-dom";
 
 function Home(props) {
     return(
@@ -6,7 +7,9 @@ function Home(props) {
     <div className="home-page" style={{ height: '50rem' }} >
       <img src={HomeImg} alt="HomeImg" style={{ height: '30rem' }}/>  
       <h1 className="home-h1">Took an at-home test?</h1>
-      <button className="blueButton">REPORT YOUR RESULTS</button>
+      <Link to="/SiteDemo">
+        <button className="blueButton">REPORT YOUR RESULTS</button>
+      </Link>
     </div>
     <section>
       <div className="home-p">
