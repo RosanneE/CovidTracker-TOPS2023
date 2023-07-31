@@ -115,7 +115,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
           Want to know more about how reporting works --- and what a stand-alone<br/>
           site or modal pop-up looks like? Take a look.
         </p>
-        <Link to="/SiteDemo">
+        <Link to="/">
           <button className="blueButton dissolveEffect">Explore Site Demo</button>
         </Link>
       </div>

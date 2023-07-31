@@ -11,7 +11,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
  return ( 
     <>
     <div className="questionNumber">
-    <img src={backArrow} alt="Back Arrow"/>
+    <img src={backArrow} alt="Back Arrow" onClick={()=> setDemoPage(demoPage -1)}/>
     Required Question 2 of 5
     </div>
 
@@ -46,7 +46,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
         <br/>
         <button className="otherButton">Other</button>
         {/* adding temp next page button  */}
-        <button onClick={()=>setDemoPage(2)}>Next Page</button>
+        <button onClick={()=>setDemoPage(demoPage + 1)}>Next Page</button>
         </p>
     </div>
     </>

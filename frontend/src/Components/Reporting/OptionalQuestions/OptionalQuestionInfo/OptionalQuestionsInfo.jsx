@@ -6,7 +6,7 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
     <div>
       <div className="questionsDiv">
         <div id="optionalQuestionsBackArrow">
-          <img src={backArrow} alt="Back Arrow" />
+          <img src={backArrow} alt="Back Arrow" onClick={()=> setDemoPage(demoPage -1)}/>
           <h3 className="optionalH3">Optional Questions</h3>
         </div>
         <p style={{ textAlign: "left", marginTop: "1rem !important" }}>
@@ -29,13 +29,13 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
         </p>
       </div>
       <div className="nextButtonDiv">
-        <Button id="optionalQuestionsNextButton" style={{ marginTop: "1.5rem" }} type="Next"  onClick={()=>setDemoPage(4)}>
+        <Button id="optionalQuestionsNextButton" style={{ marginTop: "1.5rem" }} type="Next"  onClick={()=>setDemoPage(demoPage + 1)}>
           Next
         </Button>
       </div>
-      <a style={{ display: "block", marginBottom: "1.5rem" }} href="/">
+      <p style={{ display: "block", marginBottom: "1.5rem" }} onClick={()=> setDemoPage(demoPage + 1)}>
         Skip & Submit
-      </a>
+      </p>
     </div>
   );
 }

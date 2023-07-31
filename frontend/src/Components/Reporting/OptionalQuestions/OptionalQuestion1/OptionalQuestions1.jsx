@@ -58,9 +58,10 @@ export default function OptionalQuestions1({ demoPage, setDemoPage }) {
   return (
     <div className="">
       <div className="">
-        <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow">
-          <img src={backArrow} alt="Back Arrow" />
-          <h3 className="optionalH3">Optional Questions</h3>
+   
+        <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow" >
+          <img src={backArrow} alt="Back Arrow" onClick={()=> setDemoPage(demoPage -1)}/>
+          <h3 className="optionalH3" >Optional Questions</h3>
         </div>
         <Form onSubmit={handleSubmit}>
           {questions.map((question) => (
@@ -87,13 +88,13 @@ export default function OptionalQuestions1({ demoPage, setDemoPage }) {
           ))}
         </Form>
         <div className="nextButtonDiv">
-          <Button id="optionalQuestionsNextButton" style={{ marginTop: "2.5rem" }} type="Next" onClick={() => setDemoPage(5)}>
+          <Button id="optionalQuestionsNextButton" style={{ marginTop: "2.5rem" }} type="Next" onClick={() => setDemoPage(demoPage + 1)}>
             Next
           </Button>
         </div>
-        <a style={{ display: "block", marginBottom: "1.5rem" }} href="/">
-          Skip & Submit
-        </a>
+        <p style={{ display: "block", marginBottom: "1.5rem" }} onClick={()=> setDemoPage(demoPage + 1)}>
+        Skip & Submit
+      </p>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
  return ( 
     <>
     <div className="questionNumber">
-    <img src={backArrow} alt="Back Arrow"/>
+    <img src={backArrow} alt="Back Arrow" onClick={()=>setDemoPage(demoPage -1)}/>
     Required Question 1 of 5
     </div>
 
@@ -21,11 +21,11 @@ test result?</span><span className="asterisk">*</span><br/>
 
 {/* ------------------ Need to create a useState for postive or negative  ---------------------*/}
 
-<button className="positiveNegative dissolveEffect" onClick={()=>setDemoPage(1)}>
+<button className="positiveNegative dissolveEffect" onClick={()=>setDemoPage(2)}>
     <img src={tissue} alt="Happy face" style={{maxWidth:"100%", width:"2rem"}}/> Positive
 </button> 
 
-<button className="positiveNegative dissolveEffect" onClick={()=>setDemoPage(1)}>
+<button className="positiveNegative dissolveEffect" onClick={()=>setDemoPage(2)}>
     <img src={happy} alt="Happy face" style={{maxWidth:"100%", width:"2rem"}}/> Negative
 </button><br/>
 
