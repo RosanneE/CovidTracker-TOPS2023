@@ -27,6 +27,7 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
           Public health teams at the state and local level can also get data from
           MakeMyTestCount and your anonymous data can help make important health decisions!
           Thank you for your help!
+          
         </p>
       </div>
       <div className="nextButtonDiv">
