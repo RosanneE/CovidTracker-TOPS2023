@@ -6,23 +6,8 @@ import { FormContext } from "../../../Context/FormContext";
 
 
 function ReviewAndSubmit({pageNumber, setPageNumber}) {
-  // const [contactInfo, setContactInfo] = useState({
-  //   email: "",
-  //   phone: "",
-  // });
-
-  // function handleChange(event) {
-  //   const { name, value } = event.target;
-  //   setContactInfo({
-  //     ...contactInfo,
-  //     [name]: value,
-  //   });
-  // }
 
   const { newSite, handleChange, handleSubmit } =useContext(FormContext)
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//   }
 
   return (
     <table className="reviewAndSubmit">
@@ -39,7 +24,7 @@ function ReviewAndSubmit({pageNumber, setPageNumber}) {
         <input
           className="reviewAndSubmitInput"
           type="text"
-          name="contactName"
+          name="contact_name"
           value={newSite.contact_name}
           onChange={handleChange}
         />
