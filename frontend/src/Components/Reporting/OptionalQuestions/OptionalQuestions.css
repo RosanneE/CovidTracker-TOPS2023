@@ -64,6 +64,7 @@
 }
 
 .questionsDiv {
+  color: #00426b;
   width: 42rem;
   display: flex;
   flex-wrap: wrap;

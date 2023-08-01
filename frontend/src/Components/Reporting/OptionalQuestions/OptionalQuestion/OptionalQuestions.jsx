@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, ButtonGroup } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
-import "../../OptionalQuestions/OptionalQuestions.css"
+import "../../OptionalQuestions/OptionalQuestions.css";
 
-
-export default function OptionalQuestions1({ demoPage, setDemoPage }) {
+export default function OptionalQuestions({ demoPage, setDemoPage }) {
   const [answers, setAnswers] = useState({});
 
   const questions = [
@@ -60,10 +59,9 @@ export default function OptionalQuestions1({ demoPage, setDemoPage }) {
   return (
     <div className="">
       <div className="">
-   
-        <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow" >
-          <img src={backArrow} alt="Back Arrow" onClick={()=> setDemoPage(demoPage -1)}/>
-          <h3 className="optionalH3" >Optional Questions</h3>
+        <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow">
+          <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+          <h3 className="optionalH3">Optional Questions</h3>
         </div>
         <Form onSubmit={handleSubmit}>
           {questions.map((question) => (
@@ -90,13 +88,21 @@ export default function OptionalQuestions1({ demoPage, setDemoPage }) {
           ))}
         </Form>
         <div className="nextButtonDiv">
-          <Button id="optionalQuestionsNextButton" style={{ marginTop: "2.5rem" }} type="Next" onClick={() => setDemoPage(demoPage + 1)}>
+          <Button
+            id="optionalQuestionsNextButton"
+            style={{ marginTop: "2.5rem" }}
+            type="Next"
+            onClick={() => setDemoPage(demoPage + 1)}
+          >
             Next
           </Button>
         </div>
-        <p style={{ display: "block", marginBottom: "1.5rem" }} onClick={()=> setDemoPage(demoPage + 1)}>
-        Skip & Submit
-      </p>
+        <p
+          style={{ display: "block", marginBottom: "1.5rem" }}
+          onClick={() => setDemoPage(demoPage + 1)}
+        >
+          Skip & Submit
+        </p>
       </div>
     </div>
   );
