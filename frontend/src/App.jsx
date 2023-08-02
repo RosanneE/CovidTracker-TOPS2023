@@ -22,6 +22,7 @@ import OptionalContactInfo from "./Components/Reporting/OptionalContact/Optional
 import YesContactInfo from "./Components/Reporting/OptionalContact/YesContactInfo/YesContactInfo";
 import OptionalQuestions1 from "./Components/Reporting/OptionalQuestions/OptionalQuestion1/OptionalQuestions1";
 import OptionalQuestionsInfo from "./Components/Reporting/OptionalQuestions/OptionalQuestionInfo/OptionalQuestionsInfo";
+import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function App() {
             <Route path="/OptionalContactInfo" element={<OptionalContactInfo />} />
             <Route path="/OptionalQuestions1" element={<OptionalQuestions1 />} />
             <Route path="/OptionalQuestionsInfo" element={<OptionalQuestionsInfo />} />
-       
+            <Route path="/CustomSite" element={<CustomSite />} />
           
         </Routes>
       </FormProvider>
