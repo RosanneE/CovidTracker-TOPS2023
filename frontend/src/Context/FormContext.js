@@ -29,8 +29,8 @@ export const FormProvider = ({ children }) => {
           [event.target.name]: event.target.value,
         });
       };
-
-      const handleSubmit = (event) => {
+      // Either here or on review and submit page need to navigate to requestConfirmation page if POST success or specify error otherwise
+      const handleReviewSubmit = (event) => {
         event.preventDefault();
         
         const data = JSON.stringify(newSite);
@@ -52,7 +52,7 @@ export const FormProvider = ({ children }) => {
       };
 
       return (
-        <FormContext.Provider value ={{ newSite, handleChange, handleSubmit }} >
+        <FormContext.Provider value ={{ newSite, handleChange, handleReviewSubmit }} >
             {children}
         </FormContext.Provider>
       )

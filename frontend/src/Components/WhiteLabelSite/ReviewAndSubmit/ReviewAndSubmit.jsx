@@ -7,7 +7,8 @@ import { FormContext } from "../../../Context/FormContext";
 
 function ReviewAndSubmit({pageNumber, setPageNumber}) {
 
-  const { newSite, handleChange, handleSubmit } =useContext(FormContext)
+  const { newSite, handleChange, handleReviewSubmit } =useContext(FormContext)
+
 
   return (
     <table className="reviewAndSubmit">
@@ -68,7 +69,7 @@ function ReviewAndSubmit({pageNumber, setPageNumber}) {
         </p>
         
         </div>
-        <button style={{marginRight:"none"}}className="blueButton dissolveEffect" onClick={(event)=>handleSubmit(event)}>Submit request</button>
+        <button style={{marginRight:"none"}}className="blueButton dissolveEffect" onClick={(event)=>handleReviewSubmit(event)}>Submit request</button>
       </div>
       
     </div>
