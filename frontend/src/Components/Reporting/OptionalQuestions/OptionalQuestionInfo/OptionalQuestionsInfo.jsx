@@ -9,7 +9,9 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
         <div id="optionalQuestionsBackArrow">
           <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
         </div>
-        <h3 className="optionalH3">Optional Questions</h3>
+        <h3 style={{ fontSize: "2rem" }} className="optionalH3">
+          Optional Questions
+        </h3>
         <p style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}>
           Help your community by answering the following optional-questions anonymously.
         </p>

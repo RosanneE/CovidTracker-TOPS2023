@@ -11,7 +11,9 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
         <div id="optionalQuestionsBackArrow">
           <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
         </div>
-        <h3 className="optionalH3">Optional Contact Info</h3>
+        <h3 style={{ fontSize: "2rem" }} className="optionalH3">
+          Optional Contact Info
+        </h3>
 
         <div
           style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}

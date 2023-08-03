@@ -61,7 +61,9 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
       <div id="optionalQuestionsBackArrow">
         <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
       </div>
-      <h3 className="optionalH3">Optional Questions</h3>
+      <h3 style={{ fontSize: "2rem" }} className="optionalH3">
+        Optional Questions
+      </h3>
 
       <Form onSubmit={handleSubmit}>
         {questions.map((question) => (
