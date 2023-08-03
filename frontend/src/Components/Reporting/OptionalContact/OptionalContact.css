@@ -52,7 +52,7 @@
 }
 
 .questionsDiv {
-  width: 42rem;
+  width: 55rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -67,7 +67,7 @@
 #optionalQuestionsBackArrow {
   font-family: Bitter;
   display: flex;
-  width: 42rem;
+  width: 55rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
@@ -83,16 +83,8 @@ i {
   margin-top: 1rem;
 }
 
-#optionalContactImage {
-  width: 42rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .yesContactInfoDiv {
-  width: 42rem;
+  width: 55rem;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;

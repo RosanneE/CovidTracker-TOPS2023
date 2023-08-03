@@ -12,30 +12,37 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
         <h3 style={{ fontSize: "2rem" }} className="optionalH3">
           Optional Questions
         </h3>
-        <p style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}>
+        <p
+          style={{
+            textAlign: "center",
+            marginTop: "1rem !important",
+            marginBottom: "2rem",
+            fontSize: "1.3rem",
+          }}
+        >
           Help your community by answering the following optional-questions anonymously.
         </p>
 
-        <ul style={{ textAlign: "left" }}>
+        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
           <li>
             <strong>Data that is shared here is anonymous</strong> and is not tied to any
             information that identifies you individually.
           </li>
         </ul>
-        <ul style={{ textAlign: "left" }}>
+        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
           <li>
             Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a
             secure national database that also receives COVID-19 test results from labs and
             doctors’ offices.
           </li>
         </ul>
-        <ul style={{ textAlign: "left" }}>
+        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
           <li>
             The data may be shared with <strong>researchers</strong> and{" "}
             <strong>support teams</strong> working on the MakeMyTestCount initiative.
           </li>
         </ul>
-        <ul style={{ textAlign: "left" }}>
+        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
           <li>
             Public health teams at the state and local level can also get data from
             MakeMyTestCount and{" "}
