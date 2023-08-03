@@ -35,7 +35,7 @@ export const FormProvider = ({ children }) => {
         
         const data = JSON.stringify(newSite);
 
-        fetch("http://localhost:5423/users", {
+        fetch("http://localhost:5423/partners", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
