@@ -17,10 +17,9 @@ import WhiteLabelPage from "./Pages/WhiteLabelSite/WhiteLabelSite";
 import Reporting from "./Pages/Reporting/Reporting";
 import { FormProvider } from "./Context/FormContext";
 
-
 import OptionalContactInfo from "./Components/Reporting/OptionalContact/OptionalContactInfo/OptionalContactInfo";
 import YesContactInfo from "./Components/Reporting/OptionalContact/YesContactInfo/YesContactInfo";
-import OptionalQuestions1 from "./Components/Reporting/OptionalQuestions/OptionalQuestion1/OptionalQuestions1";
+import OptionalQuestions from "./Components/Reporting/OptionalQuestions/OptionalQuestion/OptionalQuestions";
 import OptionalQuestionsInfo from "./Components/Reporting/OptionalQuestions/OptionalQuestionInfo/OptionalQuestionsInfo";
 
 function App() {
@@ -29,19 +28,17 @@ function App() {
       <Nav />
       <FormProvider>
         <Routes>
-            {/* <Route exact path="/Home" element={<Home />} /> */}
-            <Route path="/PartnerWhiteLabel" element={<PartnerWhiteLabel />} />
-            <Route path="/WhiteLabelPage" element={<WhiteLabelPage />} />
-            <Route path="/" element={<Reporting />} />
-            <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} />
-            <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
- {/* -----------------We should delete these once we are done with the build ---------- */}
-            <Route path="/YesContactInfo" element={<YesContactInfo />} />
-            <Route path="/OptionalContactInfo" element={<OptionalContactInfo />} />
-            <Route path="/OptionalQuestions1" element={<OptionalQuestions1 />} />
-            <Route path="/OptionalQuestionsInfo" element={<OptionalQuestionsInfo />} />
-       
-          
+          {/* <Route exact path="/Home" element={<Home />} /> */}
+          <Route path="/PartnerWhiteLabel" element={<PartnerWhiteLabel />} />
+          <Route path="/WhiteLabelPage" element={<WhiteLabelPage />} />
+          <Route path="/" element={<Reporting />} />
+          <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} />
+          <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
+          {/* -----------------We should delete these once we are done with the build ---------- */}
+          <Route path="/YesContactInfo" element={<YesContactInfo />} />
+          <Route path="/OptionalContactInfo" element={<OptionalContactInfo />} />
+          <Route path="/OptionalQuestions" element={<OptionalQuestions />} />
+          <Route path="/OptionalQuestionsInfo" element={<OptionalQuestionsInfo />} />
         </Routes>
       </FormProvider>
       <Footer />
