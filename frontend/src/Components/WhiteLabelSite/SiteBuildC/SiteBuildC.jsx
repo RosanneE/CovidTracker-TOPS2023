@@ -25,10 +25,13 @@ export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewA
         
       </div>
       
-      <div className="siteBuildForm">
-        <div className="formHeader">
-          <h2>Customize Site Appearence</h2>
-          <a href="#">Skip this step {"\u003E"}</a>
+      <div className="siteBuildFormC">
+        <div className="formHeaderC">
+          <div>
+            <h2 className="formHeaderH2C">Customize Site Appearence</h2>
+            <p className="formHeaderPC">Customize your site’s appearance with your logo, custom text and branded imagery.</p>
+          </div>
+          <p onClick={() => setPageNumber(pageNumber + 1)}>Skip this step {"\u003E"}</p>
         </div>
         <div className="siteBuildCGrid">
 
@@ -49,7 +52,7 @@ export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewA
               name="logo"
               value={newSite.logo}
               onChange={handleChange}
-              className="siteBuildFormInput" 
+              className="siteBuildFormInputC" 
             />
             <div className="siteBuildFormLabel">
               <label htmlFor="negativeTestLink">Cover Photo</label>
@@ -62,7 +65,7 @@ export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewA
               name="cover_photo"
               value={newSite.cover_photo}
               onChange={handleChange}
-              className="siteBuildFormInput"  
+              className="siteBuildFormInputC" 
             />
             <div className="siteBuildFormLabel">
               <label htmlFor="furtherInformation">Custom Message</label>
@@ -75,7 +78,7 @@ export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewA
               name="custom_message"
               value={newSite.custom_message}
               onChange={handleChange}
-              className="siteBuildFormInput"  
+              className="siteBuildFormInputC"  
             />
 
             <div className="siteBuildFormLabel">
@@ -89,14 +92,14 @@ export default function SiteBuildC({pageNumber, setPageNumber, navigateToReviewA
               name="social_sharing_message"
               value={newSite.social_sharing_message}
               onChange={handleChange}
-              className="siteBuildFormInput"  
+              className="siteBuildFormInputC"  
             />
 
 
 
 
 
-            <div className="siteBuildContinueButton">
+            <div className="siteBuildContinueButtonC">
             <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
               <button className="siteBuildBlueButton" onClick={() => setPageNumber(5)}>Continue</button>
               {/* <button className="siteBuildBlueButton" onClick={()=>navigateToReviewAndSubmit()}>Continue</button> */}
