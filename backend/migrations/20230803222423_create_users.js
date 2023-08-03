@@ -8,7 +8,7 @@ exports.up = function (knex) {
     table.boolean("test_result");
     table.enum("test_taken", [
       "iHealth",
-      "Abbott BinaxNow",
+      "Abbott BinaxNOW",
       "Flowflex",
       "Quidel Quickvue",
       "Siemens CLINITEST",
