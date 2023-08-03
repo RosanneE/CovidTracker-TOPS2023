@@ -78,31 +78,32 @@
   
 }
 
-.siteBuildContinueButton {
+.siteBuildContinueButtonB {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 95%;
 }
 
 
-.formHeader{
+.formHeaderB {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+  width: 70%;
   
 }
 
-.formHeader > h2 {
+.formHeaderB > h2 {
   color: #00426b;
   font-family: Bitter;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin: .5rem 1rem 1rem 1rem
+  margin: 0rem 0rem 0.5rem 0rem;
 }
 
 .siteBuildBlueButton {
