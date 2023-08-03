@@ -4,7 +4,7 @@
  */
 exports.up = function (knex) {
   return knex.schema
-    .table("users", (table) => {
+    .table("partners", (table) => {
       table.string("logo");
       table.string("cover_photo");
       table.string("custom_message");
@@ -19,7 +19,7 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-    return knex.schema.table("users", (table) => {
+    return knex.schema.table("partners", (table) => {
         table.dropColumn("logo");
         table.dropColumn("cover_photo");
         table.dropColumn("custom_message");

@@ -45,8 +45,8 @@ app.use(express.json());
 // Route handlers
 // ========================
 
-// GET route to retrieve all the users
-app.get("/users", async (req, res) => {
+// GET route to retrieve all the partners
+app.get("/partners", async (req, res) => {
   try {
     // Retrieve the users from the database
     const query = "SELECT * FROM users";
@@ -60,7 +60,7 @@ app.get("/users", async (req, res) => {
 });
 
 // POST route to create a new user
-app.post("/users", async (req, res) => {
+app.post("/partners", async (req, res) => {
   try {
     const {
       contact_name,
