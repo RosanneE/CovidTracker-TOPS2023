@@ -27,7 +27,7 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
       </div>
       
       <div className="siteBuildForm">
-        <div className="formHeader">
+        <div className="formHeaderB">
           <h2>COVID-19 Resources</h2>
           <p onClick={() => setPageNumber(2)}>Skip this step {"\u003E"}</p>
         </div>
@@ -80,7 +80,7 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             onChange={handleChange}
             className="siteBuildFormInput"  
           />
-          <div className="siteBuildContinueButton">
+          <div className="siteBuildContinueButtonB">
           <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
             <button className="siteBuildBlueButton" onClick={() => setPageNumber(4)}>Continue</button>
           </div>

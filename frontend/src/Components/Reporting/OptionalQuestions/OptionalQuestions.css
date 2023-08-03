@@ -16,10 +16,10 @@
 }
 
 .btn-secondary {
-  --bs-btn-color: #00426b;
+  --bs-btn-color: #0058b7;
   --bs-btn-bg: #ffffff;
   --bs-btn-border-color: #d9d9d9;
-  --bs-btn-hover-color: #00426b;
+  --bs-btn-hover-color: #0058b7;
   --bs-btn-hover-bg: #fff;
   --bs-btn-hover-border-color: #d9d9d9;
   --bs-btn-focus-shadow-rgb: 130, 138, 145;
@@ -52,18 +52,12 @@
   font-family: Noto Sans;
   font-size: 1.3rem;
   font-weight: 500;
-  margin-top: 3rem;
   text-align: left;
 }
 
-.optionButtons {
-  font-family: Noto Sans;
-  font-size: 1.3rem;
-  font-weight: 400;
-  padding: 0.8rem 3rem 0.8rem 3rem;
-}
-
 .questionsDiv {
+  font-family: Bitter;
+  color: #00426b;
   width: 42rem;
   display: flex;
   flex-wrap: wrap;
@@ -80,22 +74,10 @@
   flex-wrap: wrap;
 }
 
-.two-columns .optionButtons {
+.two-columns .optionalQuestionsButtons {
   flex-basis: 45%;
   border-radius: 0;
-  margin-bottom: 0;
-}
-
-/* Target the first button of the group */
-.two-columns .optionButtons:first-child {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px !important;
-}
-
-/* Target the last button of the group */
-.two-columns .optionButtons:last-child {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px !important;
+  margin-bottom: 2rem;
 }
 
 #optionalQuestionsBackArrow {
@@ -108,11 +90,17 @@
   padding-top: 3rem;
 }
 
-#optionalQuestionsBackArrow img {
-  margin-right: 2rem;
-}
-
 .optionalH3 {
   color: #00426b;
   font-family: Bitter;
+  margin-bottom: 2rem;
+}
+
+.optionalQuestionsButtons {
+  color: #0058b7;
+  font-family: Noto Sans;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.8rem 3rem 0.8rem 3rem;
+  margin-bottom: 3rem;
 }

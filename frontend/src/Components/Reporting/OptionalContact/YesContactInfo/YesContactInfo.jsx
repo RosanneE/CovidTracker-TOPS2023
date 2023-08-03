@@ -1,17 +1,32 @@
 import { Form, Row, Col, Button } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
-import "../../OptionalContact/OptionalContact.css"
+import "../../OptionalContact/OptionalContact.css";
 
 export default function YesContactInfo({ demoPage, setDemoPage }) {
   const inputStyle = { marginBottom: "1.5rem", marginRight: "1rem" };
 
   return (
     <div className="yesContactInfoDiv">
-
-        <div style={{ marginBottom: "0.1rem" }} >
-          <img src={backArrow} alt="Back Arrow" onClick={()=>setDemoPage(demoPage -1)}/>
-          <h3 className="optionalH3">Optional Contact Info</h3>
+      <div className="questionsDiv">
+        <div id="optionalQuestionsBackArrow">
+          <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
         </div>
+        <h3 style={{ fontSize: "2rem" }} className="optionalH3">
+          Optional Contact Info
+        </h3>
+
+        <div
+          style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}
+        >
+          <p style={{ fontSize: "1.3rem" }}>
+            Are you willing to share your contact information?
+          </p>
+          <p>
+            Sharing additional information makes your response more impactful to public health
+            teams in your community.
+          </p>
+        </div>
+      </div>
       <Form>
         <Row>
           <Col style={inputStyle}>
@@ -64,16 +79,23 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
           <Form.Control type="date" />
         </Form.Group>
       </Form>
-
-      <div>
+      <div className="nextButtonDiv">
         <Button
-          id="optionalContactSubmitButton"
-          style={{ marginBottom: "5rem" }}
-          type="Submit"
-          onClick={()=> setDemoPage(10)}
+          id="optionalQuestionsNextButton"
+          style={{ marginTop: "1.5rem" }}
+          type="Next"
+          onClick={() => setDemoPage(demoPage + 1)}
         >
-          Submit
+          Next
         </Button>
+      </div>
+      <div
+        style={{ display: "block", marginBottom: "1.5rem" }}
+        onClick={() => setDemoPage(demoPage + 1)}
+      >
+        <a href="your-link-here" target="_blank" rel="noopener noreferrer">
+          Skip & Submit
+        </a>
       </div>
     </div>
   );

@@ -17,10 +17,9 @@ import WhiteLabelPage from "./Pages/WhiteLabelSite/WhiteLabelSite";
 import Reporting from "./Pages/Reporting/Reporting";
 import { FormProvider } from "./Context/FormContext";
 
-
 import OptionalContactInfo from "./Components/Reporting/OptionalContact/OptionalContactInfo/OptionalContactInfo";
 import YesContactInfo from "./Components/Reporting/OptionalContact/YesContactInfo/YesContactInfo";
-import OptionalQuestions1 from "./Components/Reporting/OptionalQuestions/OptionalQuestion1/OptionalQuestions1";
+import OptionalQuestions from "./Components/Reporting/OptionalQuestions/OptionalQuestion/OptionalQuestions";
 import OptionalQuestionsInfo from "./Components/Reporting/OptionalQuestions/OptionalQuestionInfo/OptionalQuestionsInfo";
 import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
 
@@ -39,10 +38,9 @@ function App() {
  {/* -----------------We should delete these once we are done with the build ---------- */}
             <Route path="/YesContactInfo" element={<YesContactInfo />} />
             <Route path="/OptionalContactInfo" element={<OptionalContactInfo />} />
-            <Route path="/OptionalQuestions1" element={<OptionalQuestions1 />} />
+            <Route path="/OptionalQuestions" element={<OptionalQuestions />} />
             <Route path="/OptionalQuestionsInfo" element={<OptionalQuestionsInfo />} />
             <Route path="/CustomSite" element={<CustomSite />} />
-          
         </Routes>
       </FormProvider>
       <Footer />
