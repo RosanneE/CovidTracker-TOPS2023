@@ -93,7 +93,6 @@ i {
 
 .yesContactInfoDiv {
   width: 42rem;
-  display: flex;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
@@ -102,7 +101,7 @@ i {
 }
 
 .yesContactInfoDiv .form-label {
-  color: black;
+  color: #00426b;
   font-size: 1rem;
 }
 

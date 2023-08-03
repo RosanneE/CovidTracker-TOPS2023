@@ -58,51 +58,52 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
 
   return (
     <div className="">
-      <div className="">
-        <div style={{ marginBottom: "0.1rem" }} id="optionalQuestionsBackArrow">
-          <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
-          <h3 className="optionalH3">Optional Questions</h3>
-        </div>
-        <Form onSubmit={handleSubmit}>
-          {questions.map((question) => (
-            <div className="questionsDiv" key={question.id}>
-              <p className="optionalQuestions">{question.text}</p>
-              <ButtonGroup toggle className={question.id === "q3" ? "two-columns" : ""}>
-                {question.options.map((option, idx) => (
-                  <Button
-                    className="optionButtons"
-                    key={idx}
-                    type="radio"
-                    variant={
-                      answers[question.id] === option.toLowerCase() ? "primary" : "secondary"
-                    }
-                    name={question.id}
-                    value={option.toLowerCase()}
-                    onClick={() => handleChange(question.id, option.toLowerCase())}
-                  >
-                    {option}
-                  </Button>
-                ))}
-              </ButtonGroup>
-            </div>
-          ))}
-        </Form>
-        <div className="nextButtonDiv">
-          <Button
-            id="optionalQuestionsNextButton"
-            style={{ marginTop: "2.5rem" }}
-            type="Next"
-            onClick={() => setDemoPage(demoPage + 1)}
-          >
-            Next
-          </Button>
-        </div>
-        <p
-          style={{ display: "block", marginBottom: "1.5rem" }}
+      <div id="optionalQuestionsBackArrow">
+        <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+      </div>
+      <h3 className="optionalH3">Optional Questions</h3>
+
+      <Form onSubmit={handleSubmit}>
+        {questions.map((question) => (
+          <div className="questionsDiv" key={question.id}>
+            <p className="optionalQuestions">{question.text}</p>
+            <ButtonGroup toggle className={question.id === "q3" ? "two-columns" : ""}>
+              {question.options.map((option, idx) => (
+                <Button
+                  className="optionalQuestionsButtons"
+                  key={idx}
+                  type="radio"
+                  variant={
+                    answers[question.id] === option.toLowerCase() ? "primary" : "secondary"
+                  }
+                  name={question.id}
+                  value={option.toLowerCase()}
+                  onClick={() => handleChange(question.id, option.toLowerCase())}
+                >
+                  {option}
+                </Button>
+              ))}
+            </ButtonGroup>
+          </div>
+        ))}
+      </Form>
+      <div className="nextButtonDiv">
+        <Button
+          id="optionalQuestionsNextButton"
+          style={{ marginTop: "2.5rem" }}
+          type="Next"
           onClick={() => setDemoPage(demoPage + 1)}
         >
+          Next
+        </Button>
+      </div>
+      <div
+        style={{ display: "block", marginBottom: "1.5rem" }}
+        onClick={() => setDemoPage(demoPage + 1)}
+      >
+        <a href="your-link-here" target="_blank" rel="noopener noreferrer">
           Skip & Submit
-        </p>
+        </a>
       </div>
     </div>
   );
