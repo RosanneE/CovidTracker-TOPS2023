@@ -1,12 +1,12 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 // Creates context to manage form state and functions
 export const FormContext = createContext();
 
 // Context provider component
 export const FormProvider = ({ children }) => {
-  //Partners
-  const [newSite, setNewSite] = useState({
+  
+  const initialPartnerState = {
     org_name: "",
     contact_name: "",
     email: "",
@@ -20,8 +20,16 @@ export const FormProvider = ({ children }) => {
     custom_message: "",
     social_sharing_message: "",
     color_theme: "",
-  });
+  }
 
+  const storedPartnerState = JSON.parse(localStorage.getItem("partnerFormState"))
+
+  //Partners
+  const [newSite, setNewSite] = useState(storedPartnerState || initialPartnerState);
+
+  useEffect(() => {
+    localStorage.setItem("partnerFormState", JSON.stringify(newSite))
+  }, [newSite])
   const handlePartnerChange = (event) => {
     setNewSite({
       ...newSite,

@@ -21,8 +21,10 @@
   justify-content: center;
 }
 #customSite-rightside > img {
-  /* object-fit: contain; */
-  height: 100%;
+  object-fit: contain;
+  height: auto;
+  width: 85%;
+  max-width: 100%;
 }
 #customSite-customMessage {
   margin-top: -3%;
