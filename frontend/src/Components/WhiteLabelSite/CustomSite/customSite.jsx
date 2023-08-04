@@ -6,20 +6,6 @@ import tissue from "../../../Images/sick-tissue.png";
 import happy from "../../../Images/happy.png";
 import inspectingResults from "../../../Images/Inspecting_results.png";
 
-// const MiniHeader = () => {
-//   const { newSite } = useContext(FormContext);
-//   return (
-//     <div id="miniSiteHeader">
-//       <h4>
-//         {newSite.org_name
-//           ? newSite.org_name
-//           : "Butte County Department of Health"}
-//       </h4>
-//       <h4>Español +</h4>
-//     </div>
-//   );
-// };
-
 const CustomSite = () => {
   const { newSite } = useContext(FormContext);
 
@@ -52,10 +38,7 @@ const CustomSite = () => {
               </span>
               <span className="asterisk">*</span>
               <br />
-
-              {/* ------------------ Need to create a useState for postive or negative  ---------------------*/}
-
-              <button className="positiveNegative dissolveEffect">
+              <button className="positiveNegative dissolveEffect" style={{ pointerEvents: "none"}}>
                 <img
                   src={tissue}
                   alt="Happy face"
@@ -64,7 +47,7 @@ const CustomSite = () => {
                 Positive
               </button>
 
-              <button className="positiveNegative dissolveEffect">
+              <button className="positiveNegative dissolveEffect" style={{ pointerEvents: "none"}}>
                 <img
                   src={happy}
                   alt="Happy face"
@@ -78,8 +61,8 @@ const CustomSite = () => {
           <div id="customSite-customMessage">
             <p>
               {newSite.custom_message
-              ? newSite.custom_message
-            : "Our mission is to protect and promote the health and well-being of all Butte County residents"}
+                ? newSite.custom_message
+                : "Our mission is to protect and promote the health and well-being of all Butte County residents"}
             </p>
           </div>
         </div>
