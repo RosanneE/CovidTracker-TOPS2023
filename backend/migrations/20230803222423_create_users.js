@@ -6,7 +6,7 @@ exports.up = function (knex) {
   return knex.schema.createTable("users", function (table) {
     table.increments();
     table.boolean("test_result");
-    table.enum("test_taken", [
+    table.enu("test_taken", [
       "iHealth",
       "Abbott BinaxNOW",
       "Flowflex",

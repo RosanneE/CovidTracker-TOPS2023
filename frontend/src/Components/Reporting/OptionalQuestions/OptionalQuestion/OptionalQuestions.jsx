@@ -1,38 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, ButtonGroup } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
 import "../../OptionalQuestions/OptionalQuestions.css";
+import { FormContext } from "../../../../Context/FormContext";
 
 export default function OptionalQuestions({ demoPage, setDemoPage }) {
   const [answers, setAnswers] = useState({});
+  const { newUser, handleUserChange, handleUserSubmit } = useContext(FormContext);
 
   const questions = [
-    { id: "q1", text: "Have you had any symptoms?", options: ["No", "Yes", "Not sure"] },
+    {
+      id: "q1",
+      name: "symptoms",
+      text: "Have you had any symptoms?",
+      options: ["No", "Yes", "Not sure"],
+    },
     {
       id: "q2",
+      name: "sex",
       text: "What was your sex assigned at birth?",
       options: ["Male", "Female", "Other"],
     },
     {
       id: "q3",
+      name: "race",
       text: "What is your race?",
       options: [
-        "American Indian or Alaska Native ",
+        "American Indian or Alaskan Native",
         "Asian",
         "Black or African American",
-        "Native Hawaiian or Other Pacific Islander",
+        "Native Hawaiian or other Pacific Islander",
         "White",
         "Other",
       ],
     },
     {
       id: "q4",
+      name: "ethnicity",
       text: "What is your ethnicity?",
-      options: ["Hispanic or Latino", "Not Hispanic or Latino"],
+      options: ["Hispanic or Latino", "Non-Hispanic or Latino"],
     },
     {
       id: "q5",
+      name: "reminder",
       text: "Would you like text/SMS reminder to test again in 48 hours?",
       options: ["Yes", "No"],
     },
@@ -47,6 +58,11 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
 
       // Otherwise, update the answer normally
       return { ...prevAnswers, [questionId]: option };
+    });
+
+    // Also update the context
+    handleUserChange({
+      target: { name: questions.find((q) => q.id === questionId).name, value: option },
     });
   }
 
@@ -75,12 +91,10 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
                   className="optionalQuestionsButtons"
                   key={idx}
                   type="radio"
-                  variant={
-                    answers[question.id] === option.toLowerCase() ? "primary" : "secondary"
-                  }
-                  name={question.id}
-                  value={option.toLowerCase()}
-                  onClick={() => handleChange(question.id, option.toLowerCase())}
+                  variant={answers[question.id] === option ? "primary" : "secondary"}
+                  name={question.name}
+                  value={newUser[question.name]}
+                  onClick={() => handleChange(question.id, option)}
                 >
                   {option}
                 </Button>
@@ -103,7 +117,12 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
         style={{ display: "block", marginBottom: "1.5rem" }}
         onClick={() => setDemoPage(demoPage + 1)}
       >
-        <a href="your-link-here" target="_blank" rel="noopener noreferrer">
+        <a
+          href="localhost:3000/FinalSubmission"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(event) => handleUserSubmit(event)}
+        >
           Skip & Submit
         </a>
       </div>
