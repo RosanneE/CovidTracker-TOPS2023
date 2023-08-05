@@ -106,6 +106,7 @@ home-page {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
+  
   /* margin-left: 100px; */
   color: #00426b;
   text-align: center;
@@ -135,17 +136,18 @@ home-page {
   text-decoration: none;
   color: #00426b;
   font-weight: 500;
-  /* margin: 0 15px; */
+  margin: 20px;
   cursor: pointer;
-  /* transition: transform 1s ease-in-out; */
 }
 
 .nav-list-right {
   display: flex; 
+  flex-direction: row;
   align-items: center;
   gap: 5px;
-  margin-left: 1500px;
-  margin-right: 350px;
+  margin-left: 1200px;
+  /* margin-left: 1500px;
+  margin-right: 350px; */
   
 }
 .nav-list-item-icon {
