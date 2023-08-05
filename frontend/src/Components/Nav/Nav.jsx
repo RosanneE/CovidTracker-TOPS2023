@@ -37,7 +37,7 @@ function Nav(props) {
             <Link to='#' >About Us</Link>
           </li>
           <li className='nav-list-item'>
-            <Link to='#' >For Partners</Link>
+            <Link to='/partner-page' >For Partners</Link>
           </li>
           <li className='nav-list-right'>
             <img src={globe} className='nav-list-item-icon' alt="globePng" />

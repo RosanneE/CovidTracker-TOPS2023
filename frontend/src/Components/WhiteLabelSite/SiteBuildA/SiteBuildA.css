@@ -89,7 +89,7 @@
 
 .formHeaderA {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: left;
   margin-top: 3rem;
   width: 100%;
