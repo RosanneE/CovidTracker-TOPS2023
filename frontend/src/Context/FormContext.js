@@ -42,7 +42,7 @@ export const FormProvider = ({ children }) => {
 
     const data = JSON.stringify(newSite);
 
-    fetch("http://localhost:5423/partners", {
+    return fetch("http://localhost:5423/partners", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,9 +52,11 @@ export const FormProvider = ({ children }) => {
       .then((res) => res.json())
       .then((newPartner) => {
         console.log("New partner created: ", newPartner);
+        return true
       })
       .catch((err) => {
         console.error("Error creating new partner: ", err);
+        throw err;
       });
   };
 
