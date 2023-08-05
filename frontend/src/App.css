@@ -224,8 +224,7 @@ home-page {
 
 /* footer */
 .image-with-border {
-  /* border: 1px solid #1f304f;
-  height: 75rem; */
+  
   border-radius: 0.625rem; /* 10px = 0.625rem */
   width: 60.5rem; /* 200px = 12.5rem */
   height: 30.5rem; /* 200px = 12.5rem */
