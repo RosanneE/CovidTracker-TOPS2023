@@ -30,79 +30,81 @@
 }
 
 
-.siteBuildForm {
+.siteBuildMiddleA {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #f7f9fa;
   width: 100%;
-  height: 65rem;
+  height: auto;
 }
 
-.siteBuildForm > form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.siteBuildFormA {
   width: 70%;
-  
+  align-items: left;
+
+
 }
 
-.siteBuildFormInput {
+
+.siteBuildFormInputA {
   width: 100%;
   border-radius: 7px;
   border: 1px solid #8D8D8D;
   padding: 1rem;
-  margin: 1.5rem;
+  margin: 0.5rem 0 0.5rem 0;
   
 }
 
-.siteBuildFormLabel > label {
+.siteBuildFormLabelA > label {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 1.25rem;
   margin: 1rem 0 1rem 0;
   font-style: normal;
   line-height: 36px; /* 120% */
+  text-align: left;
 }
 
-.siteBuildP {
+.siteBuildFormLabelA > p {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 1rem;
 }
 
-.siteBuildFormLabel {
+.siteBuildFormLabelA {
   text-align: left;
-  
 }
 
-.siteBuildContinueButton {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  width: 70%;
-}
-
-
-.formHeader{
+.siteBuildContinueButtonA {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 95%;
+}
+
+
+.formHeaderA {
+  display: flex;
+  justify-content: start;
+  align-items: left;
+  margin-top: 3rem;
+  width: 100%;
+  
   
 }
 
-.formHeader > h2 {
+.formHeaderA > h2 {
   color: #00426b;
   font-family: Bitter;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin: .5rem 1rem 1rem 1rem
+  margin: .5rem 1rem 1rem 1rem;
+  text-align: left;
 }
 
 .siteBuildBlueButton {

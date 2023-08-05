@@ -1,7 +1,7 @@
 // Request Confirmation Page
 import "../RequestConfirmation/RequestConfirmation.css"
 
-const RequestConfirmation = () => {
+const RequestConfirmation = ({ pageNumber, setPageNumber }) => {
   return (
     <>
       <div className="requestConfirmationBox">
@@ -29,6 +29,8 @@ const RequestConfirmation = () => {
           </svg>
           <a href="/PartnerWhiteLabel">Back to Partner Page</a>
         </div>
+        {/* Testing to get back to beginning of WhiteLabelForm */}
+        <button onClick={()=>setPageNumber(1)}>To start of form</button>
       </div>
     </>
   );
