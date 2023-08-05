@@ -5,7 +5,23 @@ import "../ReviewAndSubmit/ReviewAndSubmit.css";
 import { FormContext } from "../../../Context/FormContext";
 
 function ReviewAndSubmit({ pageNumber, setPageNumber }) {
-  const { newSite, handlePartnerChange, handleReviewSubmit } = useContext(FormContext);
+  const { newSite, handlePartnerChange, handleReviewSubmit } = useContext(
+    FormContext
+  );
+
+    const handleSubmit = async (event) => {
+      try {
+        const response = await handleReviewSubmit(event);
+        console.log("Review Response: ", response);
+        if (response) {
+          setPageNumber(6);
+        } else {
+          console.error("Form Submission Failed")
+        }
+      } catch (error) {
+        console.error("Form Submission Failed:", error)
+      }
+    }
 
   return (
     <table className="reviewAndSubmit">
@@ -55,7 +71,7 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
                   className="reviewAndSubmitInput"
                   type="text"
                   name="home_link"
-                  value={newSite.email}
+                  value={newSite.home_link}
                   onChange={handlePartnerChange}
                 />
               </div>
@@ -63,14 +79,18 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
             <div className="goBackSubmit">
               <div className="goBack">
                 <p onClick={() => setPageNumber(pageNumber - 1)}>
-                  <img style={{ paddingRight: "0.5rem" }} src={LeftArrow} alt="Left arrow" />{" "}
+                  <img
+                    style={{ paddingRight: "0.5rem" }}
+                    src={LeftArrow}
+                    alt="Left arrow"
+                  />{" "}
                   Go Back
                 </p>
               </div>
               <button
                 style={{ marginRight: "none" }}
                 className="blueButton dissolveEffect"
-                onClick={(event) => handleReviewSubmit(event)}
+                onClick={handleSubmit}
               >
                 Submit request
               </button>
