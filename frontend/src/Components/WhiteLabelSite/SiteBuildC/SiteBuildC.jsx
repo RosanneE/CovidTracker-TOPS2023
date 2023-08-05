@@ -10,7 +10,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
     <>
       <div className="backtoPartnerPage">
         {/* don't forget to update this link before production */}
-        <a href="http://localhost:3000/PartnerWhiteLabel">{"\u003C"} Back to Partner Page </a>
+        <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
       <div className="siteBuildHeader">
@@ -57,7 +57,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
             <div className="siteBuildFormLabel">
               <label htmlFor="negativeTestLink">Cover Photo</label>
               <p className="siteBuildP">
-                Not sure where to start? <a href="#">Browse our gallery</a>
+                {/* ---------------- need to build a gallery? ------------- */}
+                Not sure where to start? <a href="/">Browse our gallery</a>
               </p>
             </div>
             <input

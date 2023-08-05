@@ -10,7 +10,7 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
     <>
       <div className="backtoPartnerPage">
         {/* don't forget to update this link before production */}
-        <a href="http://localhost:3000/PartnerWhiteLabel">{"\u003C"} Back to Partner Page </a>
+        <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
       <div className="siteBuildHeader">
