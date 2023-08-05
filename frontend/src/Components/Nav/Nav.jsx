@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, {useState } from 'react';
 import Logo from '../Logo/Logo';
+import globe from '../../Images/globe.png'
 import '../../App.css';
 
 
@@ -38,8 +39,15 @@ function Nav(props) {
           <li className='nav-list-item'>
             <Link to='#' >For Partners</Link>
           </li>
+          <li className='nav-list-right'>
+            <img src={globe} className='nav-list-item-icon' alt="globePng" />
+            <Link to='#' className='nav-list-item-espanol'>Español +</Link>
+          </li>
+          {/* <li>
+            <img src={globe} className='nav-list-item-right1' alt="globePng" />
+          <Link to='#' className='nav-list-item-right2'>Español +</Link>
+          </li> */}
         </ul>
-      
     </nav>
 
   );

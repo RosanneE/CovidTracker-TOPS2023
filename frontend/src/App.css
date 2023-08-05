@@ -103,11 +103,10 @@ h3 {
 /* NAV  */
 .nav-container {
   display: flex;
-  flex-direction:row ;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   color: #00426b;
   text-align: center;
   font-family: Bitter;
@@ -121,23 +120,47 @@ h3 {
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
   gap: 10px;
   list-style: none;
   text-decoration: none;
   /* color: black; */
   font-size: 22px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-list-item {
+.nav-list-item a {
   list-style: none;
   text-decoration: none;
   color: #00426B;
   font-weight: 500;
-  margin: 0 15px;
+  /* margin: 0 15px; */
   cursor: pointer;
   /* transition: transform 1s ease-in-out; */
+}
+
+.nav-list-right {
+  display: flex; 
+  align-items: center;
+  gap: 5px;
+  margin-left: 1500px;
+  margin-right: 350px;
+  
+}
+.nav-list-item-icon {
+  width: 20px;
+  /* list-style: none;
+  text-decoration: none;
+  color: #00426B;
+  font-weight: 500;
+  margin-left: 1600px; */
+}
+.nav-list-item-espanol {
+  text-decoration: none;
+  color: #00426B;
+  font-weight: 500;
 }
 
 /* Hamburger Menu Styles */
@@ -222,23 +245,35 @@ h3 {
     height: 9.375rem; /* 150px = 9.375rem */
   }
 }
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px;
+}
+.img-div img {
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px;
+}
 
 
 /*home-landing-reporting*/
 .home-h1 {
+  font-size: 64px;
   margin: 4rem 4rem 2rem 4rem ;
   color: #00426b
 }
 .home-p {
-  padding: 6.875rem 5.313rem 6.875rem 5.313rem;
+  /* padding: 6.875rem 5.313rem 6.875rem 5.313rem; */
   background: #e4f5f9;
   color: #00426b;
-    text-align: center;
-    font-family: Noto Sans;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.313rem;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
 }
 
 .home-p2 {
@@ -254,5 +289,14 @@ h3 {
 
 .h2 {
   margin: 2rem;
+  
   padding: 2.875rem 5.313rem 4.875rem 5.313rem;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.homeSection {
+  margin-bottom: 8rem;
 }
