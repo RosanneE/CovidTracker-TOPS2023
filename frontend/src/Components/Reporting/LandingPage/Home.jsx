@@ -30,7 +30,7 @@ function Home({demoPage, setDemoPage}) {
     effectively.</p>
     </div>
     <div>
-      <img src={homeSection} className="homeSection" alt="homeSection" />
+      <img src={homeSection} className="homeSection" alt="homeSection" style={{ margin: 50 }} />
     </div>
 
       </>
