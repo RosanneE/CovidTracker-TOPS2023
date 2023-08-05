@@ -6,11 +6,10 @@ import Footer from "./Components/Footer/Footer";
 import Nav from "./Components/Nav/Nav";
 
 //Route imports
-import Home from "./Components/Reporting/LandingPage/Home";
+
 
 //Pages Routes
 
-import PartnerWhiteLabel from "./Components/WhiteLabelSite/PartnerWhiteLabel/PartnerWhiteLabel";
 import RequestConfirmation from "./Components/WhiteLabelSite/RequestConfirmation/RequestConfirmation";
 import ReviewAndSubmit from "./Components/WhiteLabelSite/ReviewAndSubmit/ReviewAndSubmit";
 import WhiteLabelPage from "./Pages/WhiteLabelSite/WhiteLabelSite";
@@ -23,6 +22,7 @@ import OptionalQuestions from "./Components/Reporting/OptionalQuestions/Optional
 import OptionalQuestionsInfo from "./Components/Reporting/OptionalQuestions/OptionalQuestionInfo/OptionalQuestionsInfo";
 import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
 import FinalSubmission from "./Components/Reporting/FinalSubmission/FinalSubmission";
+import Explore from "./Pages/Explore/Explore";
 
 function App() {
   return (
@@ -30,12 +30,12 @@ function App() {
       <Nav />
       <FormProvider>
         <Routes>
-          {/* <Route exact path="/Home" element={<Home />} /> */}
-          <Route path="/PartnerWhiteLabel" element={<PartnerWhiteLabel />} />
-          <Route path="/WhiteLabelPage" element={<WhiteLabelPage />} />
+          <Route path="/partner-page" element={<WhiteLabelPage />} />
           <Route path="/" element={<Reporting />} />
           <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} />
           <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
+          <Route path="/Explore" element={<Explore />} />
+      
           {/* -----------------We should delete these once we are done with the build ---------- */}
           <Route path="/YesContactInfo" element={<YesContactInfo />} />
           <Route path="/OptionalContactInfo" element={<OptionalContactInfo />} />

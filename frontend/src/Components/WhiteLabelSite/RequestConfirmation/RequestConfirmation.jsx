@@ -27,7 +27,7 @@ const RequestConfirmation = ({ pageNumber, setPageNumber }) => {
               fill="#00426B"
             />
           </svg>
-          <a href="/PartnerWhiteLabel">Back to Partner Page</a>
+          <a href="/WhiteLabelPage">Back to Partner Page</a>
         </div>
         {/* Testing to get back to beginning of WhiteLabelForm */}
         <button onClick={()=>setPageNumber(1)}>To start of form</button>
