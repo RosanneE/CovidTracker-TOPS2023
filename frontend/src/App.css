@@ -114,8 +114,7 @@ home-page {
   font-size: 24px;
   font-style: normal;
   line-height: normal;
-  /* width: 100%; */
-  /* background-color: rgba(255, 255, 255, 0.966); */
+
 }
 
 .nav-list {
@@ -151,11 +150,6 @@ home-page {
 }
 .nav-list-item-icon {
   width: 20px;
-  /* list-style: none;
-  text-decoration: none;
-  color: #00426B;
-  font-weight: 500;
-  margin-left: 1600px; */
 }
 .nav-list-item-espanol {
   text-decoration: none;
@@ -187,9 +181,6 @@ home-page {
 
   .nav-hamburger {
     display: flex; /* Show the hamburger menu on mobile screens */
-    /* align-items: center;
-    justify-content: center;
-    margin-right: 20px; */
     flex-direction: column;
     position: absolute;
     top: 20px;
