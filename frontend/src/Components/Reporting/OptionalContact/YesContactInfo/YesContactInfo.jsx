@@ -93,7 +93,7 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
         style={{ display: "block", marginBottom: "1.5rem" }}
         onClick={() => setDemoPage(demoPage + 1)}
       >
-        <a href="your-link-here" target="_blank" rel="noopener noreferrer">
+        <a href="your-link-here" rel="noopener noreferrer">
           Skip & Submit
         </a>
       </div>

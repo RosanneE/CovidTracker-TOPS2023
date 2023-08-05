@@ -11,13 +11,13 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
           <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
         </div>
         <h3 style={{ fontSize: "2rem" }} className="optionalH3">
-          Optional Questions
+          Optional Contact Info
         </h3>
 
         <div
           style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}
         >
-          <p style={{ fontSize: "1.3rem" }}>
+          <p style={{ fontSize: "1.5rem" }}>
             Are you willing to share your contact information?
           </p>
           <p>
@@ -40,7 +40,7 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
         style={{ display: "block", marginBottom: "1.5rem" }}
         onClick={() => setDemoPage(demoPage + 1)}
       >
-        <a href="your-link-here" target="_blank" rel="noopener noreferrer">
+        <a href="FinalSubmission" rel="noopener noreferrer">
           Skip & Submit
         </a>
       </div>

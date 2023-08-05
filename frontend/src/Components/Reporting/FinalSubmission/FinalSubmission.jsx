@@ -24,7 +24,12 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
       </div>
       <p
         className="optionalContactQuestion"
-        style={{ marginBottom: "3rem", marginTop: "0.5rem", color: "#00426B" }}
+        style={{
+          marginBottom: "3rem",
+          marginTop: "0.5rem",
+          color: "#00426B",
+          fontWeight: "bold",
+        }}
       >
         Your local community thanks you for submitting your test results!
       </p>

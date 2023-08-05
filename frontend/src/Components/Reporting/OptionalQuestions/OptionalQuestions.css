@@ -40,7 +40,7 @@
   font-weight: 600;
   border: none;
   padding: 1rem;
-  width: 32rem;
+  width: 18rem;
   border-radius: 2rem;
   background: #0058b7;
   margin-top: 1rem;
@@ -58,7 +58,7 @@
 .questionsDiv {
   font-family: Bitter;
   color: #00426b;
-  width: 42rem;
+  width: 55rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -75,7 +75,7 @@
 }
 
 .two-columns .optionalQuestionsButtons {
-  flex-basis: 45%;
+  flex-basis: 55%;
   border-radius: 0;
   margin-bottom: 2rem;
 }
@@ -94,6 +94,8 @@
   color: #00426b;
   font-family: Bitter;
   margin-bottom: 2rem;
+  display: block;
+  clear: both;
 }
 
 .optionalQuestionsButtons {
