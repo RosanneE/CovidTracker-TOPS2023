@@ -43,10 +43,7 @@ function Nav(props) {
             <img src={globe} className='nav-list-item-icon' alt="globePng" />
             <Link to='#' className='nav-list-item-espanol'>Español +</Link>
           </li>
-          {/* <li>
-            <img src={globe} className='nav-list-item-right1' alt="globePng" />
-          <Link to='#' className='nav-list-item-right2'>Español +</Link>
-          </li> */}
+
         </ul>
     </nav>
 
