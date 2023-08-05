@@ -102,11 +102,11 @@ home-page {
 /* NAV  */
 .nav-container {
   display: flex;
-  flex-direction: row;
+  flex-direction:row ;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   color: #00426b;
   text-align: center;
   font-family: Bitter;
@@ -114,29 +114,47 @@ home-page {
   font-size: 24px;
   font-style: normal;
   line-height: normal;
-  /* width: 100%; */
-  /* background-color: rgba(255, 255, 255, 0.966); */
+
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
   gap: 10px;
   list-style: none;
   text-decoration: none;
   /* color: black; */
   font-size: 22px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-list-item {
+.nav-list-item a {
   list-style: none;
   text-decoration: none;
   color: #00426b;
   font-weight: 500;
-  margin: 0 15px;
+  /* margin: 0 15px; */
   cursor: pointer;
   /* transition: transform 1s ease-in-out; */
+}
+
+.nav-list-right {
+  display: flex; 
+  align-items: center;
+  gap: 5px;
+  margin-left: 1500px;
+  margin-right: 350px;
+  
+}
+.nav-list-item-icon {
+  width: 20px;
+}
+.nav-list-item-espanol {
+  text-decoration: none;
+  color: #00426B;
+  font-weight: 500;
 }
 
 /* Hamburger Menu Styles */
@@ -163,9 +181,6 @@ home-page {
 
   .nav-hamburger {
     display: flex; /* Show the hamburger menu on mobile screens */
-    /* align-items: center;
-    justify-content: center;
-    margin-right: 20px; */
     flex-direction: column;
     position: absolute;
     top: 20px;
@@ -222,21 +237,22 @@ home-page {
   }
 }
 
+
 /*home-landing-reporting*/
 .home-h1 {
-  margin: 4rem 4rem 2rem 4rem;
-  color: #00426b;
+  margin: 4rem 4rem 2rem 4rem ;
+  color: #00426b
 }
 .home-p {
-  padding: 6.875rem 5.313rem 6.875rem 5.313rem;
+  /* padding: 6.875rem 5.313rem 6.875rem 5.313rem; */
   background: #e4f5f9;
   color: #00426b;
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.313rem;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.313rem;
 }
 
 .home-p2 {
@@ -252,5 +268,6 @@ home-page {
 
 .h2 {
   margin: 2rem;
+  
   padding: 2.875rem 5.313rem 4.875rem 5.313rem;
 }

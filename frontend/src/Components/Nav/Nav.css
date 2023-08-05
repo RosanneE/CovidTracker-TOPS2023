@@ -1,7 +1,7 @@
 /* Hamburger Menu Styles */
 
-.nav-hamburger {
-    display: none; /* Hide the hamburger menu by default on larger screens */
+/* .nav-hamburger {
+    display: none; 
     cursor: pointer;
   }
   
@@ -11,31 +11,31 @@
     background-color: white;
     margin: 5px;
     transition: transform 0.3s ease;
-  }
+  } */
   /* Media query for smaller screens (mobile) */
   
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     .nav-list {
-      display: none; /* Hide the menu by default on mobile screens */
-    }
+      display: none; 
+    } */
   
-    .nav-hamburger {
-      display: flex; /* Show the hamburger menu on mobile screens */
+    /* .nav-hamburger {
+      display: flex; 
       align-items: center;
       justify-content: center;
       margin-right: 20px;
     }
   
     .nav-list.show {
-      display: flex; /* Show the menu when the hamburger is clicked */
+      display: flex; 
       flex-direction: column;
       position: absolute;
-      top: 80px; /* Adjust this value to control the distance from the top */
+      top: 80px; 
       right: 10px;
       background-color: #1f304f;
       padding: 10px;
       border-radius: 5px;
-      z-index: 999; /* Ensure the menu is above other content */
+      z-index: 999; 
     }
   
     .nav-list-item {
@@ -53,4 +53,4 @@
     .hamburger-line.open:nth-child(3) {
       transform: rotate(45deg) translate(-3px, -6px);
     }
-  }
+  } */
