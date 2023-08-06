@@ -105,14 +105,14 @@ home-page {
   flex-direction:row ;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 18px;
   
   /* margin-left: 100px; */
   color: #00426b;
   text-align: center;
   font-family: Bitter;
   /* font-size: 64px; */
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   line-height: normal;
 
@@ -120,9 +120,10 @@ home-page {
 
 .nav-list {
   display: flex;
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  /* justify-content: center; */
   align-items: center;
-  gap: 10px;
+  /* gap: 30px; */
   list-style: none;
   text-decoration: none;
   /* color: black; */
@@ -208,6 +209,17 @@ home-page {
   .nav-list-item {
     margin: 10px 0;
   }
+  .nav-list-item a {
+    text-decoration: none;
+    color: white; /* White text color */
+  }
+  .nav-list-item-espanol {
+    color: white;
+  }
+
+  .nav-list-item-icon {
+    color: white;
+  }
 
   .hamburger-line.open:nth-child(1) {
     transform: rotate(-45deg) translate(-3px, 6px);
@@ -221,6 +233,10 @@ home-page {
     transform: rotate(45deg) translate(-3px, -6px);
   }
 }
+
+
+
+
 
 /* footer */
 .image-with-border {
