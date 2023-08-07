@@ -20,7 +20,7 @@ import YesContactInfo from "./Components/Reporting/OptionalContact/YesContactInf
 import OptionalQuestions from "./Components/Reporting/OptionalQuestions/OptionalQuestion/OptionalQuestions";
 import OptionalQuestionsInfo from "./Components/Reporting/OptionalQuestions/OptionalQuestionInfo/OptionalQuestionsInfo";
 
-import CustomSite from "./Components/WhiteLabelSite/CustomSite/customSite";
+import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
 
 import FinalSubmission from "./Components/Reporting/FinalSubmission/FinalSubmission";
 import Explore from "./Pages/Explore/Explore";
