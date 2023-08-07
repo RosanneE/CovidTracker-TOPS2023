@@ -1,8 +1,12 @@
+import React, { useContext } from "react";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
 import { Button } from "react-bootstrap";
 import "../../OptionalQuestions/OptionalQuestions.css";
+import { FormContext } from "../../../../Context/FormContext";
 
 export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
+  const { handleUserSubmit } = useContext(FormContext);
+
   return (
     <div>
       <div className="questionsDiv">
@@ -23,32 +27,24 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
           Help your community by answering the following optional-questions anonymously.
         </p>
 
-        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
-          <li>
-            <strong>Data that is shared here is anonymous</strong> and is not tied to any
-            information that identifies you individually.
-          </li>
-        </ul>
-        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
-          <li>
-            Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a
-            secure national database that also receives COVID-19 test results from labs and
-            doctors’ offices.
-          </li>
-        </ul>
-        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
-          <li>
-            The data may be shared with <strong>researchers</strong> and{" "}
-            <strong>support teams</strong> working on the MakeMyTestCount initiative.
-          </li>
-        </ul>
-        <ul style={{ textAlign: "left", fontSize: "1.3rem" }}>
-          <li>
-            Public health teams at the state and local level can also get data from
-            MakeMyTestCount and{" "}
-            <strong>your response can help officials make important health decisions.</strong>
-          </li>
-        </ul>
+        <p style={{ textAlign: "left", fontSize: "1.3rem" }}>
+          <strong>Data that is shared here is anonymous</strong> and is not tied to any
+          information that identifies you individually.
+        </p>
+        <p style={{ textAlign: "left", fontSize: "1.3rem" }}>
+          Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a
+          secure national database that also receives COVID-19 test results from labs and
+          doctors’ offices.
+        </p>
+        <p style={{ textAlign: "left", fontSize: "1.3rem" }}>
+          The data may be shared with <strong>researchers</strong> and{" "}
+          <strong>support teams</strong> working on the MakeMyTestCount initiative.
+        </p>
+        <p style={{ textAlign: "left", fontSize: "1.3rem" }}>
+          Public health teams at the state and local level can also get data from
+          MakeMyTestCount and{" "}
+          <strong>your response can help officials make important health decisions.</strong>
+        </p>
       </div>
       <div className="nextButtonDiv">
         <Button
@@ -64,7 +60,11 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
         style={{ display: "block", marginBottom: "1.5rem" }}
         onClick={() => setDemoPage(demoPage + 1)}
       >
-        <a href="your-link-here" target="_blank" rel="noopener noreferrer">
+        <a
+          href="FinalSubmission"
+          rel="noopener noreferrer"
+          onClick={(event) => handleUserSubmit(event)}
+        >
           Skip & Submit
         </a>
       </div>

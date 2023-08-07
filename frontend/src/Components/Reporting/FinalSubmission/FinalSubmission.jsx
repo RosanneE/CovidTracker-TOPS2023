@@ -24,7 +24,12 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
       </div>
       <p
         className="optionalContactQuestion"
-        style={{ marginBottom: "3rem", marginTop: "0.5rem", color: "#00426B" }}
+        style={{
+          marginBottom: "3rem",
+          marginTop: "0.5rem",
+          color: "#00426B",
+          fontWeight: "bold",
+        }}
       >
         Your local community thanks you for submitting your test results!
       </p>
@@ -36,6 +41,30 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         Negative is not a guarantee. If you just got infected, you may not have enough virus in
         your body for the test to find it. Plus, no test is perfect - there’s a very small
         chance that your result could simply be an error.
+      </p>
+      <p
+        className="optionalContactQuestion"
+        style={{
+          marginTop: "1rem",
+          color: "#00426B",
+          border: "2px solid",
+          borderRadius: "0.625rem",
+          padding: "1rem",
+        }}
+      >
+        If you have COVID symptoms
+      </p>
+      <p
+        className="optionalContactQuestion"
+        style={{
+          marginTop: "1rem",
+          color: "#00426B",
+          border: "2px solid",
+          borderRadius: "0.625rem",
+          padding: "1rem",
+        }}
+      >
+        If you’ve been exposed to someone with COVID
       </p>
 
       <h3 className="optionalH3">When To Test</h3>

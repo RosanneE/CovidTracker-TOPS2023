@@ -60,7 +60,7 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
       return { ...prevAnswers, [questionId]: option };
     });
 
-    // Also update the context
+    // Update the context
     handleUserChange({
       target: { name: questions.find((q) => q.id === questionId).name, value: option },
     });
@@ -118,7 +118,7 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
         onClick={() => setDemoPage(demoPage + 1)}
       >
         <a
-          href="localhost:3000/FinalSubmission"
+          href="http://localhost:3000/FinalSubmission"
           target="_blank"
           rel="noopener noreferrer"
           onClick={(event) => handleUserSubmit(event)}
