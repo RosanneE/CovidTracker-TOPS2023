@@ -18,11 +18,6 @@ function Nav(props) {
   return (
     <nav className='nav-container'>   
     <Logo />
-    <div className='nav-hamburger' onClick={handleMobileMenuToggle}>
-        <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
-        <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
-        <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
-    </div>
         <ul className={`nav-list ${showMobileMenu ? 'show' : ''}`}>
           <li className='nav-list-item'>
             <Link to='/' >Home</Link>
@@ -43,8 +38,12 @@ function Nav(props) {
             <img src={globe} className='nav-list-item-icon' alt="globePng" />
             <Link to='#' className='nav-list-item-espanol'>Español +</Link>
           </li>
-
         </ul>
+      <div className='nav-hamburger' onClick={handleMobileMenuToggle}>
+        <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
+        <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
+        <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
+      </div>
     </nav>
 
   );
