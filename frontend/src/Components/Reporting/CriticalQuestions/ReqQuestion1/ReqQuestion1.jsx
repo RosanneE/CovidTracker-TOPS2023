@@ -20,11 +20,14 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
 
   function handleChange(questionId, option) {
     setSelectedAnswer(option);
-    console.log("Selected Answer:", option); // Log the selected answer to the console
+    console.log("Selected Answer:", option);
 
-    // Also update the context
+    // Convert the option to a boolean value
+    const booleanValue = option === "Positive" ? true : false;
+
+    // Update the context with the boolean value
     handleUserChange({
-      target: { name: ReqQuestions[questionId].name, value: option },
+      target: { name: ReqQuestions[questionId].name, value: booleanValue },
     });
   }
 
@@ -55,23 +58,29 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
           <br />
 
           <button
-            className={`positiveNegative dissolveEffect ${selectedAnswer === "Positive" ? "selected" : ""}`}
+            className={`positiveNegative dissolveEffect ${
+              selectedAnswer === "Positive" ? "selected" : ""
+            }`}
             onClick={() => {
               handleChange("rq1", "Positive");
               setDemoPage(demoPage + 1);
             }}
           >
-            <img src={tissue} alt="Happy face" style={{ maxWidth: "100%", width: "2rem" }} /> Positive
+            <img src={tissue} alt="Happy face" style={{ maxWidth: "100%", width: "2rem" }} />{" "}
+            Positive
           </button>
 
           <button
-            className={`positiveNegative dissolveEffect ${selectedAnswer === "Negative" ? "selected" : ""}`}
+            className={`positiveNegative dissolveEffect ${
+              selectedAnswer === "Negative" ? "selected" : ""
+            }`}
             onClick={() => {
               handleChange("rq1", "Negative");
               setDemoPage(demoPage + 1);
             }}
           >
-            <img src={happy} alt="Happy face" style={{ maxWidth: "100%", width: "2rem" }} /> Negative
+            <img src={happy} alt="Happy face" style={{ maxWidth: "100%", width: "2rem" }} />{" "}
+            Negative
           </button>
           <br />
 
