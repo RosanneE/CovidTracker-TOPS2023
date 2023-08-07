@@ -42,6 +42,30 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         your body for the test to find it. Plus, no test is perfect - there’s a very small
         chance that your result could simply be an error.
       </p>
+      <p
+        className="optionalContactQuestion"
+        style={{
+          marginTop: "1rem",
+          color: "#00426B",
+          border: "2px solid",
+          borderRadius: "0.625rem",
+          padding: "1rem",
+        }}
+      >
+        If you have COVID symptoms
+      </p>
+      <p
+        className="optionalContactQuestion"
+        style={{
+          marginTop: "1rem",
+          color: "#00426B",
+          border: "2px solid",
+          borderRadius: "0.625rem",
+          padding: "1rem",
+        }}
+      >
+        If you’ve been exposed to someone with COVID
+      </p>
 
       <h3 className="optionalH3">When To Test</h3>
       <div className="optionalContactQuestion" style={{ marginTop: "1rem", color: "#00426B" }}>
