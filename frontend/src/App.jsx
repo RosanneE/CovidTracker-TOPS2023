@@ -1,12 +1,13 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 //Component imports
 import Footer from "./Components/Footer/Footer";
 import Nav from "./Components/Nav/Nav";
+import SiteBanner from "./Components/SiteBanner/SiteBanner";
 
 //Route imports
-
+import HomePage from './Components/Reporting/LandingPage/Home.jsx';
 //Pages Routes
 
 import RequestConfirmation from "./Components/WhiteLabelSite/RequestConfirmation/RequestConfirmation";
@@ -26,6 +27,10 @@ import FinalSubmission from "./Components/Reporting/FinalSubmission/FinalSubmiss
 import Explore from "./Pages/Explore/Explore";
 
 function App() {
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
+
   return (
     <div className="App">
       <Nav />
@@ -46,6 +51,9 @@ function App() {
           <Route path="/FinalSubmission" element={<FinalSubmission />} />
         </Routes>
       </FormProvider>
+      {!isHomePage && <SiteBanner />}
+
+      {/* <SiteBanner /> */}
       <Footer />
     </div>
   );
