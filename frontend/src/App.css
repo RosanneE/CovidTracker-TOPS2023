@@ -226,6 +226,7 @@ h3 {
   height: auto;
 }
 
+
 /* footer */
 
 
@@ -258,8 +259,12 @@ h3 {
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
+/* site banner */
+.underline-text {
+  text-decoration: underline;
+}
 .siteBanner {
-  /* padding: 6.875rem 5.313rem 6.875rem 5.313rem; */
+  padding: 1.313rem 5.313rem 1rem 5.313rem;
   background: #e4f5f9;
   color: #00426b;
   text-align: center;
@@ -267,7 +272,7 @@ h3 {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 4rem;
+  line-height: 1.313rem;
   background: #E4F5F9;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
