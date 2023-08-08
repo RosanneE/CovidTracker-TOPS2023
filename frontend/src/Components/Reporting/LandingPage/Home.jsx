@@ -1,5 +1,6 @@
 import HomeImg from "../../../Images/HomeImg.png";
 import homeSection from "../../../Images/homeSection.png"
+import SiteBanner from "../../SiteBanner/SiteBanner";
 
 
 function Home({demoPage, setDemoPage}) {
@@ -17,11 +18,12 @@ function Home({demoPage, setDemoPage}) {
       </div>
     </div>
     <section>
-      <div className="home-p">
+    <SiteBanner  />
+      {/* <div className="home-p">
           <p>
           <em>This site meets strict <em class="underline-text">US Government security standards</em> to keep your test data secure.</em>
           </p>
-      </div>
+      </div> */}
     </section>
     <div className="home-p2">
       <h2 className="h2" style={{ fontSize: 40 }}>Your anonymous test result matters.</h2>
