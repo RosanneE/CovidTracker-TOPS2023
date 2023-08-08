@@ -13,9 +13,9 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
         <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
-      <div className="siteBuildHeader">
+      <div className="siteBuildHeaderB">
         <h1>Request a Stand-Alone Site </h1>
-        <p className="siteBuildP">
+        <p className="headerPB">
           After you submit this form our team will reach out to you to start the the process
           and clarify any additional details.
         </p>
@@ -29,12 +29,12 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
       <div className="siteBuildForm">
         <div className="formHeaderB">
           <h2>COVID-19 Resources</h2>
-          <p onClick={() => setPageNumber(2)}>Skip this step {"\u003E"}</p>
+          <p onClick={() => setPageNumber(2)} style={{cursor: 'pointer'}}>Skip this step {"\u003E"}</p>
         </div>
         <form action="">
           <div className="siteBuildFormLabel">
             <label htmlFor="postiveTestLink">Positive-Test Link</label>
-            <p className="siteBuildP">
+            <p className="siteBuildPB">
               If the user has tested positive, where can they find additional instructions? (if
               the field is left blank, users will be direct to the instructions page on
               MakeMyTestCount.org for users reporting postive results)
@@ -47,10 +47,11 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             value={newSite.positiveTest}
             onChange={handlePartnerChange}
             className="siteBuildFormInput"
+            placeholder="Example: http://mysite.com/positiveinstructions.html"
           />
           <div className="siteBuildFormLabel">
             <label htmlFor="negativeTestLink">Negative-Test Link</label>
-            <p className="siteBuildP">
+            <p className="siteBuildPB">
               If the user has tested negative, where can they find additional instructions? (if
               this field is left blank, users will be directed to the instructions page on
               MakeMyTestCount.org for users reporting negative results.)
@@ -63,12 +64,13 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             value={newSite.negative_test_link}
             onChange={handlePartnerChange}
             className="siteBuildFormInput"
+            placeholder="Example: http://mysite.com/negativeinstructions.html"
           />
           <div className="siteBuildFormLabel">
             <label htmlFor="furtherInformation">
               Link to Further information about COVID-19
             </label>
-            <p className="siteBuildP">
+            <p className="siteBuildPB">
               Where can the user find additional information? (if this field is left blank,
               users will be directed to WhenToTest.org for further infomration about COVID-19.)
             </p>
@@ -80,10 +82,11 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             value={newSite.more_info_link}
             onChange={handlePartnerChange}
             className="siteBuildFormInput"
+            placeholder="Example: http://mysite.com/covidinfo.html"
           />
           <div className="siteBuildContinueButtonB">
-            <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
-            <button className="siteBuildBlueButton" onClick={() => setPageNumber(4)}>
+            <p className="siteBuildPB" onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer'}}>{"\u003C"} Go back</p>
+            <button className="siteBuildBlueButtonB" onClick={() => setPageNumber(4)}>
               Continue
             </button>
           </div>

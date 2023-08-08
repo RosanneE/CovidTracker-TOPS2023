@@ -6,7 +6,7 @@
   margin-bottom: 50px;
 }
 
-.siteBuildHeader > h1 {
+.siteBuildHeader>h1 {
   color: #00426b;
   text-align: center;
   font-family: Bitter;
@@ -25,7 +25,7 @@
   margin-bottom: 50px;
 }
 
-.siteBuilderHeader > p {
+.siteBuilderHeader>p {
   margin-bottom: 50px;
 }
 
@@ -40,13 +40,13 @@
   height: auto;
 }
 
-.siteBuildForm > form {
+.siteBuildForm>form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 70%;
-  
+
 }
 
 .siteBuildFormInputC {
@@ -55,16 +55,17 @@
   border: 1px solid #8D8D8D;
   padding: 1rem;
   margin: 1.5rem;
-  
+
 }
 
-.siteBuildFormLabel > label {
+.siteBuildFormLabel>label {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 1.25rem;
   margin: 1rem 0 1rem 0;
   font-style: normal;
-  line-height: 36px; /* 120% */
+  line-height: 36px;
+  /* 120% */
 }
 
 .siteBuildP {
@@ -75,16 +76,23 @@
 
 .siteBuildFormLabel {
   text-align: left;
-  
+
 }
 
 .siteBuildContinueButtonC {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .siteBuildContinueButtonC {
+  flex-direction: column;
+  }
 }
 
 
@@ -94,7 +102,7 @@
   align-items: center;
   margin-top: 3rem;
   width: 70%;
-  
+
 }
 
 .formHeaderH2C {
@@ -114,18 +122,19 @@
 
 }
 
-.siteBuildBlueButton {
+.siteBuildBlueButtonC {
   color: #fff;
   text-align: center;
   font-family: Noto Sans;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.25rem; /* 100% */
+  line-height: 1.25rem;
+  /* 100% */
   border: none;
   border-radius: 1.875rem;
   background: #0058b7;
-  height: 3.75rem;
+  min-height: 3.75rem;
   padding: 1.25rem 4.313rem;
   justify-content: center;
   align-items: center;
@@ -133,7 +142,16 @@
   margin: 1.25rem;
 }
 
-.siteBuildBlueButton:hover {
+@media (max-width: 768px) {
+  .siteBuildBlueButtonC {
+    margin: .75rem;
+    min-height: 1.75rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+
+  }
+}
+.siteBuildBlueButtonC:hover {
   cursor: pointer;
 }
 
@@ -142,6 +160,6 @@
   grid-template-columns: 7fr 3fr;
 }
 
-.siteBuildCGrid > form {
+.siteBuildCGrid>form {
   grid-column: 2;
 }

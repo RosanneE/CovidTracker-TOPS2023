@@ -34,7 +34,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               Customize your site’s appearance with your logo, custom text and branded imagery.
             </p>
           </div>
-          <p onClick={() => setPageNumber(pageNumber + 1)}>Skip this step {"\u003E"}</p>
+          <p onClick={() => setPageNumber(pageNumber + 1)} style={{cursor: 'pointer', color: '#00426b'}}>Skip this step {"\u003E"}</p>
         </div>
         <div className="siteBuildCGrid">
           <form action="">
@@ -96,8 +96,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
             />
 
             <div className="siteBuildContinueButtonC">
-              <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
-              <button className="siteBuildBlueButton" onClick={() => setPageNumber(5)}>
+              <p onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', color: '#00426b'}}>{"\u003C"} Go back</p>
+              <button className="siteBuildBlueButtonC" onClick={() => setPageNumber(5)}>
                 Continue
               </button>
               {/* <button className="siteBuildBlueButton" onClick={()=>navigateToReviewAndSubmit()}>Continue</button> */}

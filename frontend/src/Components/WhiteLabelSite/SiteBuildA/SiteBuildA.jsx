@@ -8,14 +8,14 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
 
   return (
     <>
-      <div className="backtoPartnerPage">
+      <div className="backtoPartnerPageA">
         {/* don't forget to update this link before production */}
         <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
-      <div className="siteBuildHeader">
+      <div className="siteBuildHeaderA">
         <h1>Request a Stand-Alone Site </h1>
-        <p className="siteBuildP">
+        <p className="headerPA">
           After you submit this form our team will reach out to you to start the the process
           and clarify any additional details.
         </p>
@@ -112,8 +112,8 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
 
             {/* ------------ buttons updated the pageNuber useState --------- */}
             <div className="siteBuildContinueButtonA">
-              <p onClick={() => setPageNumber(pageNumber - 1)}>{"\u003C"} Go back</p>
-              <button className="siteBuildBlueButton" onClick={() => setPageNumber(3)}>
+              <p onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', color: '#00426b'}}>{"\u003C"} Go back</p>
+              <button className="siteBuildBlueButtonA" onClick={() => setPageNumber(3)}>
                 Continue
               </button>
             </div>
