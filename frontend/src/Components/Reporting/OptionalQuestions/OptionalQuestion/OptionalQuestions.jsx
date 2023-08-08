@@ -9,6 +9,11 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
   const [answers, setAnswers] = useState({});
   const { newUser, handleUserChange, handleUserSubmit } = useContext(FormContext);
 
+  const handleSkipAndSubmit = (event) => {
+    handleUserSubmit(event);
+    setDemoPage(10); // Redirects to the desired page
+  };
+
   const questions = [
     {
       id: "q1",
@@ -113,18 +118,13 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
           Next
         </Button>
       </div>
-      <div
-        style={{ display: "block", marginBottom: "1.5rem" }}
-        onClick={() => setDemoPage(demoPage + 1)}
-      >
-        <a
-          href="http://localhost:3000/FinalSubmission"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={(event) => handleUserSubmit(event)}
+      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+        <span
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          onClick={handleSkipAndSubmit}
         >
           Skip & Submit
-        </a>
+        </span>
       </div>
     </div>
   );

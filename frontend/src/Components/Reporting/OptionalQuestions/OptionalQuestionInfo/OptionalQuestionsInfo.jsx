@@ -7,6 +7,11 @@ import { FormContext } from "../../../../Context/FormContext";
 export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
   const { handleUserSubmit } = useContext(FormContext);
 
+  const handleSkipAndSubmit = (event) => {
+    handleUserSubmit(event);
+    setDemoPage(10); // Redirects to the desired page
+  };
+
   return (
     <div>
       <div className="questionsDiv">
@@ -56,17 +61,13 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
           Next
         </Button>
       </div>
-      <div
-        style={{ display: "block", marginBottom: "1.5rem" }}
-        onClick={() => setDemoPage(demoPage + 1)}
-      >
-        <a
-          href="FinalSubmission"
-          rel="noopener noreferrer"
-          onClick={(event) => handleUserSubmit(event)}
+      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+        <span
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          onClick={handleSkipAndSubmit}
         >
           Skip & Submit
-        </a>
+        </span>
       </div>
     </div>
   );
