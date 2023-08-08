@@ -23,12 +23,13 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         </h3>
       </div>
       <p
-        className="optionalContactQuestion"
+        className="optionalH3"
         style={{
           marginBottom: "3rem",
           marginTop: "0.5rem",
           color: "#00426B",
           fontWeight: "bold",
+          fontSize: "1.3rem",
         }}
       >
         Your local community thanks you for submitting your test results!
@@ -42,9 +43,11 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         your body for the test to find it. Plus, no test is perfect - there’s a very small
         chance that your result could simply be an error.
       </p>
-      <p
+      <div
         className="optionalContactQuestion"
         style={{
+          display: "flex",
+          justifyContent: "space-between",
           marginTop: "1rem",
           color: "#00426B",
           border: "2px solid",
@@ -52,11 +55,14 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           padding: "1rem",
         }}
       >
-        If you have COVID symptoms
-      </p>
-      <p
+        If you have COVID symptoms{" "}
+        <img style={{ width: "2rem" }} src={PlusIcon} alt="plus sign" />
+      </div>
+      <div
         className="optionalContactQuestion"
         style={{
+          display: "flex",
+          justifyContent: "space-between",
           marginTop: "1rem",
           color: "#00426B",
           border: "2px solid",
@@ -65,7 +71,8 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         }}
       >
         If you’ve been exposed to someone with COVID
-      </p>
+        <img style={{ width: "2rem" }} src={PlusIcon} alt="plus sign" />
+      </div>
 
       <h3 className="optionalH3">When To Test</h3>
       <div className="optionalContactQuestion" style={{ marginTop: "1rem", color: "#00426B" }}>
@@ -84,11 +91,17 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
       </div>
 
       <h3 className="optionalH3">Share</h3>
+
       <p
-        className="optionalContactQuestion"
-        style={{ marginTop: "1rem", marginBottom: "1rem", color: "#00426B" }}
+        className="optionalH3"
+        style={{
+          marginTop: "1rem",
+          marginBottom: "1rem",
+          color: "#00426B",
+          fontSize: "1.3rem",
+        }}
       >
-        Share MakeMyTestCount with anyone who wants to make their test count
+        Share MakeMyTestCount.org with members of your community.
       </p>
       <div
         className="socialMediaIconsDiv"
