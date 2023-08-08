@@ -8,7 +8,7 @@ import { FormContext } from "../../../../Context/FormContext";
 
 export default function ReqQuestion1({ demoPage, setDemoPage }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const { handleUserChange } = useContext(FormContext); // Use useContext here to get the handleUserChange function from the context
+  const { newUser, handleUserChange } = useContext(FormContext); // Use useContext here to get the newUser state
 
   const ReqQuestions = {
     rq1: {
@@ -29,19 +29,6 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
     handleUserChange({
       target: { name: ReqQuestions[questionId].name, value: booleanValue },
     });
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    // Check if an answer is selected before moving to the next page
-    if (selectedAnswer !== null) {
-      console.log(selectedAnswer); // Handle the selected answer, e.g., send it to the server.
-
-      // Move to the next page
-      setDemoPage(demoPage + 1);
-    } else {
-      // Display an error or alert to prompt the user to select an answer before proceeding.
-    }
   }
 
   return (
