@@ -121,6 +121,7 @@ h3 {
 }
 .nav-list-item-icon {
   width: 20px;
+  padding: 4px;
 }
 .nav-list-item-espanol {
   text-decoration: none;
