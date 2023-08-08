@@ -35,10 +35,12 @@ function Nav(props) {
             <Link to='/partner-page' >For Partners</Link>
           </li>
         </ul>
-          <li className='nav-list-right'>
+          <div className='nav-list-right'>
+            <div className='nav-list-right' >
             <img src={globe} className='nav-list-item-icon' alt="globePng" />
             <Link to='#' className='nav-list-item-espanol'>Español +</Link>
-          </li>
+            </div>
+          </div>
       <div className='nav-hamburger' onClick={handleMobileMenuToggle}>
         <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
         <div className={`hamburger-line ${showMobileMenu ? 'open' : ''}`} />
