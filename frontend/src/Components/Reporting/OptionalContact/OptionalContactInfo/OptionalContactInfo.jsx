@@ -36,13 +36,13 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
           Next
         </Button>
       </div>
-      <div
-        style={{ display: "block", marginBottom: "1.5rem" }}
-        onClick={() => setDemoPage(demoPage + 1)}
-      >
-        <a href="FinalSubmission" rel="noopener noreferrer">
+      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+        <span
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          onClick={() => setDemoPage(10)}
+        >
           Skip & Submit
-        </a>
+        </span>
       </div>
     </div>
   );

@@ -8,6 +8,11 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
   const inputStyle = { marginBottom: "1.5rem", marginRight: "1rem" };
   const { newUser, handleUserChange, handleUserSubmit } = useContext(FormContext);
 
+  const handleSkipAndSubmit = (event) => {
+    handleUserSubmit(event);
+    setDemoPage(10); // Redirects to the desired page
+  };
+
   return (
     <div className="yesContactInfoDiv">
       <div className="questionsDiv">
@@ -131,22 +136,18 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
           id="optionalQuestionsNextButton"
           style={{ marginTop: "1.5rem" }}
           type="Next"
-          onClick={() => setDemoPage(demoPage + 1)}
+          onClick={handleSkipAndSubmit}
         >
-          Next
+          Submit
         </Button>
       </div>
-      <div
-        style={{ display: "block", marginBottom: "1.5rem" }}
-        onClick={() => setDemoPage(demoPage + 1)}
-      >
-        <a
-          href="FinalSubmission"
-          rel="noopener noreferrer"
-          onClick={(event) => handleUserSubmit(event)}
+      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+        <span
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          onClick={handleSkipAndSubmit}
         >
           Skip & Submit
-        </a>
+        </span>
       </div>
     </div>
   );
