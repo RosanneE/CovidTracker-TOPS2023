@@ -1,0 +1,119 @@
+.siteBuildBlueButtonDesign {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  /* 100% */
+  border: none;
+  border-radius: 1.875rem;
+  background: #0058b7;
+  min-height: 3rem; /* Use min-height instead of height */
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 1.25rem;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .siteBuildBlueButtonDesign {
+    font-size: 0.9rem; 
+    min-height: 2.5rem; 
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;  
+  }
+}
+.siteBuildBlueButtonDesign:hover {
+  cursor: pointer;
+}
+
+
+.buttonsDesignDesign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 95%;
+}
+
+@media (max-width: 768px) {
+  .buttonsDesignDesign {
+    font-size: 0.9rem; 
+    min-height: 2.5rem; 
+    padding: 0.8rem 1rem;
+    margin: 0.5rem;
+    flex-direction: column;  
+  }
+}
+
+.designStart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: 5rem;
+}
+
+.backToPartnerPageDesign {
+  width: 90%;
+  display: flex;
+  margin-left: 3rem;
+  color: #00426b;
+}
+
+@media (max-width: 768px) {
+  .backToPartnerPageDesign {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+  }
+}
+
+.designStartBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.backtoPartnerPageDesign {
+  display: flex;
+  align-items: flex-start;
+  margin: 3rem 0 3rem 3rem;
+
+}
+
+
+.designStart>h1 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: .5rem 0 .75rem 0;
+}
+
+.siteBuilderHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+.designStartP {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 1rem;
+}
