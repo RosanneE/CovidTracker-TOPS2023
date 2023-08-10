@@ -10,7 +10,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
     <>
       <div className="backtoPartnerPage">
         {/* don't forget to update this link before production */}
-        <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
+        <p onClick={() => setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
       <div className="siteBuildHeader">
@@ -27,24 +27,21 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
       </div>
 
       <div className="siteBuildFormC">
-        <div className="formHeaderC">
-          <div>
-            <h2 className="formHeaderH2C">Customize Site Appearence</h2>
-            <p className="formHeaderPC">
-              Customize your site’s appearance with your logo, custom text and branded imagery.
-            </p>
-          </div>
-          <p onClick={() => setPageNumber(pageNumber + 1)} style={{cursor: 'pointer', color: '#00426b'}}>Skip this step {"\u003E"}</p>
-        </div>
         <div className="siteBuildCGrid">
+          <div className="formHeaderC">
+            <div className="formLeftGrid">
+              <h2 className="formHeaderH2C">Customize Site Appearence</h2>
+              <p className="formHeaderPC">
+                Customize your site’s appearance with your logo, custom text and branded imagery.
+              </p>
+    
+            </div>
+          </div>
           <form action="">
+            <p onClick={() => setPageNumber(pageNumber + 1)} style={{ cursor: 'pointer', color: '#00426b' }}>Skip this step {"\u003E"}</p>
             <div className="siteBuildFormLabel">
               <label htmlFor="postiveTestLink">Logo</label>
-              <p className="siteBuildP">
-                If the user has tested positive, where can they find additional instructions?
-                (if the field is left blank, users will be direct to the instructions page on
-                MakeMyTestCount.org for users reporting postive results)
-              </p>
+
             </div>
             <input
               type="text"
@@ -96,11 +93,10 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
             />
 
             <div className="siteBuildContinueButtonC">
-              <p onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', color: '#00426b'}}>{"\u003C"} Go back</p>
               <button className="siteBuildBlueButtonC" onClick={() => setPageNumber(5)}>
-                Continue
+                Review & Submit
               </button>
-              {/* <button className="siteBuildBlueButton" onClick={()=>navigateToReviewAndSubmit()}>Continue</button> */}
+              <p onClick={() => setPageNumber(pageNumber - 1)} style={{ cursor: 'pointer', color: '#00426b' }}>{"\u003C"} Go back</p>
             </div>
           </form>
         </div>
