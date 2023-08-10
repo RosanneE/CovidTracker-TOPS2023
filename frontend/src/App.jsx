@@ -19,6 +19,7 @@ import { FormProvider } from "./Context/FormContext";
 import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
 
 import Explore from "./Pages/Explore/Explore";
+import DataChart from "./Components/DataChart/DataChart";
 
 function App() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
 
           {/* -----------------We should delete these once we are done with the build ---------- */}
           <Route path="/CustomSite" element={<CustomSite />} />
+          <Route path="/DataChart" element={<DataChart />} />
         </Routes>
       </FormProvider>
       {!isHomePage && <SiteBanner />}
