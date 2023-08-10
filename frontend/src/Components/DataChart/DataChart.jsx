@@ -45,7 +45,7 @@ const DataChart = () => {
         value={countyFipsCode}
         onChange={(event) => setCountyFipsCode(event.target.value)}
       />
-      <button onClick={fetchData}>Get Data</button>
+      <button className="blueButton" onClick={fetchData} style={{padding: "1rem", lineHeight:"1rem"}}>Get Data</button>
       <div>
         {isLoading ? (
           <p>Loading...</p>
