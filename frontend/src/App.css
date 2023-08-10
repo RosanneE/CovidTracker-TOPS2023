@@ -144,6 +144,7 @@ h3 {
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
+
 /* Media query for smaller screens (mobile) */
 
 @media screen and (max-width: 768px) {
@@ -151,6 +152,18 @@ h3 {
     display: none; /* Hide the menu by default on mobile screens */
   }
 
+  .nav-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    
+  }
+  .Logo {
+    margin-right: 4.8rem;
+  }
+  
   .nav-hamburger {
     display: flex; /* Show the hamburger menu on mobile screens */
     flex-direction: column;
@@ -182,9 +195,9 @@ h3 {
     text-decoration: none;
     color: white; /* White text color */
   }
-  .nav-list-item-espanol {
+  /* .nav-list-item-espanol {
     color: white;
-  }
+  } */
 
   .nav-list-item-icon {
     color: white;
@@ -202,61 +215,134 @@ h3 {
     transform: rotate(45deg) translate(-3px, -6px);
   }
 
+  .blueButton {
+    padding: .75rem 2rem;
+    font-size: 0.9rem;
+    display: inline-flex;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
   .home-page {
+    height: 100vh;
     flex-direction: column-reverse;
+    padding: 1rem;
+    margin-top: 7rem;
   }
 
+  .home-h1 {
+    font-size: 2.8rem!important;
+  }
+  .home-text p {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
   .home-image {
-    max-width: 50%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 20px;
+  }
+  
+  .responsive-image {
+    width: 100%;
+    max-height: 25vh;
+    object-fit: contain;
+    margin-top: 10rem;
+  }
+  
+  .home-p2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .homeSection {
-    max-width: 40%;
+    max-width: 60%;
+    margin-right: 2rem;
   }
+  .siteBanner {
+    display: flex;
+    margin-top: 12rem;
+  }
+
 }
 
+/*home-landing-reporting*/
+.home-page {
+  display: flex;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+/* style={{ height: '40rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }} */
 
-.home-image {
- max-width: 100%;
- height: auto; 
+.responsive-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 520px;
+  width: auto;
+}
+/* style={{ color: '#00426b', fontSize: 18, padding: 20 }} */
+.home-paragraph {
+  color: #00426B;
+  font-size: 18px;
+  padding: 20px;
 }
 
 .homeSection {
   max-width: 100%;
   height: auto;
+  margin: .05rem 1rem 2rem 0 ;
+  
 }
 
-
-/* footer */
-
-
-.footer-social {
-  display: flex;
-  margin: 20px;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+.home-text {
+  text-align: center;
+  padding: 1rem;
+  font-size: 64px;
 }
 
-
-/*home-landing-reporting*/
 .home-h1 {
   margin: 4rem 4rem 2rem 4rem ;
-  color: #00426b
+  color: #00426b;
+  font-size: 64px;
+  text-align: center;
+  font-style: normal;
+  /* font-weight: bold; */
 }
 .home-p {
   /* padding: 6.875rem 5.313rem 6.875rem 5.313rem; */
   background: #e4f5f9;
   color: #00426b;
-    text-align: center;
-    font-family: Noto Sans;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 4rem;
-    background: #E4F5F9;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4rem;
+  background: #E4F5F9;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.home-p2 {
+  padding: 6.875rem 5.313rem 6.875rem 5.313rem;
+  color: #00426b;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.313rem;
+}
+
+.h2 {
+  margin: 2rem;
+  padding: 2.875rem 5.313rem 4.875rem 5.313rem;
 }
 
 /* site banner */
@@ -276,20 +362,13 @@ h3 {
   background: #E4F5F9;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
 }
+/* footer */
 
-.home-p2 {
-  padding: 6.875rem 5.313rem 6.875rem 5.313rem;
-  color: #00426b;
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.313rem;
-}
-
-.h2 {
-  margin: 2rem;
-  
-  padding: 2.875rem 5.313rem 4.875rem 5.313rem;
+.footer-social {
+  display: flex;
+  margin: 20px;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
