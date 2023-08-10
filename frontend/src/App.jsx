@@ -1,5 +1,6 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
+import "chart.js"
 
 //Component imports
 import Footer from "./Components/Footer/Footer";
