@@ -7,72 +7,80 @@ import { FormContext } from "../../../../Context/FormContext";
 
 export default function ReqQuestion3({ demoPage, setDemoPage }) {
   const [selectedButton, setSelectedButton] = useState("");
-  const [selectedDate, setSelectedDate] = useState(null); // Initialize selectedDate to null
-  const [isNextButtonClickable, setNextButtonClickable] = useState(false); // Initialize the Next button clickability to false
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [isNextButtonVisible, setNextButtonVisible] = useState(false);
+  const [isNextButtonClickable, setNextButtonClickable] = useState(false);
   const { handleUserChange } = useContext(FormContext);
 
   const handleButtonClick = (selected) => {
     setSelectedButton(selected);
 
-    // If the user selects "Today," set the selectedDate to today's date
     if (selected === "Today") {
-      setSelectedDate(new Date());
-    }
-    // If the user selects "Yesterday," set the selectedDate to yesterday's date
-    else if (selected === "Yesterday") {
+      setSelectedDate(new Date()); // Automatically set selectedDate to today's date
+      setNextButtonVisible(true);
+      setNextButtonClickable(true);
+    } else if (selected === "Yesterday") {
       const yesterday = new Date();
       yesterday.setDate(yesterday.getDate() - 1);
-      setSelectedDate(yesterday);
-    } else {
-      // If the user selects "Other," clear the selected date
+      setSelectedDate(yesterday); // Automatically set selectedDate to yesterday's date
+      setNextButtonVisible(true);
+      setNextButtonClickable(true);
+    } else if (selected === "Other") {
       setSelectedDate(null);
+      setNextButtonVisible(true);
+      setNextButtonClickable(false);
     }
   };
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    setNextButtonClickable(true);
   };
 
-  // Check if the user has made a selection or picked a date from the calendar
-  // If so, enable the Next button clickability
   useEffect(() => {
-    if (selectedButton === "Today" || selectedButton === "Yesterday" || selectedDate !== null) {
+    if (selectedButton === "Today" || selectedButton === "Yesterday") {
+      setNextButtonClickable(true);
+    } else if (selectedButton === "Other" && selectedDate !== null) {
       setNextButtonClickable(true);
     } else {
       setNextButtonClickable(false);
     }
   }, [selectedButton, selectedDate]);
-
   return (
     <>
       <div className="questionNumber">
-        <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
-        Required Question 3 of 5
+        <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+        3 of 5
       </div>
 
-      <div className="questionAnswer">
+      <div className="whenTestDiv">
         <p>
-          <span className="question">When did you test?</span>
-          <span className="asterisk">*</span>
+          <span className="question2">When did you test?</span>
+          <span className="asterisk2"> *</span>
           <br />
           <button
-            className={`selectButtonLeft ${selectedButton === "Today" ? "selected" : ""}`}
+            className={`selectButton ${selectedButton === "Today" ? "selected" : ""}`}
+            style={{
+              backgroundColor: selectedButton === "Today" ? "rgba(121, 239, 255, 0.50)" : ""
+            }}
             onClick={() => handleButtonClick("Today")}
           >
             Today
           </button>
           <button
-            className={`selectButtonMiddle ${
-              selectedButton === "Yesterday" ? "selected" : ""
-            }`}
+            className={`selectButton ${selectedButton === "Yesterday" ? "selected" : ""}`}
+            style={{
+              backgroundColor: selectedButton === "Yesterday" ? "rgba(121, 239, 255, 0.50)" : ""
+            }}
             onClick={() => handleButtonClick("Yesterday")}
           >
             Yesterday
           </button>
           <button
-            className={`selectButtonRight ${
-              selectedButton === "Other" ? "selected" : ""
-            }`}
+            className={`selectButton ${selectedButton === "Other" ? "selected" : ""}`}
+            style={{
+              backgroundColor: selectedButton === "Other" ? "rgba(121, 239, 255, 0.50)" : ""
+            }}
             onClick={() => handleButtonClick("Other")}
           >
             Other
@@ -80,44 +88,51 @@ export default function ReqQuestion3({ demoPage, setDemoPage }) {
         </p>
       </div>
 
-      {/* Render the custom-styled calendar when "Other" button is selected */}
-      {selectedButton === "Other" && (
-        <div className="calendar">
-          <div className="calendarText">Please select your test date:</div>
-          <DatePicker
-            selected={selectedDate}
-            onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"
-            inline // Use the inline prop to display the calendar directly
-          />
-        </div>
+      {isNextButtonVisible && (
+        <>
+          {selectedButton === "Other" && (
+            <div className="calendar">
+              <div className="calendarText">Please select a date</div>
+              <DatePicker
+                selected={selectedDate}
+                onChange={handleDateChange}
+                dateFormat="dd/MM/yyyy"
+                inline
+              />
+            </div>
+          )}
+
+          <div className="nextButtonDiv">
+            <button
+              className={`nextButton ${isNextButtonClickable ? "clickable" : ""}`}
+              onClick={() => {
+                if (isNextButtonClickable) {
+                  const dateString =
+                    selectedDate !== null ? selectedDate.toLocaleDateString("en-GB") : null;
+
+                  handleUserChange({
+                    target: { name: "test_date", value: dateString },
+                  });
+
+                  setDemoPage(demoPage + 1);
+                }
+              }}
+              disabled={!isNextButtonClickable}
+              style={{
+                backgroundColor: isNextButtonClickable ? "#0058B7" : "#DDE5ED",
+                border: isNextButtonClickable ? "3px solid #8A8A8A" : "none",
+                cursor: isNextButtonClickable ? "pointer" : "not-allowed"
+              }}
+            >
+              Next
+            </button>
+          </div>
+        </>
       )}
 
-      <div className="nextButtonDiv">
-        {/* Conditionally style the Next button based on clickability */}
-        <button
-          className={`nextButton ${isNextButtonClickable ? "clickable" : ""}`}
-          onClick={() => {
-            if (isNextButtonClickable) {
-              // Convert the date to a string in the format dd/MM/yyyy
-              const dateString =
-                selectedDate !== null
-                  ? selectedDate.toLocaleDateString("en-GB")
-                  : null;
-
-              // Update the context with the selected date
-              handleUserChange({
-                target: { name: "test_date", value: dateString },
-              });
-
-              setDemoPage(demoPage + 1);
-            }
-          }}
-          disabled={!isNextButtonClickable}
-          style={{ backgroundColor: isNextButtonClickable ? "#0058B7" : "" }} // Set background color to #0058B7 when clickable
-        >
-          Next
-        </button>
+      <div className="requiredQuestion3">
+        <span className="requiredQuestionAsterisk2">* </span>
+        <span className="requiredQuestionText2">Required question</span>
       </div>
     </>
   );
