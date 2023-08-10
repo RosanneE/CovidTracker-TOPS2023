@@ -1,26 +1,109 @@
-.questionNumber {
-  color: #000;
-  font-family: Noto Sans;
-  font-size: 1.3rem;
-  font-weight: 400;
-  display: flex;
-  justify-content: space-between;
-  width: 22rem;
+.questionDiv {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 5.5rem;
+}
+
+.whichTestDiv {
+  width: 65rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3rem;
+}
+
+.requiredQuestion1 {
+  padding-bottom: 2.31rem;
+}
+
+.requiredQuestion2 {
+  text-align: right;
+  padding: 2rem;
+}
+
+.requiredQuestion3 {
+  width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  padding-bottom: 2.31rem;
+  margin-top: 5rem;
+}
+
+.requiredQuestionAsterisk1, .requiredQuestionAsterisk2 {
+  color: #900000;
+  font-family: Noto Sans;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+}
+
+.requiredQuestionText1, .requiredQuestionText2 {
+  color: #00426B;
+  font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+}
+
+.backArrowImg {
+  padding-right: 2rem;
+}
+
+.backArrowImg:hover {
+  cursor: pointer;
+}
+
+.testImage {
+  border-radius: 0rem 0rem 1.25rem 1.25rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 0.5rem;
+  padding: 0px !important;
+}
+
+.testImage:hover {
+  cursor: pointer;
+}
+
+.otherCard {
+  border-radius: 0rem 0rem 1.25rem 1.25rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 0.72rem;
+  width: 10.4375rem;
+  height: 5.872rem;
+  text-align: center;
+vertical-align: middle;
+line-height: 5.872rem;
+}
+
+.reportHeader {
+  color: #00426B;
+text-align: center;
+font-family: Bitter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+background: #E4F5F9;
+box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+display: flex;
+padding: 1rem;
+justify-content: center;
+align-items: center;
+}
+
+.questionNumber {
+  color: #00426B;
+  font-family: Bitter;
+  font-size: 1.25rem;
+  font-weight: 500;
+  position: relative;
+  top: 2.6rem;
+  left: -33rem;
 }
 
 .critQuestionsH3 {
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.4rem; /* 120% */
-  width: 14rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .testTable {
@@ -31,65 +114,138 @@
   text-align: center;
 }
 
+.testCard, .otherCard {
+  display: inline-block;
+}
+
+.testCard {
+  width: 11.7rem;
+  margin-top: 1rem;
+}
+
+.testCardContainer {
+  padding-top: 3rem;
+}
+
 .question {
   color: #00426b;
   font-family: Bitter;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 500;
   line-height: 2.03713rem;
 }
 
+.question2 {
+font-family: Bitter;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 500;
+color: #00426b;
+}
+
 .questionAnswer {
   padding: 5rem;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 65rem;
+}
+
+.whenTestDiv, .whatAgeDiv, .whatZipDiv {
+  margin-right: auto;
+  margin-left: auto;
+  width: 65rem;
+}
+
+.rememberMe {
+  color:#00426B;
+  font-family: Noto Sans;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+}
+
+.rememberMe img {
+  padding-left: 0.5rem;
+}
+
+.rememberMe img:hover {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000;
+}
+
+.popup {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1001;
+  width: 17rem;
+  height: 16.5rem;
+  padding: 0.75rem;
+  text-align: left;
+  color: #00426B;
+font-family: Noto Sans;
+font-size: 1rem;
+font-style: normal;
+}
+
+.checkbox {
+  margin-right: 0.5rem;
 }
 
 .asterisk {
-  color: #900000;
-  font-family: Bitter;
-  font-size: 2.45506rem;
+  color: #CF357F;
+  font-size: 4rem;
   font-weight: 500;
+}
+
+.asterisk2 {
+  font-size: 2.5rem;
+  color: #CF357F;
 }
 
 .nextButton {
   color: #fff;
   font-family: Noto Sans;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-style: normal;
-  font-weight: 600;
-  border: none;
-  padding: 1rem;
-  width: 32rem;
-  border-radius: 2rem;
+  font-weight: 500;
+  border: 3px solid #8A8A8A;
+  width: 17.3125rem;
+padding: 1rem;
+border-radius: 2rem;
   background: #dde5ed;
   margin-bottom: 3rem;
 }
 
-.selectButtonLeft,
-.selectButtonMiddle,
-.selectButtonRight {
-  color: #00426b;
+.selectButton {
+  color: #0058B7;
   background: #fff;
   border: none;
   font-family: Noto Sans;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
-  border: 1px solid #d9d9d9;
-  padding: 0.8rem 3rem 0.8rem 3rem;
-  margin-top: 2rem;
-}
-
-.selectButtonLeft {
-  border-radius: 1rem 0rem 0rem 1rem;
-}
-
-.selectButtonRight {
-  border-radius: 0rem 1rem 1rem 0rem;
+  border-radius: 0.625rem;
+  border: 1px solid #D9D9D9;
+  margin-top: 4rem;
+  padding: 1.2rem 2.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .nextButton:hover,
-.selectButtonLeft:hover,
-.selectButtonMiddle:hover,
-.selectButtonRight:hover {
+.selectButton:hover {
   cursor: pointer;
 }
 
@@ -102,8 +258,10 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 20rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 .positiveNegative {
@@ -117,11 +275,12 @@
   border: none;
   border-radius: 1.875rem;
   background: #0058b7;
-  padding: 0.8rem 1rem;
+  padding: 1.0625rem 4.5625rem 1rem 4.5rem;
   justify-content: center;
   align-items: center;
+  margin: 1.44rem;
   flex-shrink: 0;
-  margin: 2rem;
+  margin-top: 3rem;
 }
 
 .positiveNegative:hover {
@@ -130,24 +289,26 @@
 
 .otherButton {
   border: none;
-  color: #0058b7;
-  text-align: center;
-  font-family: Noto Sans;
-  font-size: 1.5rem;
+  color: #0058B7;
+text-align: center;
+font-family: Noto Sans;
+font-size: 1.03875rem;
   font-style: normal;
   font-weight: 600;
   background: none;
+  text-decoration-line: underline;
 }
 
 .otherButton:hover {
   cursor: pointer;
 }
 
+
 .react-datepicker {
   color: #00426b !important;
   font-family: Noto Sans;
   font-size: 1rem;
-  background-color: none !important;
+  background-color: transparent !important;
   border: none !important;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -162,7 +323,7 @@
 }
 
 .react-datepicker__header {
-  background-color: #fff !important;
+  background-color: transparent !important;
   border-bottom: none !important;
 }
 
@@ -175,11 +336,13 @@
   margin-top: 10px;
 }
 
+
 .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker__time-name {
   color: #00426b !important;
   font-family: Noto Sans !important;
+  padding: 0.5rem;
 }
 
 .react-datepicker__day {
@@ -190,7 +353,7 @@
 .react-datepicker__month-text--keyboard-selected,
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
-  background-color: #fff !important;
+  background-color: transparent !important;
   color: #00426b !important;
   font-family: Noto Sans !important;
   font-weight: bold;
@@ -209,34 +372,25 @@
 .react-datepicker__year-text--selected,
 .react-datepicker__year-text--in-selecting-range,
 .react-datepicker__year-text--in-range {
-  border-radius: 0.3rem;
-  background-color: #fff !important;
-  color: #00426b !important;
-  font-weight: bold;
+  border-radius: 100% !important;
+  background-color: #00426b !important;
+  color: #fff !important;
 }
 
-.react-datepicker__day:hover,
-.react-datepicker__month-text:hover,
-.react-datepicker__quarter-text:hover,
-.react-datepicker__year-text:hover {
-  background-color: #fff !important;
-  font-weight: bold;
+.react-datepicker__day:hover {
+  border-radius: 100% !important;
+  background-color: #00426b !important;
+  color: #fff !important;
 }
 
 .calendarText {
   width: 30rem;
-  text-align: left;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   color: #00426b;
-  font-family: Noto Sans;
-  font-size: 1rem;
+  font-family: Bitter;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: bold;
-}
-
-.selectButtonLeft.selected,
-.selectButtonMiddle.selected,
-.selectButtonRight.selected {
-  background-color: #52EAFF;
+  font-weight: 500;
 }

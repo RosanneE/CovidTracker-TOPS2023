@@ -33,45 +33,94 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
 
   return (
     <>
+    <div className="whichTextContainer">
       <div className="questionNumber">
-        <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
-        Required Question 2 of 5
+        <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+        2 of 5
       </div>
 
-      <div className="questionAnswer">
-        <p>
-          <span className="question">Which test did you take?</span>
-          <span className="asterisk">*</span>
+      <div className="whichTestDiv">
+          <span className="question2">Which test did you take?</span>
+          <span className="asterisk2"> *</span>
           <br />
+          <div className="testCardContainer">
+          <div className="testCard">
           <h3 className="critQuestionsH3">iHealth</h3>
           <img
             className="testImage"
             onClick={() => handleTestSelection("iHealth")}
             src={iHealth}
             alt="iHealth"
-            style={{ maxWidth: "100%", width: "14rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
           />
+          </div>
 
+          <div className="testCard">
           <h3 className="critQuestionsH3">Abbott BinaxNOW</h3>
           <img
             className="testImage"
             onClick={() => handleTestSelection("Abbott BinaxNOW")}
             src={abbott}
             alt="Abbott"
-            style={{ maxWidth: "100%", width: "14rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
           />
+          </div>
 
+          <div className="testCard">
+          <h3 className="critQuestionsH3">Flowflex</h3>
           <img
             className="testImage"
             onClick={() => handleTestSelection("Flowflex")}
             src={flowFlex}
             alt="Flowflex"
-            style={{ maxWidth: "100%", width: "14rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
           />
+          </div>
+
+          <div className="testCard">
+          <h3 className="critQuestionsH3">Quidel Quickvue</h3>
+          <img
+            className="testImage"
+            onClick={() => handleTestSelection("Quidel Quickvue")}
+            src={quidel}
+            alt="Quidel Quickvue"
+            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+          />
+          </div>
+
+          <div className="testCard">
+          <h3 className="critQuestionsH3">Siemens CLINITEST</h3>
+          <img
+            className="testImage"
+            onClick={() => handleTestSelection("Siemens CLINITEST")}
+            src={clinitest}
+            alt="Siemens CLINITEST"
+            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+          />
+          </div>
+
+          <div className="testCard">
+          <h3 className="critQuestionsH3">Roche COVID-19 At-Home Test</h3>
+          <img
+            className="testImage"
+            onClick={() => handleTestSelection("Roche COVID-19 AT-Home Test")}
+            src={roche}
+            alt="Roche COVID-19 AT-Home Test"
+            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+          />
+          </div>
+
+          <div className="otherCard">
           <button onClick={() => handleTestSelection("Other")} className="otherButton">
             Other
           </button>
-        </p>
+          </div>
+          <div className="requiredQuestion2">
+        <span className="requiredQuestionAsterisk2">* </span>
+        <span className="requiredQuestionText2">Required question</span>
+      </div>
+          </div>
+      </div>
       </div>
     </>
   );

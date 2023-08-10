@@ -1,5 +1,5 @@
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
-import stockImage from "../../../../Images/reportstartphoto.png";
+import stockImage from "../../../../Images/Inspecting_results.png";
 import tissue from "../../../../Images/sick-tissue.png";
 import happy from "../../../../Images/happy.png";
 import "../CriticalQuestions.css";
@@ -33,15 +33,12 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
 
   return (
     <>
-      <div className="questionNumber">
-        <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
-        Required Question 1 of 5
-      </div>
+        <div className="reportHeader">Report COVID-19 at-home test results to help your community</div>
 
       <div className="questionAnswer">
-        <p>
+        <div className="questionDiv">
           <span className="question">{ReqQuestions.rq1.text}</span>
-          <span className="asterisk">*</span>
+          <span className="asterisk"> *</span>
           <br />
 
           <button
@@ -53,7 +50,6 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
               setDemoPage(demoPage + 1);
             }}
           >
-            <img src={tissue} alt="Happy face" style={{ maxWidth: "100%", width: "2rem" }} />{" "}
             Positive
           </button>
 
@@ -66,17 +62,20 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
               setDemoPage(demoPage + 1);
             }}
           >
-            <img src={happy} alt="Happy face" style={{ maxWidth: "100%", width: "2rem" }} />{" "}
             Negative
           </button>
-          <br />
-
+          </div>
+          <div className="questionImage">
           <img
             src={stockImage}
             alt="Hands on a table"
-            style={{ maxWidth: "100%", width: "20rem", marginTop: "2rem" }}
+            style={{ maxWidth: "100%", width: "width: 32.5rem;", marginTop: "2rem" }}
           />
-        </p>
+          </div>
+      </div>
+      <div className="requiredQuestion1">
+        <span className="requiredQuestionAsterisk1">* </span>
+        <span className="requiredQuestionText1">Required question</span>
       </div>
     </>
   );
