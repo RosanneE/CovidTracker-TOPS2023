@@ -52,7 +52,7 @@
 }
 
 .questionsDiv {
-  width: 55rem;
+  width: 65rem;
   display: block;
   flex-wrap: wrap;
   margin-left: auto;
@@ -61,13 +61,13 @@
 }
 
 .btn-group {
-  width: 55rem;
+  width: 65rem;
 }
 
 #optionalQuestionsBackArrow {
   font-family: Bitter;
   display: flex;
-  width: 55rem;
+  width: 65rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
@@ -84,7 +84,7 @@ i {
 }
 
 .yesContactInfoDiv {
-  width: 55rem;
+  width: 65rem;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
@@ -110,4 +110,8 @@ i {
   background: #dde5ed;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.backArrowImg {
+  padding-right: 2rem;
 }
