@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-// import "chartjs-adapter-moment";
+
 
 const DataChart = () => {
   const [govData, setGovData] = useState({ months: [], cases: [] });
@@ -9,41 +9,44 @@ const DataChart = () => {
   const fetchData = () => {
     fetch(`https://data.cdc.gov/resource/n8mc-b4w4.json?$limit=100000&county_fips_code=${countyFipsCode}`)
       .then(response => {
-        console.log(response.body)
+        // console.log(response)
         return response.json()
       })
       .then(data => {
-        console.log(data)
+        // console.log(data)
         // Process the fetched data and update state
         const months = data.map(entry => entry.case_month);
         const cases = data.length
-        // console.log(months)
-        // console.log(cases)
+        console.log(months)
+        console.log(cases)
         setGovData({ months: months, cases: cases });
-        console.log(govData)
+        // console.log(govData)
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
   };
 
-  const renderChart = (data) => {
+  const renderChart = () => {
     const chartData = {
-      labels: data.months,
+      labels: govData.months,
       datasets: [
         {
           label: "# of Cases",
-          data: data.cases,
+          data: govData.cases,
           backgroundColor: "rgba(255, 99, 132, 0.2)",
           borderColor: "rgba(255, 99, 132, 1)",
           borderWidth: 1,
         },
       ],
     };
-
-    return <Line data={chartData}  />;
+    return <Line data={chartData} />;
   };
 
+  useEffect(() => {
+    renderChart();
+  }, [govData]);
+  
   return (
     <div>
       <input
