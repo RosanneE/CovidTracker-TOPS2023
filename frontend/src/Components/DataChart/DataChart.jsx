@@ -5,9 +5,12 @@ import Chart from "chart.js/auto";
 const DataChart = () => {
   const [govData, setGovData] = useState({ months: [], cases: [] });
   const [countyFipsCode, setCountyFipsCode] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = async () => {
     try {
+      setIsLoading(true);
+
       const response = await fetch(
         `https://data.cdc.gov/resource/n8mc-b4w4.json?$limit=1000000&county_fips_code=${countyFipsCode}`
       );
@@ -25,8 +28,10 @@ const DataChart = () => {
       });
 
       setGovData({ months: Object.keys(caseCounts), caseCounts });
+      setIsLoading(false);
     } catch (error) {
       console.error("Error fetching datt:", error);
+      setIsLoading(false);
     }
   };
 
@@ -42,7 +47,9 @@ const DataChart = () => {
       />
       <button onClick={fetchData}>Get Data</button>
       <div>
-        {govData.months.length > 0 && (
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : govData.months.length > 0 ? (
           <Line
             data={{
               labels: sortedMonths,
@@ -57,6 +64,8 @@ const DataChart = () => {
               ],
             }}
           />
+        ) : (
+          <p>No data available.</p>
         )}
       </div>
     </div>
