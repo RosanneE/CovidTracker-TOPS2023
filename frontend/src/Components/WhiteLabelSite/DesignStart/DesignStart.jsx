@@ -16,7 +16,7 @@ export default function DesignStart({ pageNumber, setPageNumber }) {
         {/* ------------ buttons updated the pageNuber useState --------- */}
         <div className="buttonsDesignDesign">
           <button className="siteBuildBlueButtonDesign" onClick={() => setPageNumber(2)}>Stand Alone Site</button>
-          <button className="siteBuildBlueButtonDesign" onClick={() => setPageNumber(2)}>Modul Pop Up</button>
+          <button className="siteBuildBlueButtonDesign" onClick={() => setPageNumber(2)}>Modal Pop Up</button>
         </div>
 
         <p className="designStartP">Not sure what works best for you?</p>

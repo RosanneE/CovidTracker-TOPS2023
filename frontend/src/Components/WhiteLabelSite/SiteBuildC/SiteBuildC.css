@@ -98,14 +98,23 @@
 
 .formHeaderC {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   margin-top: 3rem;
-  width: 70%;
+  width: 100%;
+  grid-row-start: 1;
+}
 
+.formLeftGrid {
+  display: grid;
+  rows: 1fr 5fr 1fr
 }
 
 .formHeaderH2C {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #00426b;
   font-family: Bitter;
   font-style: normal;
@@ -119,27 +128,28 @@
   color: #00426b;
   font-family: Noto Sans;
   font-size: 1rem;
-
+  
 }
+
 
 .siteBuildBlueButtonC {
   color: #fff;
   text-align: center;
   font-family: Noto Sans;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: 1.25rem;
   /* 100% */
   border: none;
-  border-radius: 1.875rem;
+  border-radius: .62rem;
   background: #0058b7;
-  min-height: 3.75rem;
-  padding: 1.25rem 4.313rem;
+  min-height: 2.5rem;
+  padding: .62rem 2.18rem;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin: 1.25rem;
+  margin: .625rem;
 }
 
 @media (max-width: 768px) {
@@ -158,8 +168,22 @@
 .siteBuildCGrid {
   display: grid;
   grid-template-columns: 7fr 3fr;
+  width: 1512px;
+  height: auto;
+  background: #f7f9fa;
+
 }
 
 .siteBuildCGrid>form {
   grid-column: 2;
+}
+
+#logo {
+width: 367px;
+height: 46px;
+}
+
+#cover_photo {
+  width: 367px;
+  height: 46px;
 }
