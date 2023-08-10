@@ -32,6 +32,19 @@
   --bs-btn-disabled-border-color: #6c757d;
 }
 
+/* Spacing between buttons */
+.btn-group > .btn:not(:last-child) {
+  margin-right: 0.5rem; /* Adjust this value as per your preference */
+  border-radius: 0.75rem;
+}
+
+/* Race buttons in two columns */
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distributes space evenly between the buttons */
+}
+
 #optionalQuestionsNextButton {
   color: #fff;
   font-family: Noto Sans;
@@ -69,17 +82,6 @@
   width: 42rem;
 }
 
-.two-columns {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.two-columns .optionalQuestionsButtons {
-  flex-basis: 55%;
-  border-radius: 0;
-  margin-bottom: 2rem;
-}
-
 #optionalQuestionsBackArrow {
   font-family: Bitter;
   display: flex;
@@ -105,4 +107,10 @@
   font-weight: 400;
   padding: 0.8rem 3rem 0.8rem 3rem;
   margin-bottom: 3rem;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem !important;
 }
