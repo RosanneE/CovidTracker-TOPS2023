@@ -1,0 +1,36 @@
+.explore-modal-overlay {
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  z-index: 20;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-modal {
+  background-color: aquamarine;
+  z-index: 25;
+  width: 90%;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.explore-modal > span {
+  cursor: pointer;
+}
+
+.explore-header {
+  display:flex;
+  justify-content: flex-start;
+  font-family: bitter;
+}
+.explore-header > h3 {
+  font-family: bitter;
+}
+.explore-header > p {
+  margin-left: 5rem;
+}

@@ -1,6 +1,6 @@
 //PARTNER/WHITELABEL PAGE
 
-import React from "react";
+import React, { useState } from "react";
 import ellipse from "../../../Images/Ellipse 5.png";
 import screenshot1 from "../../../Images/Screen Shot 2023-05-21 at 10.28 1.png";
 import screenshot2 from "../../../Images/Screen Shot 2023-05-21 at 10.28 2.png";
@@ -16,11 +16,20 @@ import ellipse4 from "../../../Images/ellipse_4.png"
 import ellipse5 from "../../../Images/ellipse_3.png"
 import ellipse6 from "../../../Images/ellipse_6.png"
 import { Link } from "react-router-dom";
+import ExploreDemo from "../ExploreDemo/ExploreDemo";
+
 
 
 function PartnerPage({pageNumber, setPageNumber}) {
+  const [ showExploreDemo, setShowExploreDemo] = useState(false)
+  
+  const handleModalOpen = () => setShowExploreDemo(true)
+  const handleModalClose = () => setShowExploreDemo(false)
+
   return (
     <>
+    {showExploreDemo && 
+      <ExploreDemo handleModalClose={handleModalClose} handleModalOpen={handleModalOpen}/>}
       <div className="partnerWMMTC">
         <h1 className="whyUseMMTCHeader1">Partner With MakeMyTestCount</h1>
         <p>
@@ -121,9 +130,9 @@ function PartnerPage({pageNumber, setPageNumber}) {
           Want to know more about how reporting works --- and what a stand-alone<br/>
           site or modal pop-up looks like? Take a look.
         </p>
-        <Link to="/">
-          <button className="blueButton dissolveEffect">Explore Site Demo</button>
-        </Link>
+        
+          <button className="blueButton dissolveEffect" onClick={handleModalOpen}>Explore Site Demo</button>
+        
       </div>
 
 {/* ------------------------------------------------------------ */}
