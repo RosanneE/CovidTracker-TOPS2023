@@ -9,6 +9,12 @@ import vector1 from "../../../Images/Vector 1.png";
 import vector2 from "../../../Images/Vector 2.png";
 import vector3 from "../../../Images/Vector 3.png";
 import vector4 from "../../../Images/Vector 4.png";
+import ellipse1 from "../../../Images/ellipse_5_Chair.png"
+import ellipse2 from "../../../Images/ellipse_1.png"
+import ellipse3 from "../../../Images/ellipse_2.png"
+import ellipse4 from "../../../Images/ellipse_4.png"
+import ellipse5 from "../../../Images/ellipse_3.png"
+import ellipse6 from "../../../Images/ellipse_6.png"
 import { Link } from "react-router-dom";
 
 
@@ -131,7 +137,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
         <div className="whyUseMMTCList">
           <ul className="whyUseMMTCUl">
             <li>
-              <img src={ellipse} alt="Bullet Point" />
+              <img src={ellipse1} alt="Bullet Point" />
               <div className="whyUseMMTCLi">
                 <h3 className="whyUseMMTCHeader3">User-Friendly</h3>
                 Accessible on any device from anywhere with internet access.
@@ -139,7 +145,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
               </div>
             </li>
             <li>
-              <img src={ellipse} alt="Bullet Point" />
+              <img src={ellipse2} alt="Bullet Point" />
               <div className="whyUseMMTCLi">
               <h3 className="whyUseMMTCHeader3">Secure</h3>
               End-to-end secure collection and transmission of data through
@@ -147,7 +153,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
               </div>
             </li>
             <li>
-              <img src={ellipse} alt="Bullet Point" />
+              <img src={ellipse3} alt="Bullet Point" />
               <div className="whyUseMMTCLi">
               <h3 className="whyUseMMTCHeader3">Standardized</h3>
               Data are coded and transmitted in a standard format used
@@ -155,7 +161,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
               </div>
             </li>
             <li>
-              <img src={ellipse} alt="Bullet Point" />
+              <img src={ellipse4} alt="Bullet Point" />
               <div className="whyUseMMTCLi">
               <h3 className="whyUseMMTCHeader3">Seamless Integration</h3>
               Can be a stand-alone site or installed as a pop-up, giving the
@@ -163,7 +169,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
               </div>
             </li>
             <li>
-              <img src={ellipse} alt="Bullet Point" />
+              <img src={ellipse5} alt="Bullet Point" />
               <div className="whyUseMMTCLi">
               <h3 className="whyUseMMTCHeader3">Scalable</h3>
               Supports all over-the-counter COVID tests. Built on a solid IT
@@ -172,7 +178,7 @@ function PartnerPage({pageNumber, setPageNumber}) {
               </div>
             </li>
             <li>
-              <img src={ellipse} alt="Bullet Point" />
+              <img src={ellipse6} alt="Bullet Point" />
               <div className="whyUseMMTCLi">
               <h3 className="whyUseMMTCHeader3">National and local</h3>
               Connects with the national data repository, HHS Protect. States
