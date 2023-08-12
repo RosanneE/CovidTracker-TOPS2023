@@ -6,39 +6,37 @@ import "../../OptionalContact/OptionalContact.css";
 export default function OptionalContactInfo({ demoPage, setDemoPage }) {
   return (
     <div>
+    <div className="optionalArrow">
+    <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+  </div>
       <div className="questionsDiv">
-        <div id="optionalQuestionsBackArrow">
-          <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
-        </div>
-        <h3 style={{ fontSize: "2rem" }} className="optionalH3">
+        <h3 className="question2">
           Optional Contact Info
         </h3>
 
         <div
           style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}
         >
-          <p style={{ fontSize: "1.5rem" }}>
-            Are you willing to share your contact information?
-          </p>
-          <p>
-            Sharing additional information makes your response more impactful to public health
-            teams in your community.
+          <p style={{ fontSize: "1.5rem" }}><br/><br/>
+            Are you willing to share your contact information?<br/><br/></p>
+            <p style={{ fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
+            Sharing additional information makes your response more impactful<br/> to public health teams in your community.
           </p>
         </div>
       </div>
       <div className="nextButtonDiv">
         <Button
           id="optionalQuestionsNextButton"
-          style={{ marginTop: "1.5rem" }}
+          style={{ border: "3px solid #8A8A8A" }}
           type="Next"
           onClick={() => setDemoPage(demoPage + 1)}
         >
           Next
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+      <div style={{ display: "block", marginBottom: "13rem" }}>
         <span
-          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500"}}
           onClick={() => setDemoPage(10)}
         >
           Skip & Submit
