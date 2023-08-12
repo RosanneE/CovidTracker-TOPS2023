@@ -86,7 +86,7 @@ export default function ReqQuestion3({ demoPage, setDemoPage }) {
             Other
           </button>
         </p>
-      </div>
+
 
       {isNextButtonVisible && (
         <>
@@ -129,8 +129,8 @@ export default function ReqQuestion3({ demoPage, setDemoPage }) {
           </div>
         </>
       )}
-
-      <div className="requiredQuestion3">
+</div>
+      <div className="requiredQuestion3 displayNone">
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
       </div>

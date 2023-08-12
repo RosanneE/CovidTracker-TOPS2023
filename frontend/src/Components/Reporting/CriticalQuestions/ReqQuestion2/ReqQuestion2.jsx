@@ -33,7 +33,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
 
   return (
     <>
-    <div className="whichTextContainer">
+    <div className="whichTestContainer">
       <div className="questionNumber">
         <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
         2 of 5
@@ -51,7 +51,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             onClick={() => handleTestSelection("iHealth")}
             src={iHealth}
             alt="iHealth"
-            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", padding: "1rem" }}
           />
           </div>
 
@@ -62,7 +62,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             onClick={() => handleTestSelection("Abbott BinaxNOW")}
             src={abbott}
             alt="Abbott"
-            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", padding: "1rem" }}
           />
           </div>
 
@@ -73,7 +73,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             onClick={() => handleTestSelection("Flowflex")}
             src={flowFlex}
             alt="Flowflex"
-            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", padding: "1rem" }}
           />
           </div>
 
@@ -84,7 +84,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             onClick={() => handleTestSelection("Quidel Quickvue")}
             src={quidel}
             alt="Quidel Quickvue"
-            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", padding: "1rem" }}
           />
           </div>
 
@@ -95,7 +95,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             onClick={() => handleTestSelection("Siemens CLINITEST")}
             src={clinitest}
             alt="Siemens CLINITEST"
-            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", padding: "1rem" }}
           />
           </div>
 
@@ -106,7 +106,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             onClick={() => handleTestSelection("Roche COVID-19 AT-Home Test")}
             src={roche}
             alt="Roche COVID-19 AT-Home Test"
-            style={{ maxWidth: "100%", width: "10.4375rem", padding: "1rem" }}
+            style={{ maxWidth: "100%", padding: "1rem" }}
           />
           </div>
 
@@ -115,7 +115,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
             Other
           </button>
           </div>
-          <div className="requiredQuestion2">
+          <div className="requiredQuestion2 displayNone">
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
       </div>

@@ -56,7 +56,6 @@ export default function ReqQuestion5({ demoPage, setDemoPage }) {
             onChange={handleZipCodeChange}
           />
         </p>
-      </div>
 
       <div className="nextButtonDiv">
         {/* Conditionally style the Next button based on clickability */}
@@ -74,7 +73,7 @@ export default function ReqQuestion5({ demoPage, setDemoPage }) {
         </button>
       </div>
       
-      <div className="rememberMe">
+      <div className="rememberMe displayNone">
       <input className="checkbox" type="checkbox" id="Checkbox" name="checkbox" value="1" />
       Remember me on this device. 
       <img
@@ -92,8 +91,8 @@ can uncheck this box the next time you report a result. You will lose access to 
         </div>
       )}
     </div>
-
-      <div className="requiredQuestion3">
+    </div>
+      <div className="requiredQuestion3 displayNone">
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
       </div>
