@@ -35,7 +35,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
 
           <form action="">
             <div className="siteBuildFormLabelA">
-              <label htmlFor="contact_name">
+              <label htmlFor="contact_name" id="contact_name_label">
                 Contact Name<span style={{ color: "red" }}>*</span>
               </label>
             </div>
@@ -50,7 +50,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="org_name">
+              <label htmlFor="org_name" id ="org_name_label">
                 Organization Name<span style={{ color: "red" }}>*</span>
               </label>
             </div>
@@ -65,7 +65,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="email">
+              <label htmlFor="email" id ="email_label">
                 Email<span style={{ color: "red" }}>*</span>
               </label>
             </div>
@@ -80,8 +80,8 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="site_origin">Site Origin</label>
-              <p>Used to record where users come from</p>
+              <label htmlFor="site_origin" id ="site_origin_label">Site Origin</label>
+              <p id ="site_origin_paragraph">Used to record where users come from</p>
             </div>
             <input
               type="text"
@@ -94,8 +94,8 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="email">Home Link</label>
-              <p>
+              <label htmlFor="email" id ="home_link_label">Home Link</label>
+              <p id ="home_link_paragraph">
                 Users of your stand-alone site who click on your logo will be directed to this
                 URL
               </p>
@@ -113,7 +113,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             {/* ------------ buttons updated the pageNuber useState --------- */}
             <div className="siteBuildContinueButtonA">
               <p onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', color: '#00426b'}}>{"\u003C"} Go back</p>
-              <button className="siteBuildBlueButtonA" onClick={() => setPageNumber(3)}>
+              <button className="siteBuildBlueButtonA" id="siteBuildBlueButtonA" onClick={() => setPageNumber(3)}>
                 Continue
               </button>
             </div>

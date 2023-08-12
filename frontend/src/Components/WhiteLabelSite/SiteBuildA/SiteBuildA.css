@@ -1,40 +1,155 @@
-.backtoPartnerPageA {
-  color: #00426b;
-  margin-left: 90px;
-  display: flex;
-  align-items: flex-start;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
+/* Mobile Styles (max-width: 768px) */
 
+/* Back to Partner Page Link */
 @media (max-width: 768px) {
   .backtoPartnerPageA {
     margin-left: 90px;
     display: flex;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 }
 
+/* Site Build Header */
+@media (max-width: 768px) {
+  .siteBuildHeaderA>h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+
+  }
+}
+
+/* Header PA */
+@media (max-width: 768px) {
+  .siteBuildHeaderA>p {
+    margin: 0 1rem;
+  }
+}
+
+/* Site Build Form */
+@media (max-width: 768px) {
+  .siteBuildFormA {
+    width: 500px;
+    height: auto;
+  }
+
+  .siteBuildFormInputA {
+    width: 400px;
+    height: 40px;
+  }
+
+  #contact_name {
+    width: 400px;
+  }
+
+  #org_name {
+    width: 400px;
+  }
+
+  #email {
+    width: 400px;
+  }
+
+  #site_origin {
+    width: 400px;
+  }
+
+  #home_link {
+    width: 400px;
+  }
+
+  .siteBuildFormLabelA {
+    width: 500px;
+
+  }
+
+  #contact_name_label {
+    width: 400px;
+
+  }
+
+  #org_name_label {
+    width: 400px;
+
+  }
+
+  #email_label {
+    width: 400px;
+
+  }
+
+  #site_origin_label {
+    width: 400px;
+
+  }
+
+  #home_link_label {
+    width: 400px;
+
+  }
+
+  #site_origin_paragraph {
+    width: 400px;
+
+  }
+
+  #home_link_paragraph {
+    width: 400px;
+  }
+
+
+}
+
+/* Form Header A */
+@media (max-width: 768px) {
+  .formHeaderA {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Site Build Continue Button */
+@media (max-width: 768px) {
+  .siteBuildContinueButtonA {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Site Build Blue Button */
+@media (max-width: 768px) {
+  #siteBuildBlueButtonA {
+    margin: .75rem;
+    min-height: 1.75rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+}
+}
+
+/* Desktop Styles (min-width: 769px) */
+
+/* Back to Partner Page Link */
+.backtoPartnerPageA {
+  color: #00426b;
+  margin-left: 90px;
+  display: flex;
+  align-items: flex-start;
+  margin: 5rem 0;
+}
+
+/* Site Build Header */
 .siteBuildHeaderA>h1 {
   color: #00426b;
   text-align: center;
   font-family: Bitter;
   font-size: 3rem;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .siteBuildHeaderA>h1 {
-    font-size: 2rem;
-    margin: .5rem;
-  }
-}
-
+/* Site Builder Header */
 .siteBuilderHeader {
   display: flex;
   flex-direction: column;
@@ -43,6 +158,7 @@
   margin-bottom: 50px;
 }
 
+/* Header PA */
 .headerPA {
   display: flex;
   align-items: center;
@@ -53,13 +169,7 @@
   margin: 0 17rem;
 }
 
-@media (max-width: 768px) {
-  .headerPA {
-    margin: 1rem 2rem;
-  }
-}
-
-
+/* Site Build Middle */
 .siteBuildMiddleA {
   display: flex;
   flex-direction: column;
@@ -70,42 +180,39 @@
   height: auto;
 }
 
-.siteBuildFormA {
-  width: 70%;
-  align-items: left;
-
-}
-
+/* Site Build Form Input */
 .siteBuildFormInputA {
-  width: 100%;
+  width: 632px;
+  height: 50px;
   border-radius: 7px;
   border: 1px solid #8D8D8D;
   padding: 1rem;
-  margin: 0.5rem 0 0.5rem 0;
-
+  margin: 0.5rem 0;
 }
 
+/* Site Build Form Label */
 .siteBuildFormLabelA>label {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 1.25rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
   font-style: normal;
   line-height: 36px;
   /* 120% */
   text-align: left;
+  width: 632px;
 }
 
+/* Site Build Form Label Paragraph */
 .siteBuildFormLabelA>p {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 1rem;
-}
-
-.siteBuildFormLabelA {
+  width: 632px;
   text-align: left;
 }
 
+/* Form Header A */
 .formHeaderA {
   display: flex;
   justify-content: flex-start;
@@ -114,48 +221,32 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .formHeaderA {
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-
-
+/* Form Header A Heading */
 .formHeaderA>h2 {
   color: #00426b;
   font-family: Bitter;
-  font-style: normal;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: normal;
-  margin: .5rem 1rem 1rem 1rem;
+  margin: 0.5rem 1rem 1rem 1rem;
   text-align: left;
 }
 
+/* Site Build Continue Button */
 .siteBuildContinueButtonA {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   width: 95%;
 }
 
-@media (max-width: 768px) {
-  .siteBuildContinueButtonA {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
+/* Site Build Blue Button */
 .siteBuildBlueButtonA {
   color: #fff;
   text-align: center;
   font-family: Noto Sans;
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.25rem;
   /* 100% */
@@ -170,16 +261,7 @@
   margin: 1.25rem;
 }
 
-@media (max-width: 768px) {
-  .siteBuildBlueButtonA {
-    margin: .75rem;
-    min-height: 1.75rem;
-    padding: 1rem 3rem;
-    font-size: 1rem;
-
-  }
-}
-
+/* Site Build Blue Button Hover */
 .siteBuildBlueButtonA:hover {
   cursor: pointer;
 }

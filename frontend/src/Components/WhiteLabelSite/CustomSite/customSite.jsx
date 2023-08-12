@@ -2,8 +2,6 @@ import "../CustomSite/CustomSite.css";
 import Footer from "../../Footer/Footer";
 import { useContext } from "react";
 import { FormContext } from "../../../Context/FormContext";
-import tissue from "../../../Images/sick-tissue.png";
-import happy from "../../../Images/happy.png";
 import inspectingResults from "../../../Images/Inspecting_results.png";
 
 const CustomSite = () => {
@@ -39,20 +37,12 @@ const CustomSite = () => {
               <span className="asterisk">*</span>
               <br />
               <button className="positiveNegative dissolveEffect" style={{ pointerEvents: "none"}}>
-                <img
-                  src={tissue}
-                  alt="Happy face"
-                  style={{ maxWidth: "100%", width: "2rem" }}
-                />{" "}
+                {" "}
                 Positive
               </button>
 
               <button className="positiveNegative dissolveEffect" style={{ pointerEvents: "none"}}>
-                <img
-                  src={happy}
-                  alt="Happy face"
-                  style={{ maxWidth: "100%", width: "2rem" }}
-                />{" "}
+                {" "}
                 Negative
               </button>
               <br />
