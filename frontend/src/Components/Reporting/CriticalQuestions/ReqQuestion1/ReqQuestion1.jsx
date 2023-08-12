@@ -33,7 +33,11 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
 
   return (
     <>
-        <div className="reportHeader">Report COVID-19 at-home test results to help your community</div>
+        <div className="reportHeader displayNone">Report COVID-19 at-home test results to help your community</div>
+        <div className="questionNumber displayNoneDesktop">
+        <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+        1 of 5
+      </div>
 
       <div className="questionAnswer">
         <div className="questionDiv">
@@ -65,7 +69,7 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
             Negative
           </button>
           </div>
-          <div className="questionImage">
+          <div className="questionImage displayNone">
           <img
             src={stockImage}
             alt="Hands on a table"
@@ -73,7 +77,7 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
           />
           </div>
       </div>
-      <div className="requiredQuestion1">
+      <div className="requiredQuestion1 displayNone">
         <span className="requiredQuestionAsterisk1">* </span>
         <span className="requiredQuestionText1">Required question</span>
       </div>

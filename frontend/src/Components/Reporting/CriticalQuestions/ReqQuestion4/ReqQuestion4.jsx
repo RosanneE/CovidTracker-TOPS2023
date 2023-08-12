@@ -71,7 +71,7 @@ export default function ReqQuestion4({ demoPage, setDemoPage }) {
         </button>
       </div>
       </div>
-      <div className="requiredQuestion3">
+      <div className="requiredQuestion3 displayNone">
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
       </div>
