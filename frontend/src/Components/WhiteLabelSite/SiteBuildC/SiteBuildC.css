@@ -99,7 +99,7 @@
 .formHeaderC {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 3rem;
   width: 100%;
@@ -108,9 +108,15 @@
 
 .formLeftGrid {
   display: grid;
-  rows: 1fr 5fr 1fr
+  grid-template-rows: 1fr 5fr 1fr;
 }
+.formLeftHeader {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
 
+}
 .formHeaderH2C {
   display: flex;
   align-items: center;

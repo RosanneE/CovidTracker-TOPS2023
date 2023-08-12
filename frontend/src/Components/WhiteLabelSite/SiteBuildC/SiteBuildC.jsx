@@ -30,11 +30,15 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
         <div className="siteBuildCGrid">
           <div className="formHeaderC">
             <div className="formLeftGrid">
-              <h2 className="formHeaderH2C">Customize Site Appearence</h2>
-              <p className="formHeaderPC">
-                Customize your site’s appearance with your logo, custom text and branded imagery.
-              </p>
-    
+              <div className="formLeftHeader" >
+                <h2 className="formHeaderH2C" style={{ textAlign: 'center' }}>
+                  Customize Site Appearance
+                </h2>
+                <p className="formHeaderPC" style={{ textAlign: 'center', width: "50%"}}>
+                  Customize your site’s appearance with your logo, custom text and branded imagery.
+                </p>
+              </div>
+
             </div>
           </div>
           <form action="">
