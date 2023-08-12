@@ -33,7 +33,7 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
 
   return (
     <>
-    <div className="whichTextContainer">
+    <div className="whichTestContainer">
       <div className="questionNumber">
         <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
         2 of 5

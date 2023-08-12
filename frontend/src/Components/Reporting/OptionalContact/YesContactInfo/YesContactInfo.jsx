@@ -15,27 +15,26 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
 
   return (
     <div className="yesContactInfoDiv">
+  <div className="optionalArrow">
+    <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+  </div>
       <div className="questionsDiv">
-        <div id="optionalQuestionsBackArrow">
-          <img src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
-        </div>
-        <h3 style={{ fontSize: "2rem" }} className="optionalH3">
+        <h3 className="question2">
           Optional Contact Info
-        </h3>
+        </h3><br/><br/>
 
         <div
           style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}
         >
           <p style={{ fontSize: "1.5rem" }}>
-            Are you willing to share your contact information?
+            Are you willing to share your contact information?<br/><br/>
           </p>
-          <p>
-            Sharing additional information makes your response more impactful to public health
-            teams in your community.
+          <p style={{fontFamily: "Noto Sans", fontSize: "1.125rem"}}>
+            Sharing additional information makes your response more impactful<br/> to public health teams in your community.<br/><br/>
           </p>
         </div>
       </div>
-      <Form style={{ width: "40rem", margin: "0 auto" }}>
+      <Form className="contactInfoForm" style={{ width: "40rem", margin: "0 auto", textAlign: "left", fontWeight: "400"}}>
         <Row>
           <Col style={inputStyle}>
             <Form.Group controlId="firstName">
@@ -134,16 +133,16 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
       <div className="nextButtonDiv">
         <Button
           id="optionalQuestionsNextButton"
-          style={{ marginTop: "1.5rem" }}
+          style={{ border: "3px solid #8A8A8A" }}
           type="Next"
           onClick={handleSkipAndSubmit}
         >
-          Submit
+          Next
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+      <div style={{ display: "block", marginBottom: "13rem" }}>
         <span
-          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500"}}
           onClick={handleSkipAndSubmit}
         >
           Skip & Submit

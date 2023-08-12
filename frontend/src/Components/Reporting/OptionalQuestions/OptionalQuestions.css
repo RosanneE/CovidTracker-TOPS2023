@@ -50,7 +50,7 @@
   font-family: Noto Sans;
   font-size: 1.3rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   border: none;
   padding: 1rem;
   width: 18rem;
@@ -71,7 +71,7 @@
 .questionsDiv {
   font-family: Bitter;
   color: #00426b;
-  width: 55rem;
+  width: 55.5rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -100,6 +100,12 @@
   clear: both;
 }
 
+.opQuestionsDiv {
+  width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .optionalQuestionsButtons {
   color: #0058b7;
   font-family: Noto Sans;
@@ -107,10 +113,20 @@
   font-weight: 400;
   padding: 0.8rem 3rem 0.8rem 3rem;
   margin-bottom: 3rem;
-  width: 200px;
-  height: 50px;
+  width: 12rem;
+  height: 3.125rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.625rem !important;
+}
+
+.optionalQuestionsButtons:hover {
+  color: #0058b7;
+}
+
+.optionalArrow {
+  position: relative;
+  top: 2.6rem;
+  left: -34.5rem;
 }

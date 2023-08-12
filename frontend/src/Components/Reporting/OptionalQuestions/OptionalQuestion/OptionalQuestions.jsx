@@ -78,20 +78,15 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
   }
 
   return (
-    <div className="">
-      <div id="optionalQuestionsBackArrow">
-        <img
-          className="backArrowImg"
-          src={backArrow}
-          alt="Back Arrow"
-          onClick={() => setDemoPage(demoPage - 1)}
-        />
-      </div>
-      <h3 className="optionalH3">Optional Questions</h3>
-
+    <div>
+      <div className="optionalArrow">
+    <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+  </div>
+  <div className="opQuestionsDiv">
+      <h3 className="question2">Optional Questions</h3><br/><br/>
       <Form onSubmit={handleSubmit}>
         {questions.map((question) => (
-          <div className="questionsDiv" key={question.id}>
+          <div key={question.id}>
             <p className="optionalQuestions">{question.text}</p>
             <ButtonGroup toggle className={question.id === "q3" ? "two-columns" : ""}>
               {question.options.map((option, idx) => (
@@ -114,21 +109,22 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
       <div className="nextButtonDiv">
         <Button
           id="optionalQuestionsNextButton"
-          style={{ marginTop: "2.5rem" }}
+          style={{ border: "3px solid #8A8A8A" }}
           type="Next"
           onClick={() => setDemoPage(demoPage + 1)}
         >
           Next
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "1.5rem" }}>
+      <div style={{ display: "block", marginBottom: "13rem" }}>
         <span
-          style={{ cursor: "pointer", textDecoration: "underline", color: "#007BFF" }}
+          style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500"}}
           onClick={handleSkipAndSubmit}
         >
           Skip & Submit
         </span>
+        </div>
       </div>
-    </div>
+      </div>
   );
 }

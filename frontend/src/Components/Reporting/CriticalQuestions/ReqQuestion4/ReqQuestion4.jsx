@@ -54,7 +54,6 @@ export default function ReqQuestion4({ demoPage, setDemoPage }) {
             onChange={handleAgeChange}
           />
         </p>
-      </div>
 
       <div className="nextButtonDiv">
         {/* Conditionally style the Next button based on clickability */}
@@ -71,7 +70,7 @@ export default function ReqQuestion4({ demoPage, setDemoPage }) {
           Next
         </button>
       </div>
-
+      </div>
       <div className="requiredQuestion3">
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
