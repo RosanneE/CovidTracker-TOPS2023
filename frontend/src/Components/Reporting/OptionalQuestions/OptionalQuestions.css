@@ -130,3 +130,114 @@
   top: 2.6rem;
   left: -34.5rem;
 }
+
+
+
+
+
+/* ----------------------------- MOBILE ----------------------------- */
+
+
+@media screen and (max-width: 768px) {
+
+  .btn-group {
+    width: 21rem !important;
+  }
+
+  .optionalQuestionsButtons {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  #optionalQuestionsNextButton {
+    width: 15rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .displayMobile {
+    display: block;
+  }
+
+  .optionalArrow {
+    display: block;
+    position: inherit;
+    padding: 0.5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .optionalArrow img {
+    float: left;
+  }
+
+  .questionsDiv, .opQuestionsDiv, .nextStepsDiv { 
+    padding-right: 0rem !important;
+    padding-top: 4rem !important;
+    width: 90% !important;
+    padding: 0.5rem !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .optionalContactQuestion2 {
+    font-size: 0.9rem !important;
+    line-height: 1.1rem !important;
+    height: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .mobileContact {
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .socialMediaCol {
+    width: 3rem !important;
+  }
+
+  .socialMediaIconsDiv img {
+    padding: 0.5rem !important;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+  }
+
+  .contactInfoForm {
+    width: 85% !important;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .contactCol {
+    padding: 5px;
+  }
+
+  .skipSubmit {
+    margin-bottom: 4rem !important;
+  }
+
+  .optionalQuestions {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .leftAlign {
+    text-align: left !important;
+  }
+
+  .smallFont {
+    font-family: Noto Sans !important;
+    font-size: 1.125rem !important;
+  }
+
+  .italic {
+    font-style: italic !important;
+  }
+
+}

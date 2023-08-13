@@ -14,7 +14,7 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
   };
 
   return (
-    <div className="yesContactInfoDiv">
+    <div>
   <div className="optionalArrow">
     <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
   </div>
@@ -23,20 +23,20 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
           Optional Contact Info
         </h3><br/><br/>
 
-        <div
+        <div className="leftAlign"
           style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}
         >
-          <p style={{ fontSize: "1.5rem" }}>
+          <p className="smallFont" style={{ fontSize: "1.5rem" }}>
             Are you willing to share your contact information?<br/><br/>
           </p>
-          <p style={{fontFamily: "Noto Sans", fontSize: "1.125rem"}}>
+          <p className="italic" style={{fontFamily: "Noto Sans", fontSize: "1.125rem"}}>
             Sharing additional information makes your response more impactful<br/> to public health teams in your community.<br/><br/>
           </p>
         </div>
       </div>
       <Form className="contactInfoForm" style={{ width: "40rem", margin: "0 auto", textAlign: "left", fontWeight: "400"}}>
         <Row>
-          <Col style={inputStyle}>
+          <Col className="contactCol" style={inputStyle}>
             <Form.Group controlId="firstName">
               <Form.Label className="form-label">First Name</Form.Label>
               <Form.Control
@@ -48,19 +48,19 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
               />
             </Form.Group>
           </Col>
-          <Col style={inputStyle}>
+          <Col className="contactCol" style={inputStyle}>
             <Form.Group controlId="middleName">
-              <Form.Label className="form-label">Middle Name</Form.Label>
+              <Form.Label className="form-label">Middle Initial</Form.Label>
               <Form.Control
                 type="text"
                 name="middle_initial"
-                placeholder="Ex: Jacob"
+                placeholder="Ex: J"
                 value={newUser.middle_initial || ""}
                 onChange={handleUserChange}
               />
             </Form.Group>
           </Col>
-          <Col style={inputStyle}>
+          <Col className="contactCol" style={inputStyle}>
             <Form.Group controlId="lastName">
               <Form.Label className="form-label">Last Name</Form.Label>
               <Form.Control
@@ -140,7 +140,7 @@ export default function YesContactInfo({ demoPage, setDemoPage }) {
           Next
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "13rem" }}>
+      <div className="skipSubmit" style={{ display: "block", marginBottom: "13rem" }}>
         <span
           style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500"}}
           onClick={handleSkipAndSubmit}

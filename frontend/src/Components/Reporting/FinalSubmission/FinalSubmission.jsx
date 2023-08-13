@@ -16,14 +16,14 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
     <div className="questionsDiv">
       <div>
       <div className="optionalArrow">
-    <img className="backArrowImg" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
+    <img className="backArrowImg displayNone" src={backArrow} alt="Back Arrow" onClick={() => setDemoPage(demoPage - 1)} />
   </div>
         <h3 className="question2">
           Results Submitted!
         </h3><br/><br/>
       </div>
       <p
-        className="optionalH3"
+        className="optionalH3 smallFont"
         style={{
           marginBottom: "3rem",
           marginTop: "0.5rem",
@@ -33,8 +33,13 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         }}
       >
         Your local community thanks you for submitting your test results!<br/><br/>
+        <div className="nextButtonDiv displayNoneDesktop displayMobile">
+        <button id="optionalQuestionsNextButton" style={{ marginTop: "3rem", border: "3px solid #8A8A8A" }}>
+          Next
+        </button>
+      </div>
       </p>
-      <div style={{ width: "36.5625rem", marginLeft: "auto", marginRight: "auto"}}>
+      <div className="nextStepsDiv" style={{ width: "36.5625rem", marginLeft: "auto", marginRight: "auto"}}>
       <h3 style={{ marginBottom: "1rem" }} className="optionalH3">
         Next Steps<br/><br/>
       </h3>
@@ -44,7 +49,7 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         chance that your result could simply be an error.
       </p>
       <div
-        className="optionalContactQuestion"
+        className="optionalContactQuestion optionalContactQuestion2"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -55,12 +60,12 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           padding: "1rem",
           height: "1.6rem"
         }}
-      >
-        If you have COVID symptoms
+      ><div className="mobileContact">
+        If you have COVID symptoms</div>
         <img style={{ width: "2rem" }} src={PlusIcon} alt="plus sign" />
       </div>
       <div
-        className="optionalContactQuestion"
+        className="optionalContactQuestion optionalContactQuestion2"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -71,8 +76,8 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           padding: "1rem",
           height: "1.6rem"
         }}
-      >
-        If you’ve been exposed to someone with COVID
+      ><div className="mobileContact">
+        If you’ve been exposed to someone with COVID</div>
         <img style={{ width: "2rem" }} src={PlusIcon} alt="plus sign" />
       </div>
         <br/><br/>
@@ -121,16 +126,16 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
         style={{ display: "flex", justifyContent: "center" }}
       >
         <Row>
-          <Col>
+          <Col className="socialMediaCol">
             <img src={InstagramIcon} alt="Instagram" style={iconStyle} />
           </Col>
-          <Col>
+          <Col className="socialMediaCol">
             <img src={FacebookIcon} alt="Facebook" style={iconStyle} />
           </Col>
-          <Col>
+          <Col className="socialMediaCol">
             <img src={TwitterIcon} alt="Twitter" style={iconStyle} />
           </Col>
-          <Col>
+          <Col className="socialMediaCol">
             <img src={PlusIcon} alt="Plus" style={iconStyle} />
           </Col>
         </Row>

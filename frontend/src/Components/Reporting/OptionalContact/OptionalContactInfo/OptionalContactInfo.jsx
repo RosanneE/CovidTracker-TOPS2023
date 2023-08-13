@@ -14,12 +14,12 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
           Optional Contact Info
         </h3>
 
-        <div
+        <div className="leftAlign"
           style={{ textAlign: "center", marginTop: "1rem !important", marginBottom: "2rem" }}
         >
-          <p style={{ fontSize: "1.5rem" }}><br/><br/>
+          <p className="smallFont" style={{ fontSize: "1.5rem" }}><br/><br/>
             Are you willing to share your contact information?<br/><br/></p>
-            <p style={{ fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
+            <p className="italic" style={{ fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
             Sharing additional information makes your response more impactful<br/> to public health teams in your community.
           </p>
         </div>
@@ -31,10 +31,10 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
           type="Next"
           onClick={() => setDemoPage(demoPage + 1)}
         >
-          Next
+          Yes
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "13rem" }}>
+      <div className="skipSubmit" style={{ display: "block", marginBottom: "13rem" }}>
         <span
           style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500"}}
           onClick={() => setDemoPage(10)}
