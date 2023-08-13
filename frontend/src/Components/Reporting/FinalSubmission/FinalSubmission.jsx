@@ -31,13 +31,8 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           fontWeight: "500",
           fontSize: "1.3rem",
         }}
-      >
+      > 
         Your local community thanks you for submitting your test results!<br/><br/>
-        <div className="nextButtonDiv displayNoneDesktop displayMobile">
-        <button id="optionalQuestionsNextButton" style={{ marginTop: "3rem", border: "3px solid #8A8A8A" }}>
-          Next
-        </button>
-      </div>
       </p>
       <div className="nextStepsDiv" style={{ width: "36.5625rem", marginLeft: "auto", marginRight: "auto"}}>
       <h3 style={{ marginBottom: "1rem" }} className="optionalH3">
