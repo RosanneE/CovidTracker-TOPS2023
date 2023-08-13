@@ -32,13 +32,25 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
           Help your community by answering the following optional-questions anonymously.
         </p>
 
-        <p style={{ textAlign: "left", fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
+        <p className="displayNone" style={{ textAlign: "left", fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
           <strong>Data that is shared here is anonymous</strong> and is not tied to any
           information that identifies you individually. <br/><br/> Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a secure national database that also receives COVID-19 test results from labs and doctors' offices.<br/><br/>
           The data may be shared with <strong>researchers</strong> and <strong>support teams</strong> working on the MakeMyTestCount initiative.<br/><br/>
           Public health teams at the state and local level can also get data from
           MakeMyTestCount and <strong>your response can help officials make important health decisions.</strong><br/><br/>
         </p>
+
+        <p className="displayNoneDesktop displayMobile" style={{ textAlign: "left", fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
+          <ul>
+          <li><strong>Data that is shared here is anonymous</strong> and is not tied to any
+          information that identifies you individually.</li> <br/>
+          <li>Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a secure national database that also receives COVID-19 test results from labs and doctors' offices.</li><br/>
+          <li>The data may be shared with <strong>researchers</strong> and <strong>support teams</strong> working on the MakeMyTestCount initiative.</li><br/>
+          <li>Public health teams at the state and local level can also get data from
+          MakeMyTestCount and <strong>your response can help officials make important health decisions.</strong></li>
+          </ul>
+        </p>
+
       </div>
       <div className="nextButtonDiv">
         <Button
@@ -50,7 +62,7 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
           Next
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "13rem" }}>
+      <div className="skipSubmit" style={{ display: "block", marginBottom: "13rem" }}>
         <span
           style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500" }}
           onClick={handleSkipAndSubmit}

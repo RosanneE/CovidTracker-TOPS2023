@@ -12,7 +12,7 @@ export default function ReqQuestion4({ demoPage, setDemoPage }) {
     const inputAge = event.target.value;
     setAge(inputAge);
 
-    const isValidAge = /^\d+$/.test(inputAge) && parseInt(inputAge) >= 1 && parseInt(inputAge) <= 100;
+    const isValidAge = /^\d+$/.test(inputAge) && parseInt(inputAge) >= 1 && parseInt(inputAge) <= 122;
 
     // Enable the Next button when the age input is a valid number between 1 and 100
     if (isValidAge) {

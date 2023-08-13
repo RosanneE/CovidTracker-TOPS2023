@@ -4,6 +4,7 @@ import { Form, Button, ButtonGroup } from "react-bootstrap";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
 import "../../OptionalQuestions/OptionalQuestions.css";
 import { FormContext } from "../../../../Context/FormContext";
+import information from "../../../../Images/informationicon.png";
 
 export default function OptionalQuestions({ demoPage, setDemoPage }) {
   const [answers, setAnswers] = useState({});
@@ -105,7 +106,16 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
             </ButtonGroup>
           </div>
         ))}
-      </Form>
+      </Form><br/><br/>
+      <div className="displayNoneDesktop displayMobile">
+      <input className="checkbox" type="checkbox" id="Checkbox" name="checkbox" value="1" />
+      Remember me on this device. 
+      <img
+      style={{paddingLeft: "0.5rem"}}
+        src={information}
+        alt="Information icon"
+      /><br/><br/>
+      </div>
       <div className="nextButtonDiv">
         <Button
           id="optionalQuestionsNextButton"
@@ -116,7 +126,7 @@ export default function OptionalQuestions({ demoPage, setDemoPage }) {
           Next
         </Button>
       </div>
-      <div style={{ display: "block", marginBottom: "13rem" }}>
+      <div className="skipSubmit" style={{ display: "block", marginBottom: "13rem" }}>
         <span
           style={{ cursor: "pointer", textDecoration: "underline", color: "#0058B7", fontWeight: "500"}}
           onClick={handleSkipAndSubmit}
