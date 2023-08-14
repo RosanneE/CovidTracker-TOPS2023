@@ -2,6 +2,7 @@
   display: flex;
   padding: 2%;
 }
+
 #customSite-leftside {
   width: 50%;
   display: flex;
@@ -9,49 +10,50 @@
   justify-content: center;
   align-items: center;
 }
-/* CURRENTLY not affecting styling */
-/* #customSite-leftside > .question {
-  flex-wrap: wrap;
-  font-size: 3rem;
-} */
+
+
 #customSite-rightside {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#customSite-rightside > img {
-  object-fit: contain;
-  height: auto;
-  width: 85%;
-  max-width: 100%;
+
+#customSite-rightside>img {
+  width: 296px;
+  height: 216px;
+  object-fit: fill;
 }
+
 #customSite-customMessage {
-  margin-top: -3%;
-  width: 40%;
   color: #1c355e;
   text-align: center;
   font-family: Noto Sans;
-  font-size: .75rem;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 #miniSiteHeader {
+  width: 732px;
+  height: 54px;
   display: flex;
-  border-bottom: 1px solid #b3b3b3;
+  align-items: center;
   justify-content: space-between;
-  padding: 2%;
-  padding-left: 3%;
-  padding-right: 3%;
+  border-bottom: 1px solid #b3b3b3;
+
 }
-#miniSiteHeader > h4 {
+
+#miniSiteHeader>h4 {
   color: #00426b;
   font-family: Bitter;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  font-size: 11px;
+  margin-left: 30px;
+  margin-right: 20px;
 }
 
 #sub-header {
@@ -60,21 +62,25 @@
   flex-direction: column;
   justify-content: center;
   padding-top: 1%;
+  width: 730px;
+  height: 42px;
 }
-#sub-header > h5 {
+
+#sub-header>h5 {
   color: #00426b;
   text-align: center;
   font-family: Bitter;
-  font-size: 1.25rem;
+  font-size: 10px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-#sub-header > p {
+
+#sub-header>p {
   color: #00426b;
   text-align: center;
   font-family: Noto Sans;
-  font-size: 0.8rem;
+  font-size: 6.5px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -84,13 +90,87 @@
   background: #e7f4f8;
   padding: 0.5%;
 }
-#sub-footer > p {
+
+#sub-footer>p {
   color: #00426b;
   text-align: center;
   font-family: Noto Sans;
-  font-size: 0.75rem;
+  font-size: 6.5px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-bottom: 0%;
 }
+
+.miniSite {
+  width: 730px;
+  height: auto;
+  border: #8D8D8D solid 1px;
+  border-radius: 4%;
+  overflow: hidden;
+  box-shadow:  2px 4px rgba(128, 128, 128, 0.2);
+}
+
+.customSiteQuestion {
+  weight: 500;
+  font-size: 32px;
+  width: 338px;
+  height: 105px;
+  color: #00426b;
+  font-family: Bitter;
+
+}
+
+.positiveNegativeCustom {
+  color: #fff;
+  width: 139px;
+  height: 35px;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 1.875rem;
+  background: #0058b7;
+  justify-content: center;
+  align-items: center;
+  margin: 1.44rem;
+  flex-shrink: 0;
+  margin-top: 3rem;
+}
+
+.positiveNegativeCustom:hover {
+  cursor: pointer;
+}
+
+.customSiteButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.questionAnswerCustom {
+  width: 338px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*------------------ footer ----------------------*/
+.customSiteFooter {
+  height: 140px;
+}
+
+.footerSocialCustom {
+  display: flex;
+  margin: 10px;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+

@@ -22,17 +22,17 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
         <img
           src={statusBar}
           alt=""
-          style={{ maxWidth: "100%", width: "40.25rem", margin: "2rem" }}
+          style={{ maxWidth: "90%"}}
         />
       </div>
 
-      <div className="siteBuildForm">
+      <div className="siteBuildFormB">
         <div className="formHeaderB">
           <h2>COVID-19 Resources</h2>
           <p onClick={() => setPageNumber(2)} style={{cursor: 'pointer'}}>Skip this step {"\u003E"}</p>
         </div>
         <form action="">
-          <div className="siteBuildFormLabel">
+          <div className="siteBuildFormLabelB">
             <label htmlFor="postiveTestLink">Positive-Test Link</label>
             <p className="siteBuildPB">
               If the user has tested positive, where can they find additional instructions? (if
@@ -46,10 +46,10 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             name="positive_test_link"
             value={newSite.positiveTest}
             onChange={handlePartnerChange}
-            className="siteBuildFormInput"
+            className="siteBuildFormInputB"
             placeholder="Example: http://mysite.com/positiveinstructions.html"
           />
-          <div className="siteBuildFormLabel">
+          <div className="siteBuildFormLabelB">
             <label htmlFor="negativeTestLink">Negative-Test Link</label>
             <p className="siteBuildPB">
               If the user has tested negative, where can they find additional instructions? (if
@@ -63,10 +63,10 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             name="negative_test_link"
             value={newSite.negative_test_link}
             onChange={handlePartnerChange}
-            className="siteBuildFormInput"
+            className="siteBuildFormInputB"
             placeholder="Example: http://mysite.com/negativeinstructions.html"
           />
-          <div className="siteBuildFormLabel">
+          <div className="siteBuildFormLabelB">
             <label htmlFor="furtherInformation">
               Link to Further information about COVID-19
             </label>
@@ -81,11 +81,11 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             name="more_info_link"
             value={newSite.more_info_link}
             onChange={handlePartnerChange}
-            className="siteBuildFormInput"
+            className="siteBuildFormInputB"
             placeholder="Example: http://mysite.com/covidinfo.html"
           />
           <div className="siteBuildContinueButtonB">
-            <p className="siteBuildPB" onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer'}}>{"\u003C"} Go back</p>
+            <p className="siteBuildPB" onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', fontSize: '20px', color: '#00426b'}}>{"\u003C"} Go back</p>
             <button className="siteBuildBlueButtonB" onClick={() => setPageNumber(4)}>
               Continue
             </button>
