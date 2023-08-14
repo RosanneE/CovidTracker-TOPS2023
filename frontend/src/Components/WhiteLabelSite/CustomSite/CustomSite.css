@@ -11,11 +11,7 @@
   align-items: center;
 }
 
-/* CURRENTLY not affecting styling */
-/* #customSite-leftside > .question {
-  flex-wrap: wrap;
-  font-size: 3rem;
-} */
+
 #customSite-rightside {
   width: 50%;
   display: flex;
@@ -110,7 +106,9 @@
   width: 730px;
   height: auto;
   border: #8D8D8D solid 1px;
-  border-radius: 5%;
+  border-radius: 4%;
+  overflow: hidden;
+  box-shadow:  2px 4px rgba(128, 128, 128, 0.2);
 }
 
 .customSiteQuestion {
@@ -134,7 +132,6 @@
   border: none;
   border-radius: 1.875rem;
   background: #0058b7;
-  /* padding: 1rem 3rem; */
   justify-content: center;
   align-items: center;
   margin: 1.44rem;
@@ -162,6 +159,8 @@
   justify-content: center;
 }
 
+
+/*------------------ footer ----------------------*/
 .customSiteFooter {
   height: 140px;
 }
@@ -175,7 +174,3 @@
   align-content: center;
 }
 
-.customeSiteFooter {
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
-}

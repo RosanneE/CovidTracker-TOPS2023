@@ -40,33 +40,38 @@
   height: auto;
 }
 
-.siteBuildForm>form {
+.formRightGrid>form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 378px;
 
 }
 
 .siteBuildFormInputC {
-  width: 80%;
+  width: 367px;
   border-radius: 7px;
   border: 1px solid #8D8D8D;
-  padding: 1rem;
-  margin: 1.5rem;
+  margin-bottom: 20px;
+  padding: 3px;
+  text-align: center;
+}
 
+#custom_message {
+  height: 200px;
+}
+
+#social_sharing_message {
+  height: 144px;
 }
 
 .siteBuildFormLabel>label {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 18px;
-  font-weight: 400;
-  margin: 1rem 0 1rem 0;
+  font-weight: 500;
   font-style: normal;
-  line-height: 36px;
-  /* 120% */
 }
 
 .siteBuildPC {
@@ -77,12 +82,14 @@
 
 .siteBuildFormLabel {
   text-align: left;
+  width: 350px;
+
 
 }
 
 .siteBuildContinueButtonC {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
@@ -92,7 +99,7 @@
 
 @media (max-width: 900px) {
   .siteBuildContinueButtonC {
-  flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -103,12 +110,12 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  width: 1300px;
+  width: 1200px;
 }
 
 .formLeftGrid {
   display: grid;
-  grid-template-rows: 5fr 1fr;
+  grid-template-rows: 2fr 1fr;
   grid-column-start: 1;
 }
 
@@ -117,12 +124,13 @@
 }
 
 .formLeftHeader {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   margin-left: 15px;
 }
+
 .formHeaderH2C {
   color: #00426b;
   font-family: Bitter;
@@ -168,15 +176,20 @@
     font-size: 1rem;
 
   }
+
+  .siteBuildContinueButtonC {
+    flex-direction: column;
+  }
 }
+
 .siteBuildBlueButtonC:hover {
   cursor: pointer;
 }
 
 .siteBuildCGrid {
   display: grid;
-  grid-template-columns: 7fr 3fr;
-  width: 1512px;
+  grid-template-columns: 800px 400px;
+  width: 1200px;
   height: auto;
   background: #f7f9fa;
 
@@ -187,8 +200,8 @@
 }
 
 #logo {
-width: 367px;
-height: 46px;
+  width: 367px;
+  height: 46px;
 }
 
 #cover_photo {
@@ -202,6 +215,113 @@ height: 46px;
 .customSite {
   width: 732px;
   height: 499px;
-  
-  
+}
+
+/* adjusting the layout of the grids for smaller screen size  */
+@media (max-width: 900px) {
+  .siteBuildCGrid {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    width: 800px;
+  }
+
+  .formLeftGrid {
+    grid-column-start: 1;
+    grid-template-rows: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .customSite {
+    grid-row-start: 1;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    height: auto;
+
+
+  }
+
+  .colorSelction {
+    grid-row-start: 2;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  .formRightGrid {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    height: auto;
+  }
+
+  .customSite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+
+  }
+
+  .formHeaderC {
+    width: 800px;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+  }
+
+  .formLeftHeader {
+    margin: 1rem;
+  }
+
+  .colorSelction {
+    margin: 2rem .5rem;
+    align-items: center;
+  }
+
+  .radioOption img {
+    border-radius: 2px;
+    display: block;
+    margin: 30px 0;
+  }
+
+}
+
+/* ------------Radio selection for colors -------------- */
+
+.colorSelection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 750px;
+}
+
+.radioOption {
+  text-align: center;
+}
+
+.radioOption label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #00426b;
+  font-weight: 600;
+}
+
+.radioOption img {
+  width: 127px;
+  height: 97px;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 5px;
 }
