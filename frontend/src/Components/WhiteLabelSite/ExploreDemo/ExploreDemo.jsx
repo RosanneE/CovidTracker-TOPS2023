@@ -157,11 +157,13 @@ const ExploreDemo = (props) => {
                 {carousel[activeSlideIndex].description}
               </p>
               <div className="explore-rightSide-lowerBox-examples">
-                <ol className="explore-examples">
+                <ol className="explore-examples-list">
                   {carousel[activeSlideIndex].examples.map((example, index) => {
                     return (
-                      <li>
-                        <span className="explore-examples-bulletPoints">{String.fromCharCode(index + 65)}</span>
+                      <li className="explore-example">
+                        <span className="explore-examples-bulletPoints">
+                          {String.fromCharCode(index + 65)}
+                        </span>
                         <p>{example}</p>
                       </li>
                     );
