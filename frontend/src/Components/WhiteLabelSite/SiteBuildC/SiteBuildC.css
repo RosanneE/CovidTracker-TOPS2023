@@ -6,18 +6,18 @@
   margin-bottom: 50px;
 }
 
-.siteBuildHeader>h1 {
+.siteBuildHeaderC>h1 {
   color: #00426b;
   text-align: center;
   font-family: Bitter;
-  font-size: 3rem;
+  font-size: 64px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-bottom: 1rem;
 }
 
-.siteBuilderHeader {
+.siteBuilderHeaderC {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@
   margin-bottom: 50px;
 }
 
-.siteBuilderHeader>p {
+.siteBuilderHeaderC>p {
   margin-bottom: 50px;
 }
 
@@ -61,17 +61,18 @@
 .siteBuildFormLabel>label {
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-weight: 400;
   margin: 1rem 0 1rem 0;
   font-style: normal;
   line-height: 36px;
   /* 120% */
 }
 
-.siteBuildP {
+.siteBuildPC {
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .siteBuildFormLabel {
@@ -98,43 +99,44 @@
 
 .formHeaderC {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
-  width: 100%;
-  grid-row-start: 1;
+  margin-top: 20px;
+  width: 1300px;
 }
 
 .formLeftGrid {
   display: grid;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  grid-column-start: 1;
 }
+
+.formRightGrid {
+  grid-column-start: 2;
+}
+
 .formLeftHeader {
  display: flex;
  flex-direction: column;
  align-items: center;
- justify-content: center;
-
+ justify-content: flex-start;
+  margin-left: 15px;
 }
 .formHeaderH2C {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #00426b;
   font-family: Bitter;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin: .5rem 1rem 1rem 1rem;
   text-align: left;
+  width: 100%;
 }
 
 .formHeaderPC {
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1rem;
-  
+  font-size: 14px;
 }
 
 
@@ -148,7 +150,7 @@
   line-height: 1.25rem;
   /* 100% */
   border: none;
-  border-radius: .62rem;
+  border-radius: 1.875rem;
   background: #0058b7;
   min-height: 2.5rem;
   padding: .62rem 2.18rem;
@@ -192,4 +194,14 @@ height: 46px;
 #cover_photo {
   width: 367px;
   height: 46px;
+}
+
+
+/* --------------- mini site ------------------ */
+
+.customSite {
+  width: 732px;
+  height: 499px;
+  
+  
 }

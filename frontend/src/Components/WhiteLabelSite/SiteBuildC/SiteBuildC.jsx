@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./SiteBuildC.css";
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
 import { FormContext } from "../../../Context/FormContext";
+import CustomSite from "../CustomSite/CustomSite";
 
 export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
@@ -13,36 +14,45 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
         <p onClick={() => setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
-      <div className="siteBuildHeader">
+      <div className="siteBuildHeaderC">
         <h1>Request a Stand-Alone Site </h1>
-        <p className="siteBuildP">
+        <p className="siteBuildPC">
           After you submit this form our team will reach out to you to start the the process
           and clarify any additional details.
         </p>
         <img
           src={statusBar}
           alt=""
-          style={{ maxWidth: "100%", width: "40.25rem", margin: "2rem" }}
+          style={{ maxWidth: "90%" }}
         />
       </div>
 
       <div className="siteBuildFormC">
+        <div className="formHeaderC">
+          <div className="formLeftHeader" >
+            <h2 className="formHeaderH2C" >
+              Customize Site Appearance
+            </h2>
+            <p className="formHeaderPC" >
+              Customize your site’s appearance with your logo, custom text and branded imagery.
+            </p>
+          </div>
+          <p onClick={() => setPageNumber(pageNumber + 1)}
+            style={{ cursor: 'pointer', color: '#00426b', marginRight: '5px' }}>
+            Skip this step {"\u003E"}
+          </p>
+        </div>
         <div className="siteBuildCGrid">
-          <div className="formHeaderC">
-            <div className="formLeftGrid">
-              <div className="formLeftHeader" >
-                <h2 className="formHeaderH2C" style={{ textAlign: 'center' }}>
-                  Customize Site Appearance
-                </h2>
-                <p className="formHeaderPC" style={{ textAlign: 'center', width: "50%"}}>
-                  Customize your site’s appearance with your logo, custom text and branded imagery.
-                </p>
-              </div>
-
+          <div className="formLeftGrid">
+            <div className="customSite">
+              <CustomSite />
+            </div>
+            <div className="colorSelction">
+              <h1>THIS IS WHERE THE COLOR SELCTION WILL BE</h1>
             </div>
           </div>
+        <div className="formRightGrid">
           <form action="">
-            <p onClick={() => setPageNumber(pageNumber + 1)} style={{ cursor: 'pointer', color: '#00426b' }}>Skip this step {"\u003E"}</p>
             <div className="siteBuildFormLabel">
               <label htmlFor="postiveTestLink">Logo</label>
 
@@ -54,10 +64,10 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               value={newSite.logo}
               onChange={handlePartnerChange}
               className="siteBuildFormInputC"
-            />
+              />
             <div className="siteBuildFormLabel">
               <label htmlFor="negativeTestLink">Cover Photo</label>
-              <p className="siteBuildP">
+              <p className="siteBuildPC">
                 {/* ---------------- need to build a gallery? ------------- */}
                 Not sure where to start? <a href="/">Browse our gallery</a>
               </p>
@@ -69,10 +79,10 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               value={newSite.cover_photo}
               onChange={handlePartnerChange}
               className="siteBuildFormInputC"
-            />
+              />
             <div className="siteBuildFormLabel">
               <label htmlFor="furtherInformation">Custom Message</label>
-              <p className="siteBuildP">A quick message about your organization and mission</p>
+              <p className="siteBuildPC">A quick message about your organization and mission</p>
             </div>
             <input
               type="text"
@@ -81,11 +91,11 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               value={newSite.custom_message}
               onChange={handlePartnerChange}
               className="siteBuildFormInputC"
-            />
+              />
 
             <div className="siteBuildFormLabel">
               <label htmlFor="furtherInformation">Social Sharing Message Message</label>
-              <p className="siteBuildP">This will appear whenever your site is shared</p>
+              <p className="siteBuildPC">This will appear whenever your site is shared</p>
             </div>
             <input
               type="text"
@@ -94,7 +104,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               value={newSite.social_sharing_message}
               onChange={handlePartnerChange}
               className="siteBuildFormInputC"
-            />
+              />
 
             <div className="siteBuildContinueButtonC">
               <button className="siteBuildBlueButtonC" onClick={() => setPageNumber(5)}>
@@ -104,6 +114,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
             </div>
           </form>
         </div>
+              </div>
+
       </div>
     </>
   );

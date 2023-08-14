@@ -3,12 +3,13 @@ import Footer from "../../Footer/Footer";
 import { useContext } from "react";
 import { FormContext } from "../../../Context/FormContext";
 import inspectingResults from "../../../Images/Inspecting_results.png";
+import CustomeSiteFooter from "./CustomSiteFooter";
 
 const CustomSite = () => {
   const { newSite } = useContext(FormContext);
 
   return (
-    <>
+    <div className="miniSite">
       {/* Header - Organization name is custom */}
       <div id="miniSiteHeader">
         <h4>
@@ -29,31 +30,31 @@ const CustomSite = () => {
       Custom message is in body below buttons*/}
       <div id="customSite-body">
         <div id="customSite-leftside">
-          <div className="questionAnswer">
-            <p>
-              <span className="question">
-                What was your at-home test result?
-              </span>
-              <span className="asterisk">*</span>
-              <br />
-              <button className="positiveNegative dissolveEffect" style={{ pointerEvents: "none"}}>
-                {" "}
+          <div className="questionAnswerCustom">
+
+            <span className="customSiteQuestion">
+              <p> What was your</p>
+              <p>at-home test result?</p>
+            </span>
+
+            <div className="customSiteButtons">
+              <button className="positiveNegativeCustom dissolveEffectCustom" style={{ pointerEvents: "none" }}>
                 Positive
               </button>
 
-              <button className="positiveNegative dissolveEffect" style={{ pointerEvents: "none"}}>
-                {" "}
+              <button className="positiveNegativeCustom dissolveEffectCustom" style={{ pointerEvents: "none" }}>
                 Negative
               </button>
-              <br />
-            </p>{" "}
-          </div>
-          <div id="customSite-customMessage">
-            <p>
-              {newSite.custom_message
-                ? newSite.custom_message
-                : "Our mission is to protect and promote the health and well-being of all Butte County residents"}
-            </p>
+            </div>
+
+
+            <div id="customSite-customMessage">
+              <p>
+                {newSite.custom_message
+                  ? newSite.custom_message
+                  : "Our mission is to protect and promote the health and well-being of all Butte County residents"}
+              </p>
+            </div>
           </div>
         </div>
         <div id="customSite-rightside">
@@ -63,15 +64,11 @@ const CustomSite = () => {
           />
         </div>
       </div>
-      <div id="sub-footer">
-        <p>
-          This site meets strict US government security standards to keep your
-          data secure.
-        </p>
+      <div className="ustomeSiteFooter" style={{ backgroundColor: '#1f304f' }}>
+        <CustomeSiteFooter />
       </div>
-      {/* Footer */}
-      <Footer />
-    </>
+    </div>
+
   );
 };
 
