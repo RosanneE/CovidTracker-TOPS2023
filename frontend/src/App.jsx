@@ -17,7 +17,7 @@ import WhiteLabelPage from "./Pages/WhiteLabelSite/WhiteLabelSite";
 import Reporting from "./Pages/Reporting/Reporting";
 import { FormProvider } from "./Context/FormContext";
 
-import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
+import CustomSite from "./Components/WhiteLabelSite/CustomSite/customSite";
 
 import Explore from "./Pages/Explore/Explore";
 import DataChart from "./Components/DataChart/DataChart";
