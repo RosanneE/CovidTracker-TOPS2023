@@ -107,7 +107,20 @@ const ExploreDemo = (props) => {
   return (
     <div className="explore-modal-overlay">
       <div className="explore-modal-container">
-        <span onClick={props.handleModalClose}>&times;</span>
+        <span onClick={props.handleModalClose}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M23.8149 22.9213C23.9334 23.0398 24 23.2005 24 23.3681C24 23.5357 23.9334 23.6964 23.8149 23.8149C23.6964 23.9334 23.5357 24 23.3681 24C23.2005 24 23.0398 23.9334 22.9213 23.8149L12 12.8937L1.07874 23.8149C0.960234 23.9334 0.799505 24 0.631912 24C0.464318 24 0.303589 23.9334 0.185083 23.8149C0.0665765 23.6964 3.30366e-09 23.5357 0 23.3681C-3.30367e-09 23.2005 0.0665759 23.0398 0.185082 22.9213L11.1063 12L0.185082 1.07874C0.0665759 0.960234 0 0.799505 0 0.631912C0 0.464318 0.0665759 0.303589 0.185082 0.185082C0.303589 0.0665759 0.464318 0 0.631912 0C0.799505 0 0.960234 0.0665759 1.07874 0.185082L12 11.1063L22.9213 0.185082C22.9799 0.126404 23.0496 0.0798577 23.1263 0.0481011C23.2029 0.0163446 23.2851 1.63581e-09 23.3681 0C23.4511 -1.63581e-09 23.5332 0.0163446 23.6099 0.0481011C23.6866 0.0798576 23.7562 0.126404 23.8149 0.185082C23.8736 0.243761 23.9201 0.313422 23.9519 0.390089C23.9837 0.466756 24 0.548928 24 0.631912C24 0.714895 23.9837 0.797067 23.9519 0.873734C23.9201 0.950401 23.8736 1.02006 23.8149 1.07874L12.8937 12L23.8149 22.9213Z"
+              fill="#00426B"
+            />
+          </svg>
+        </span>
         <div className="explore-modal">
           <div className="explore-header">
             <h3>Explore the Tool</h3>
@@ -140,20 +153,50 @@ const ExploreDemo = (props) => {
               <h4>{carousel[activeSlideIndex].step}</h4>
             </div>
             <div className="explore-rightSide-lowerBox">
-              <p>{carousel[activeSlideIndex].description}</p>
+              <p id="explore-description">
+                {carousel[activeSlideIndex].description}
+              </p>
               <div className="explore-rightSide-lowerBox-examples">
-                {carousel[activeSlideIndex].examples.map((example) => {
-                  return <p>{example}</p>;
-                })}
+                <ol className="explore-examples">
+                  {carousel[activeSlideIndex].examples.map((example, index) => {
+                    return (
+                      <li>
+                        <span className="explore-examples-bulletPoints">{String.fromCharCode(index + 65)}</span>
+                        <p>{example}</p>
+                      </li>
+                    );
+                  })}
+                </ol>
               </div>
             </div>
           </div>
           <div className="explore-footer">
             <div className="explore-button-container">
-              <button className="blueButton" onClick={handleCarouselPrevious}>
-                Previous
-              </button>
-              <button className="blueButton" onClick={handleCarouselNext}>
+              {activeSlideIndex !== 0 ? (
+                <button
+                  className="blueButton"
+                  id="explore-button-previous"
+                  onClick={handleCarouselPrevious}
+                >
+                  Previous
+                </button>
+              ) : (
+                ""
+              )}
+              <button
+                className="blueButton"
+                onClick={handleCarouselNext}
+                style={{
+                  backgroundColor:
+                    activeSlideIndex === carousel.length - 1
+                      ? "#0058B780"
+                      : undefined,
+                  border:
+                    activeSlideIndex === carousel.length - 1
+                      ? "#0058B780 solid 4px"
+                      : undefined,
+                }}
+              >
                 Next
               </button>
             </div>
