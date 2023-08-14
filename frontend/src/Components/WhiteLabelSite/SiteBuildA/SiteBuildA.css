@@ -22,7 +22,7 @@
 /* Header PA */
 @media (max-width: 768px) {
   .siteBuildHeaderA>p {
-    margin: 0 1rem;
+    margin: 0 2.5rem !important;
   }
 }
 
@@ -63,6 +63,7 @@
 
   }
 
+
   #contact_name_label {
     width: 400px;
 
@@ -89,12 +90,20 @@
   }
 
   #site_origin_paragraph {
-    width: 400px;
+    width: 300px !important;
+    margin-left: 10px;
+    margin: auto;
 
   }
 
   #home_link_paragraph {
-    width: 400px;
+    width: 300px !important;
+    margin: auto;
+  }
+
+  .backtoPartnerPageA {
+    align-items: center;
+    justify-content: center;
   }
 
 
@@ -104,7 +113,6 @@
 @media (max-width: 768px) {
   .formHeaderA {
     justify-content: center;
-    align-items: center;
   }
 }
 
@@ -124,7 +132,7 @@
     min-height: 1.75rem;
     padding: 1rem 3rem;
     font-size: 1rem;
-}
+  }
 }
 
 /* Desktop Styles (min-width: 769px) */
@@ -165,8 +173,8 @@
   justify-content: center;
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1rem;
-  margin: 0 17rem;
+  font-size: 14px;
+  margin: 0 5rem;
 }
 
 /* Site Build Middle */
@@ -194,8 +202,9 @@
 .siteBuildFormLabelA>label {
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1.25rem;
-  margin: 1rem 0;
+  font-size: 18px;
+  font-weight: 400;
+  margin: .25rem 0;
   font-style: normal;
   line-height: 36px;
   /* 120% */
@@ -207,9 +216,10 @@
 .siteBuildFormLabelA>p {
   color: #00426b;
   font-family: Noto Sans;
-  font-size: 1rem;
+  font-size: 14px;
   width: 632px;
   text-align: left;
+
 }
 
 /* Form Header A */
@@ -239,6 +249,9 @@
   align-items: center;
   margin: 3rem 0;
   width: 95%;
+}
+.siteBuildContinueButtonA>p {
+  font-size: 20px;
 }
 
 /* Site Build Blue Button */

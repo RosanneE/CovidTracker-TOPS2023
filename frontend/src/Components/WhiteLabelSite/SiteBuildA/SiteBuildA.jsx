@@ -22,7 +22,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
         <img
           src={statusBar}
           alt=""
-          style={{ maxWidth: "100%", width: "40.25rem", margin: "2rem" }}
+          style={{ maxWidth: "90%"}}
         />
       </div>
 
