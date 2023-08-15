@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./SiteBuildC.css";
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
 import bright from "../../../Images/customeSiteBriteColor.png";
@@ -15,6 +15,13 @@ import CustomSite from "../CustomSite/CustomSite";
 
 export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
+  const [siteTheme, setSiteTheme] = useState("classic")
+
+  const handleThemeChange = (event) => {
+    const selectedTheme = event.target.value;
+    setSiteTheme(selectedTheme);
+  };
+
 
   return (
     <>
@@ -54,7 +61,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
         <div className="siteBuildCGrid">
           <div className="formLeftGrid">
             <div className="customSite">
-              <CustomSite />
+              <CustomSite siteTheme={siteTheme} />
             </div>
 
             {/* ---------------color selection-------------------------*/}
@@ -64,35 +71,39 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 <label>
                   <img src={classic} alt="Classic" />
                   Classic
-                  <input type="radio" name="color" value="classic" />
+                  <input type="radio" name="color" checked={siteTheme === 'classic'} value="classic" onChange={handleThemeChange} />
                 </label>
               </div>
+
               <div class="radioOption">
                 <label>
                   <img src={clean} alt="Clean" />
                   Clean
-                  <input type="radio" name="color" value="clean" />
+                  <input type="radio" name="color" value="clean" onChange={handleThemeChange} />
                 </label>
               </div>
+
               <div class="radioOption">
                 <label>
                   <img src={bright} alt="Bright" />
                   Bright
-                  <input type="radio" name="color" value="bright" />
+                  <input type="radio" name="color" value="bright" onChange={handleThemeChange} />
                 </label>
               </div>
+
               <div class="radioOption">
                 <label>
                   <img src={deep} alt="Deep" />
                   Deep
-                  <input type="radio" name="color" value="deep" />
+                  <input type="radio" name="color" value="deep" onChange={handleThemeChange} />
                 </label>
               </div>
+
               <div class="radioOption">
                 <label>
                   <img src={natural} alt="Natural" />
                   Natural
-                  <input type="radio" name="color" value="natural" />
+                  <input type="radio" name="color" value="natural" onChange={handleThemeChange} />
                 </label>
               </div>
             </div>
@@ -102,7 +113,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
           <div className="formRightGrid">
             <form action="">
               <div className="siteBuildFormLabel">
-                <label htmlFor="postiveTestLink">Logo</label>
+                <label htmlFor="postiveTestLink" >Logo</label>
 
               </div>
               <input
@@ -114,8 +125,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 className="siteBuildFormInputC"
               />
               <div className="siteBuildFormLabel">
-                <label htmlFor="negativeTestLink">Cover Photo</label>
-                <p className="siteBuildPC">
+                <label htmlFor="negativeTestLink" >Cover Photo</label>
+                <p className="siteBuildPC" >
 
                   {/* ---------------- need to build a gallery? ------------- */}
 
@@ -131,8 +142,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 className="siteBuildFormInputC"
               />
               <div className="siteBuildFormLabel">
-                <label htmlFor="furtherInformation">Custom Message</label>
-                <p className="siteBuildPC">A quick message about your organization and mission</p>
+                <label htmlFor="furtherInformation" >Custom Message</label>
+                <p className="siteBuildPC"  >A quick message about your organization and mission</p>
               </div>
               <textarea
                 type="text"
@@ -145,8 +156,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               />
 
               <div className="siteBuildFormLabel">
-                <label htmlFor="furtherInformation">Social Sharing Message Message</label>
-                <p className="siteBuildPC">This will appear whenever your site is shared</p>
+                <label htmlFor="furtherInformation" >Social Sharing Message Message</label>
+                <p className="siteBuildPC" >This will appear whenever your site is shared</p>
               </div>
               <textarea
                 type="text"
