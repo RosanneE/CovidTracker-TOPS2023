@@ -20,20 +20,32 @@ const ExploreDemo = (props) => {
   const handleCarouselPrevious = () => {
     if (activeSlideIndex !== 0) setActiveSlideIndex(activeSlideIndex - 1);
   };
-  
-  const handleDropdownClick = (index) => {
-    const detailsElement = document.getElementById("tableOfContents")
-    const isOpen = detailsElement.open
-    // toggle the open attribute to close or open
-    isOpen ? detailsElement.open = false : detailsElement.open = true
 
-    setActiveSlideIndex(index)
-  }
+  const handleDropdownClick = (index) => {
+    const detailsElement = document.getElementById("tableOfContents");
+    const isOpen = detailsElement.open;
+    // toggle the open attribute to close or open
+    isOpen ? (detailsElement.open = false) : (detailsElement.open = true);
+
+    setActiveSlideIndex(index);
+  };
+
+  const tableOfContents = [
+    "Step 1: Test result",
+    "Step 2: Test selection",
+    "Step 3: Required question",
+    "Step 4: Optional questions",
+    "Step 5: Optional contact info",
+    "Step 6: Negative test result",
+    "Step 6: Positive test result",
+    "Stand-alone site example",
+    "Modal pop-up example",
+  ];
 
   const carousel = [
     {
       id: 1,
-      screenShot: slide_1, //TODO import screenshots
+      screenShot: slide_1,
       step: "Step 1: Test result (required)",
       description: `User clicks "positive" or "negative".`,
       examples: [
@@ -132,38 +144,17 @@ const ExploreDemo = (props) => {
         </span>
         <div className="explore-modal">
           <div className="explore-header">
-            <h3>Explore the Tool</h3>
-            {/* <p>
-              Table of Contents
-              <span>
-                <svg
-                  width="18"
-                  height="11"
-                  viewBox="0 0 18 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.875 2.08108L8.9375 11L0 2.08108L2.08542 0L8.9375 6.83784L15.7896 0L17.875 2.08108Z"
-                    fill="#00426B"
-                  />
-                </svg>
-              </span>
-            </p> */}
+            <h3>Explore the Tool</h3>            
             <details id="tableOfContents">
-                <summary>Table of Contents</summary>
-                <ul>
-                  <li onClick={()=>{handleDropdownClick(0)}}>Step 1: Test result</li>
-                  <li onClick={()=>handleDropdownClick(1)}>Step 2: Test selection</li>
-                  <li onClick={()=>handleDropdownClick(2)}>Step 3: Required questions</li>
-                  <li onClick={()=>handleDropdownClick(3)}>Step 4: Optional questions</li>
-                  <li onClick={()=>handleDropdownClick(4)}>Step 5: Optional contact info</li>
-                  <li onClick={()=>handleDropdownClick(5)}>Step 6: Negative test result</li>
-                  <li onClick={()=>handleDropdownClick(6)}>Step 6: Positive test result</li>
-                  <li onClick={()=>handleDropdownClick(7)}>Stand-alone site example</li>
-                  <li onClick={()=>handleDropdownClick(8)}>Modal pop-up example</li>
-                </ul>
-              </details>
+              <summary>Table of Contents</summary>
+              <ul>
+                {tableOfContents.map((step, index) => {
+                  return (
+                    <li onClick={() => handleDropdownClick(index)}>{step}</li>
+                  );
+                })}
+              </ul>
+            </details>
           </div>
           <div className="explore-body">
             <div className="explore-leftSide">
