@@ -109,7 +109,7 @@
   border: #8D8D8D solid 1px;
   border-radius: 4%;
   overflow: hidden;
-  box-shadow:  2px 4px rgba(128, 128, 128, 0.2);
+  box-shadow: 2px 4px rgba(128, 128, 128, 0.2);
 }
 
 .customSiteQuestion {
@@ -175,4 +175,3 @@
   align-items: center;
   align-content: center;
 }
-

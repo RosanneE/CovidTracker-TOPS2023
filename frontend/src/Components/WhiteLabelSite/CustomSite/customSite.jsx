@@ -82,7 +82,7 @@ const CustomSite = ({ siteTheme }) => {
           <div className="questionAnswerCustom">
 
             <span className="customSiteQuestion">
-              <p style={{ color: h1Color, margin: 0}}> What was your</p>
+              <p style={{ color: h1Color, margin: 0 }}> What was your</p>
               <p style={{ color: h1Color }}>at-home test result?</p>
             </span>
 

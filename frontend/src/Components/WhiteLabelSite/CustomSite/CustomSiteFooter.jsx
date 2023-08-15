@@ -10,7 +10,7 @@ import CareEv from "../../../Images/CareEvolution.png";
 function CustomeSiteFooter({ siteTheme }) {
   const [footerColor, setFooterColor] = useState('#1f304f');
   const [subFooterColor, setSubFooterColor] = useState('#E7F4F8')
-  const [subFooterText, setSubFooterText ] = useState('#00426B')
+  const [subFooterText, setSubFooterText] = useState('#00426B')
 
   useEffect(() => {
     function footerColorChange(siteTheme) {
