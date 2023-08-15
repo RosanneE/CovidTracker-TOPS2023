@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, } from "react";
 import "./SiteBuildC.css";
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
 import bright from "../../../Images/customeSiteBriteColor.png";
@@ -8,6 +8,7 @@ import clean from "../../../Images/customeSiteCleanColor.png";
 import natural from "../../../Images/customSiteNaturalColor.png";
 import { FormContext } from "../../../Context/FormContext";
 import CustomSite from "../CustomSite/CustomSite";
+import ImageUpload from "../CustomSite/ImageUpload/ImageUpload";
 // import Amplify from 'aws-amplify';
 // import awsconfig from './aws-exports';
 // import { Storage } from 'aws-amplify';
@@ -179,6 +180,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
           </div>
         </div>
       </div>
+      <ImageUpload />
     </>
   );
 }
