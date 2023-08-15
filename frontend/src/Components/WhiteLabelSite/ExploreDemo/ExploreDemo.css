@@ -52,12 +52,43 @@
 .explore-header > p > span {
   margin-left: 15px;
 }
+
+details {
+  position: relative;
+  margin-left: 5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+details ul {
+  display: block;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  z-index:100;
+  position: absolute;
+  background-color: #f9fbfc;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+details li {
+  margin-left: 1.5rem;
+  font-weight: 400;
+  margin-top: .66rem;
+}
+details li:hover {
+  text-decoration: underline #CF357F 2px;
+  cursor: pointer;
+}
+
 .explore-body {
   display: grid;
   grid-template-columns: 2.3fr 1.1fr;
   grid-template-rows: 4.31rem 32rem;
   background-color: #f9fbfc;
 }
+
 .explore-rightSide-topBox {
   grid-area: 1 / 2 / 2 / 3;
   border-bottom: 1px solid #b3b3b3;
@@ -78,11 +109,13 @@
   font-family: Noto Sans;
   text-align: left;
 }
+
 #explore-description {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.6875rem;
 }
+
 .explore-examples-list {
   font-size: 0.875rem;
   line-height: 1.3125rem;
@@ -97,7 +130,6 @@
   grid-template-columns: 1fr 4fr;
   margin-bottom: 5%;
 }
-
 .explore-examples-bulletPoints {
   margin-right: 10%;
   display: flex;
@@ -110,6 +142,7 @@
   height: 3rem;
   color: white;
 }
+
 .explore-leftSide {
   grid-row: 1 / 3;
 }

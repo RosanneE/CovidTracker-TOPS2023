@@ -20,6 +20,15 @@ const ExploreDemo = (props) => {
   const handleCarouselPrevious = () => {
     if (activeSlideIndex !== 0) setActiveSlideIndex(activeSlideIndex - 1);
   };
+  
+  const handleDropdownClick = (index) => {
+    const detailsElement = document.getElementById("tableOfContents")
+    const isOpen = detailsElement.open
+    // toggle the open attribute to close or open
+    isOpen ? detailsElement.open = false : detailsElement.open = true
+
+    setActiveSlideIndex(index)
+  }
 
   const carousel = [
     {
@@ -124,7 +133,7 @@ const ExploreDemo = (props) => {
         <div className="explore-modal">
           <div className="explore-header">
             <h3>Explore the Tool</h3>
-            <p>
+            {/* <p>
               Table of Contents
               <span>
                 <svg
@@ -140,7 +149,21 @@ const ExploreDemo = (props) => {
                   />
                 </svg>
               </span>
-            </p>
+            </p> */}
+            <details id="tableOfContents">
+                <summary>Table of Contents</summary>
+                <ul>
+                  <li onClick={()=>{handleDropdownClick(0)}}>Step 1: Test result</li>
+                  <li onClick={()=>handleDropdownClick(1)}>Step 2: Test selection</li>
+                  <li onClick={()=>handleDropdownClick(2)}>Step 3: Required questions</li>
+                  <li onClick={()=>handleDropdownClick(3)}>Step 4: Optional questions</li>
+                  <li onClick={()=>handleDropdownClick(4)}>Step 5: Optional contact info</li>
+                  <li onClick={()=>handleDropdownClick(5)}>Step 6: Negative test result</li>
+                  <li onClick={()=>handleDropdownClick(6)}>Step 6: Positive test result</li>
+                  <li onClick={()=>handleDropdownClick(7)}>Stand-alone site example</li>
+                  <li onClick={()=>handleDropdownClick(8)}>Modal pop-up example</li>
+                </ul>
+              </details>
           </div>
           <div className="explore-body">
             <div className="explore-leftSide">
