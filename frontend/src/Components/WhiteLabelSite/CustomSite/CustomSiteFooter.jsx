@@ -1,4 +1,5 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaCopyright } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
 import whiteLogo from "../../../Images/mmtc-logo-white.png";
 import footerImg from "../../../Images/footerImg.png";
 import Nih from "../../../Images/NIH.png";
@@ -6,14 +7,60 @@ import CareEv from "../../../Images/CareEvolution.png";
 
 
 
-function CustomeSiteFooter() {
+function CustomeSiteFooter({ siteTheme }) {
+  const [footerColor, setFooterColor] = useState('#1f304f');
+  const [subFooterColor, setSubFooterColor] = useState('#E7F4F8')
+  const [subFooterText, setSubFooterText] = useState('#00426B')
+
+  useEffect(() => {
+    function footerColorChange(siteTheme) {
+      if (siteTheme === 'classic') {
+        setFooterColor('#1f304f')
+        setSubFooterColor('#E7F4F8')
+        setSubFooterText('#00426B');
+      }
+      if (siteTheme === 'clean') {
+        setFooterColor('#828282')
+        setSubFooterColor('#F4F4F4')
+        setSubFooterText('#32009B');
+      }
+      if (siteTheme === 'bright') {
+        setFooterColor('#51CBFF')
+        setSubFooterColor('#013D80')
+        setSubFooterText('#FFFFFF');
+      }
+      if (siteTheme === 'deep') {
+        setFooterColor('#9B3F60')
+        setSubFooterColor('#E6E6E6')
+        setSubFooterText('#333333');
+      }
+      if (siteTheme === 'natural') {
+        setFooterColor('#465F49')
+        setSubFooterColor('#ECECEC')
+        setSubFooterText('#4C4C4C');
+      }
+    }
+    footerColorChange(siteTheme);
+  }, [siteTheme, setFooterColor]);
+
   return (
-    <footer className="footerContainerCustom" style={{ backgroundColor: '#1f304f', height: "auto", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '729px' }}>
-      <div id="sub-footer" style={{width: '728px'}}>
-      <p>
-        This site meets strict US government security standards to keep your
-        data secure.
-      </p>
+    <footer className="footerContainerCustom"
+      style={{
+        backgroundColor: footerColor,
+        height: "auto",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '729px'
+      }}
+
+    >
+      <div id="sub-footer" style={{ width: '728px', backgroundColor: subFooterColor, color: subFooterText }}>
+        <p style={{ color: subFooterText }}>
+          This site meets strict US government security standards to keep your
+          data secure.
+        </p>
       </div>
       {/* <img src={footerImg} alt="footerImg" className='image-with-border' /> */}
       <img src={whiteLogo} alt="whiteLogo" style={{ height: 22, width: 55, marginTop: "5px" }} />

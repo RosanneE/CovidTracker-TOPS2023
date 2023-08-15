@@ -33,6 +33,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  width: 260px;
 }
 
 #miniSiteHeader {
@@ -108,7 +109,7 @@
   border: #8D8D8D solid 1px;
   border-radius: 4%;
   overflow: hidden;
-  box-shadow:  2px 4px rgba(128, 128, 128, 0.2);
+  box-shadow: 2px 4px rgba(128, 128, 128, 0.2);
 }
 
 .customSiteQuestion {
@@ -123,20 +124,21 @@
 
 .positiveNegativeCustom {
   color: #fff;
-  width: 139px;
-  height: 35px;
+  width: 138.78px;
+  height: 34.93px;
   text-align: center;
   font-family: Noto Sans;
   font-size: 18px;
   font-weight: 500;
   border: none;
-  border-radius: 1.875rem;
+  border-radius: 28px;
   background: #0058b7;
   justify-content: center;
   align-items: center;
-  margin: 1.44rem;
   flex-shrink: 0;
-  margin-top: 3rem;
+  margin: 20px 10px;
+  /* margin-bottom: 10px; */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0225);
 }
 
 .positiveNegativeCustom:hover {
@@ -173,4 +175,3 @@
   align-items: center;
   align-content: center;
 }
-
