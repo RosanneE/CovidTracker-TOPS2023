@@ -13,7 +13,7 @@ function Nav(props) {
   const handleMobileMenuToggle = () => {
     setShowMobileMenu((prevShowMobileMenu) => !prevShowMobileMenu);
   };
-  console.log('showMobileMenu:', showMobileMenu);
+  // console.log('showMobileMenu:', showMobileMenu);
 
   return (
     <nav className='nav-container'>   

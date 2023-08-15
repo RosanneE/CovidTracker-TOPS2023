@@ -8,7 +8,7 @@ import Nav from "./Components/Nav/Nav";
 import SiteBanner from "./Components/SiteBanner/SiteBanner";
 
 //Route imports
-import HomePage from "./Components/Reporting/LandingPage/Home.jsx";
+
 //Pages Routes
 
 import RequestConfirmation from "./Components/WhiteLabelSite/RequestConfirmation/RequestConfirmation";
@@ -17,7 +17,6 @@ import WhiteLabelPage from "./Pages/WhiteLabelSite/WhiteLabelSite";
 import Reporting from "./Pages/Reporting/Reporting";
 import { FormProvider } from "./Context/FormContext";
 
-import CustomSite from "./Components/WhiteLabelSite/CustomSite/CustomSite";
 
 import Explore from "./Pages/Explore/Explore";
 import DataChart from "./Components/DataChart/DataChart";
@@ -40,7 +39,6 @@ function App() {
           <Route path="/Explore" element={<Explore />} />
 
           {/* -----------------We should delete these once we are done with the build ---------- */}
-          <Route path="/CustomSite" element={<CustomSite />} />
           <Route path="/DataChart" element={<DataChart />} />
           <Route path="/ExploreDemo" element={<ExploreDemo />} />
         </Routes>
