@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import ReviewAndSubmitPic from "../../../Images/ReviewAndSubmitPic.png";
 import LeftArrow from "../../../Images/LeftArrow.png";
 import "../ReviewAndSubmit/ReviewAndSubmit.css";

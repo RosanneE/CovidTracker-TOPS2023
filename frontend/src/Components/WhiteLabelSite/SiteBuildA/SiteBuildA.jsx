@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./SiteBuildA.css";
 import statusBar from "../../../Images/SiteBuildStatusBarA.png";
 import { FormContext } from "../../../Context/FormContext";

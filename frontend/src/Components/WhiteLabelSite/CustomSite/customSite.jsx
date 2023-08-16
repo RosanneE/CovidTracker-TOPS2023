@@ -2,9 +2,9 @@ import "../CustomSite/CustomSite.css";
 import { useContext, useState, useEffect } from "react";
 import { FormContext } from "../../../Context/FormContext";
 import inspectingResults from "../../../Images/Inspecting_results.png";
-import CustomeSiteFooter from "./CustomSiteFooter";
+import CustomeSiteFooter from "./CustomeSiteFooter/CustomSiteFooter";
 
-const CustomSite = ({ siteTheme }) => {
+const CustomSite = ({ siteTheme, logoUrl }) => {
   const { newSite } = useContext(FormContext);
 
 
@@ -60,7 +60,9 @@ const CustomSite = ({ siteTheme }) => {
   return (
     <div className="miniSite">
       {/* Header - Organization name is custom */}
+
       <div id="miniSiteHeader" >
+        <img src={logoUrl} alt="" />
         <h4 style={{ color: h1Color }}>
           {newSite.org_name
             ? newSite.org_name
@@ -75,6 +77,7 @@ const CustomSite = ({ siteTheme }) => {
           of your family.
         </p>
       </div>
+
       {/* Body is from ReqQuestion1 
       Custom message is in body below buttons*/}
       <div id="customSite-body">
