@@ -3,7 +3,6 @@ import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { FormContext } from "../../Context/FormContext";
 
-
 const DataChart = () => {
   // Data from cdc for ChartJS
   const [govData, setGovData] = useState({ months: [], cases: [] });
@@ -12,39 +11,40 @@ const DataChart = () => {
   // Loading text
   const [isLoading, setIsLoading] = useState(false);
   // This is getting the data but zipcode is not labeled as expected
-  const {newUser} = useContext(FormContext)
-  const [zipCodeInput, setZipCodeInput] = useState(newUser.zipcode)
-  
+  const { newUser } = useContext(FormContext);
+  const [zipCodeInput, setZipCodeInput] = useState(newUser.zipcode);
+
   const findFIPS = async (zipCode, type = 2) => {
-    const url = `https://www.huduser.gov/hudapi/public/usps?type=${type}&query=${zipCode}`
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgwOTRhMjdkZTQ0NGJmNWVhZTZjOTI4Nzk2NjY5ZGMxYjY2MjMwZTI3MmFmMTM1NjViMWMwMWQ0ZDgyNTVkMzhhNzcyYTMyMTIyNjRhODQ0In0.eyJhdWQiOiI2IiwianRpIjoiODA5NGEyN2RlNDQ0YmY1ZWFlNmM5Mjg3OTY2NjlkYzFiNjYyMzBlMjcyYWYxMzU2NWIxYzAxZDRkODI1NWQzOGE3NzJhMzIxMjI2NGE4NDQiLCJpYXQiOjE2OTIxNTAxODcsIm5iZiI6MTY5MjE1MDE4NywiZXhwIjoyMDA3NzY5Mzg3LCJzdWIiOiI1NjUwMyIsInNjb3BlcyI6W119.IOeiCm_hYlXZLgr2QQQo0CsOGbCgLK8zY1fn0xIkPVaubK2s2IiU1hpjiU7eIDmZHCbAz9Co9m3DFdBvey-TVA"
+    const url = `https://www.huduser.gov/hudapi/public/usps?type=${type}&query=${zipCode}`;
+    const token =
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgwOTRhMjdkZTQ0NGJmNWVhZTZjOTI4Nzk2NjY5ZGMxYjY2MjMwZTI3MmFmMTM1NjViMWMwMWQ0ZDgyNTVkMzhhNzcyYTMyMTIyNjRhODQ0In0.eyJhdWQiOiI2IiwianRpIjoiODA5NGEyN2RlNDQ0YmY1ZWFlNmM5Mjg3OTY2NjlkYzFiNjYyMzBlMjcyYWYxMzU2NWIxYzAxZDRkODI1NWQzOGE3NzJhMzIxMjI2NGE4NDQiLCJpYXQiOjE2OTIxNTAxODcsIm5iZiI6MTY5MjE1MDE4NywiZXhwIjoyMDA3NzY5Mzg3LCJzdWIiOiI1NjUwMyIsInNjb3BlcyI6W119.IOeiCm_hYlXZLgr2QQQo0CsOGbCgLK8zY1fn0xIkPVaubK2s2IiU1hpjiU7eIDmZHCbAz9Co9m3DFdBvey-TVA";
 
     const headers = {
-      Authorization: `Bearer ${token}`
-    }
+      Authorization: `Bearer ${token}`,
+    };
 
     try {
+      setIsLoading(true);
       const response = await fetch(url, {
         headers: headers,
       });
 
-      if(!response.ok) {
-        throw new Error(`Failed to fetch FIPS code`)
+      if (!response.ok) {
+        throw new Error(`Failed to fetch FIPS code`);
       }
 
       const responseData = await response.json();
       const results = responseData.data.results;
 
-      const fipsCodes = results.map((result) => result.geoid.substring(0, 5))
-      console.log(fipsCodes)
+      const fipsCodes = results.map((result) => result.geoid.substring(0, 5));
+      console.log(fipsCodes);
       return fipsCodes;
     } catch (error) {
-      console.error("Error fetching FIPS code:", error)
+      console.error("Error fetching FIPS code:", error);
+      setIsLoading(false);
       return [];
     }
-  }
-  
-
+  };
 
   // Use FIPS to get Chart
   const fetchData = async () => {
@@ -52,11 +52,11 @@ const DataChart = () => {
       setIsLoading(true);
 
       // Fetch FIPS code based on the provided zipcode
-      const fipsCodes = await findFIPS(zipCodeInput)
+      const fipsCodes = await findFIPS(zipCodeInput);
 
       // Use the first FIPS code if available
       if (fipsCodes.length > 0) {
-        setCountyFipsCode(fipsCodes[0])
+        setCountyFipsCode(fipsCodes[0]);
       }
 
       const response = await fetch(
@@ -85,13 +85,12 @@ const DataChart = () => {
 
   const sortedMonths = govData.months.sort((a, b) => new Date(a) - new Date(b));
 
-  // useEffect(() => {
-  //   if(newUser.zipcode) {
-  //     setZipCodeInput(newUser.zipcode);
-  //     fetchData();
-  //   }
-  // }, [newUser.zipcode])
-  
+  useEffect(() => {
+    if(countyFipsCode) {
+      fetchData();
+    }
+  }, [countyFipsCode])
+
   return (
     <div>
       <div>
@@ -137,11 +136,12 @@ const DataChart = () => {
               plugins: {
                 tooltip: {
                   callbacks: {
-                    title: () => 'CDC COVID-12 Data',
-                    afterLabel: () => 'Data Source: CDC COVID-12 Data. Centers for Disease Control and Prevention.'
-                  }
-                }
-              }
+                    title: () => "CDC COVID-12 Data",
+                    afterLabel: () =>
+                      "Data Source: CDC COVID-12 Data. Centers for Disease Control and Prevention.",
+                  },
+                },
+              },
             }}
           />
         ) : (
