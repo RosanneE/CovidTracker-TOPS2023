@@ -7,7 +7,6 @@ import backArrow from "../../../Images/Button - Back to Step 2.png";
 import DataChart from "../../DataChart/DataChart";
 
 export default function FinalSubmission({ demoPage, setDemoPage }) {
-  
   const iconStyle = {
     width: "4.25rem",
     height: "4.25rem",
@@ -57,11 +56,11 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
             fontSize: "1.125rem",
           }}
         >
-          Others like you are doing their part to keep their community safe by
-          sharing their at-home Covid-19 data. See the trends in your County, or
-          see how other counties are reporting.
+          Others, like you, are doing their part to keep their community safe by sharing their
+          at-home Covid-19 data. See the trends in your county, or see how other counties are
+          reporting.
         </p>
-        <div style={{ marginBottom: "4rem"}}>
+        <div style={{ marginBottom: "4rem" }}>
           <DataChart />
         </div>
       </div>
@@ -74,14 +73,10 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           <br />
           <br />
         </h3>
-        <p
-          className="optionalContactQuestion"
-          style={{ marginTop: "1rem", color: "#00426B" }}
-        >
-          Negative is not a guarantee. If you just got infected, you may not
-          have enough virus in your body for the test to find it. Plus, no test
-          is perfect - there’s a very small chance that your result could simply
-          be an error.
+        <p className="optionalContactQuestion" style={{ marginTop: "1rem", color: "#00426B" }}>
+          Negative is not a guarantee. If you just got infected, you may not have enough virus
+          in your body for the test to find it. Plus, no test is perfect - there’s a very small
+          chance that your result could simply be an error.
         </p>
         <div
           className="optionalContactQuestion optionalContactQuestion2"
@@ -112,9 +107,7 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
             height: "1.6rem",
           }}
         >
-          <div className="mobileContact">
-            If you’ve been exposed to someone with COVID
-          </div>
+          <div className="mobileContact">If you’ve been exposed to someone with COVID</div>
           <img style={{ width: "2rem" }} src={PlusIcon} alt="plus sign" />
         </div>
         <br />
@@ -142,8 +135,7 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           style={{ marginTop: "1rem", color: "#00426B" }}
         >
           <p>
-            Have questions about COVID and how to protect yourself and your
-            loved ones? Visit{" "}
+            Have questions about COVID and how to protect yourself and your loved ones? Visit{" "}
             <a
               style={{ color: "#00426B" }}
               className="whenToTestLink"
