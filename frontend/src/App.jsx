@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import "chart.js"
+import "chart.js";
 
 //Component imports
 import Footer from "./Components/Footer/Footer";
@@ -17,6 +17,7 @@ import WhiteLabelPage from "./Pages/WhiteLabelSite/WhiteLabelSite";
 import Reporting from "./Pages/Reporting/Reporting";
 import { FormProvider } from "./Context/FormContext";
 
+import Explore from "./Pages/Explore/Explore";
 import DataChart from "./Components/DataChart/DataChart";
 import FinalSubmission from "./Components/Reporting/FinalSubmission/FinalSubmission";
 
