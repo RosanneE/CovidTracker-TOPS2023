@@ -61,8 +61,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
 
             {/* ---------------color selection-------------------------*/}
 
-            <div class="colorSelection">
-              <div class="radioOption">
+            <div className="colorSelection">
+              <div className="radioOption">
                 <label>
                   <img src={classic} alt="Classic" />
                   Classic
@@ -76,7 +76,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 </label>
               </div>
 
-              <div class="radioOption">
+              <div className="radioOption">
                 <label>
                   <img src={clean} alt="Clean" />
                   Clean
@@ -89,7 +89,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 </label>
               </div>
 
-              <div class="radioOption">
+              <div className="radioOption">
                 <label>
                   <img src={bright} alt="Bright" />
                   Bright
@@ -102,7 +102,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 </label>
               </div>
 
-              <div class="radioOption">
+              <div className="radioOption">
                 <label>
                   <img src={deep} alt="Deep" />
                   Deep
@@ -110,7 +110,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 </label>
               </div>
 
-              <div class="radioOption">
+              <div className="radioOption">
                 <label>
                   <img src={natural} alt="Natural" />
                   Natural
