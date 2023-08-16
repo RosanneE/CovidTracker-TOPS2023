@@ -43,13 +43,21 @@
 .formRightGrid>form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 378px;
 
 }
 
 .siteBuildFormInputC {
+  width: 367px;
+  border-radius: 7px;
+  border: 1px solid #8D8D8D;
+  margin-bottom: 20px;
+}
+
+
+.logoUpload, .coverPhotoUpload{
   width: 367px;
   border-radius: 7px;
   border: 1px solid #8D8D8D;

@@ -1,7 +1,4 @@
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
-import stockImage from "../../../../Images/reportstartphoto.png";
-import tissue from "../../../../Images/sick-tissue.png";
-import happy from "../../../../Images/happy.png";
 import iHealth from "../../../../Images/ihealth.png";
 import abbott from "../../../../Images/abbott.png";
 import flowFlex from "../../../../Images/flowflex.png";

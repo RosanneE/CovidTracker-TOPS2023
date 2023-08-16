@@ -41,10 +41,32 @@
   height: 54px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: 1px solid #b3b3b3;
+  margin: 2px 0px;
 
 }
+
+.miniSiteHeaderImg {
+  width: 140px;
+  height: 40px;
+  object-fit: contain;
+
+}
+
+.miniSiteCoverImg {
+  position: relative;
+  width: 296px;
+  height: 216px;
+  max-width: 100%; /* Enforce max width to prevent overflowing */
+  max-height: 100%; /* Enforce max height to prevent overflowing */
+  object-fit: cover; /* Crop or stretch as needed */
+  opacity: 0.9;
+  filter: brightness(1.2);
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
 
 #miniSiteHeader>h4 {
   color: #00426b;

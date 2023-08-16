@@ -1,23 +1,20 @@
 import { useContext, useState } from "react";
 import "./SiteBuildC.css";
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
-import bright from "../../../Images/customeSiteBriteColor.png";
-import deep from "../../../Images/customSiteDeepColor.png";
-import classic from "../../../Images/customeSiteClassicColor.png";
-import clean from "../../../Images/customeSiteCleanColor.png";
-import natural from "../../../Images/customSiteNaturalColor.png";
 import { FormContext } from "../../../Context/FormContext";
 import CustomSite from "../CustomSite/CustomSite";
-import ImageUpload from "../ImageUpload/ImageUpload";
+import ImageUploadLogo from "../ImageUpload/ImageUploadLogo";
+import ImageUploadCover from "../ImageUpload/ImageUploadCover";
+import ChangeSiteTheme from "./ChangeSiteTheme/ChangeSiteTheme";
 
-// import Amplify from 'aws-amplify';
-// import awsconfig from './aws-exports';
-// import { Storage } from 'aws-amplify';
+const BUTTE_COUNTY_LOGO = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/563797ae-11e1-4959-92a1-bbf329840028.image"
+const COVER_PHOTO_DEFAULT = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/52a55cbb-abeb-4dab-9c26-661ee0e9b5d6.image"
 
 export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
   const [siteTheme, setSiteTheme] = useState("classic");
-  const [logoUrl, setlogoUrl ] = useState("../../../Images/buttecountylogo.png");
+  const [logoUrl, setlogoUrl ] = useState(BUTTE_COUNTY_LOGO);
+  const [coverPhoto, setCoverPhoto] = useState(COVER_PHOTO_DEFAULT)
 
   const handleThemeChange = (event) => {
     const selectedTheme = event.target.value;
@@ -27,7 +24,6 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
   return (
     <>
       <div className="backtoPartnerPage">
-        {/* don't forget to update this link before production */}
         <p onClick={() => setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
       </div>
 
@@ -58,80 +54,21 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
         <div className="siteBuildCGrid">
           <div className="formLeftGrid">
             <div className="customSite">
-              <CustomSite siteTheme={siteTheme} logoUrl={logoUrl}  />
+              <CustomSite siteTheme={siteTheme} logoUrl={logoUrl} coverPhoto={coverPhoto} setCoverPhoto={setCoverPhoto} />
             </div>
 
             {/* ---------------color selection-------------------------*/}
 
-            <div className="colorSelection">
-              <div className="radioOption">
-                <label>
-                  <img src={classic} alt="Classic" />
-                  Classic
-                  <input
-                    type="radio"
-                    name="color"
-                    checked={siteTheme === "classic"}
-                    value="classic"
-                    onChange={handleThemeChange}
-                  />
-                </label>
-              </div>
+            <ChangeSiteTheme handleThemeChange={ handleThemeChange } siteTheme={siteTheme} />
 
-              <div className="radioOption">
-                <label>
-                  <img src={clean} alt="Clean" />
-                  Clean
-                  <input
-                    type="radio"
-                    name="color"
-                    value="clean"
-                    onChange={handleThemeChange}
-                  />
-                </label>
-              </div>
-
-              <div className="radioOption">
-                <label>
-                  <img src={bright} alt="Bright" />
-                  Bright
-                  <input
-                    type="radio"
-                    name="color"
-                    value="bright"
-                    onChange={handleThemeChange}
-                  />
-                </label>
-              </div>
-
-              <div className="radioOption">
-                <label>
-                  <img src={deep} alt="Deep" />
-                  Deep
-                  <input type="radio" name="color" value="deep" onChange={handleThemeChange} />
-                </label>
-              </div>
-
-              <div className="radioOption">
-                <label>
-                  <img src={natural} alt="Natural" />
-                  Natural
-                  <input
-                    type="radio"
-                    name="color"
-                    value="natural"
-                    onChange={handleThemeChange}
-                  />
-                </label>
-              </div>
-            </div>
           </div>
 
           {/* ------------right side inputs start here --------------*/}
+
           <div className="formRightGrid">
             <form action="">
               <div className="siteBuildFormLabel">
-                <label htmlFor="postiveTestLink">Logo</label>
+                <label htmlFor="imageUploadLogo">Logo</label>
               </div>
               {/* <input
                 type="file"
@@ -140,50 +77,62 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
                 onChange={handlePartnerChange}
                 className="siteBuildFormInputC"
               /> */}
-              <ImageUpload logoUrl={logoUrl} setlogoUrl={setlogoUrl} />
+              <div className="logoUpload">
+                <ImageUploadLogo setlogoUrl={setlogoUrl} id="imageUploadLogo" />
+              </div>
               <div className="siteBuildFormLabel">
-                <label htmlFor="negativeTestLink">Cover Photo</label>
+                <label htmlFor="imageUploadCover">Cover Photo</label>
                 <p className="siteBuildPC">
                   {/* ---------------- need to build a gallery? ------------- */}
                   Not sure where to start? <a href="/">Browse our gallery</a>
                 </p>
+              <div className="coverPhotoUpload">
+                <ImageUploadCover setCoverPhoto={setCoverPhoto} id="imageUploadCover" />
               </div>
-              <input
+              </div>
+              {/* <input
                 type="file"
                 id="cover_photo"
                 name="cover_photo"
                 onChange={handlePartnerChange}
                 className="siteBuildFormInputC"
-              />
+              /> */}
               <div className="siteBuildFormLabel">
-                <label htmlFor="furtherInformation">Custom Message</label>
+                <label htmlFor="custom_message">Custom Message</label>
                 <p className="siteBuildPC">
                   A quick message about your organization and mission
                 </p>
               </div>
               <textarea
-                type="text"
                 rows="5"
                 id="custom_message"
                 name="custom_message"
                 value={newSite.custom_message}
                 onChange={handlePartnerChange}
                 className="siteBuildFormInputC"
+                placeholder="Sample Message: Our mission is 
+                to protect and promote the health and well-being 
+                of all Butte County residents."
               />
 
               <div className="siteBuildFormLabel">
-                <label htmlFor="furtherInformation">Social Sharing Message Message</label>
+                <label htmlFor="social_sharing_message">Social Sharing Message Message</label>
                 <p className="siteBuildPC">This will appear whenever your site is shared</p>
               </div>
-              <textarea
-                type="text"
+            
+              <textarea       
                 rows="4"
                 id="social_sharing_message"
                 name="social_sharing_message"
                 value={newSite.social_sharing_message}
                 onChange={handlePartnerChange}
                 className="siteBuildFormInputC"
+                placeholder="Example:
+                Spread the word- not COVID-19!
+                Visit the site to join your community 
+                in reporting your at-home test results. "
               />
+         
 
               <div className="siteBuildContinueButtonC">
                 <p
@@ -200,7 +149,6 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
           </div>
         </div>
       </div>
-      {/* <ImageUpload /> */}
     </>
   );
 }

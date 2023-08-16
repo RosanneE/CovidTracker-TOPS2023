@@ -4,24 +4,25 @@ import LeftArrow from "../../../Images/LeftArrow.png";
 import "../ReviewAndSubmit/ReviewAndSubmit.css";
 import { FormContext } from "../../../Context/FormContext";
 
+
 function ReviewAndSubmit({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange, handleReviewSubmit } = useContext(
     FormContext
   );
 
-    const handleSubmit = async (event) => {
-      try {
-        const response = await handleReviewSubmit(event);
-        console.log("Review Response: ", response);
-        if (response) {
-          setPageNumber(6);
-        } else {
-          console.error("Form Submission Failed")
-        }
-      } catch (error) {
-        console.error("Form Submission Failed:", error)
+  const handleSubmit = async (event) => {
+    try {
+      const response = await handleReviewSubmit(event);
+      console.log("Review Response: ", response);
+      if (response) {
+        setPageNumber(6);
+      } else {
+        console.error("Form Submission Failed")
       }
+    } catch (error) {
+      console.error("Form Submission Failed:", error)
     }
+  }
 
   return (
     <table className="reviewAndSubmit">
@@ -31,9 +32,11 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
             <div className="reviewAndSubmitDiv">
               <h3>Review & Submit</h3>
               <p>Please review your contact information</p>
-              <p style={{ textAlign: "right" }}>
-                <a href="/">Edit info</a>
-              </p>
+              <div style={{ textAlign: "right" }}>
+
+                <p onClick={() => setPageNumber(2)}>Edit info</p>
+
+              </div>
 
               <div>
                 <label>Contact Name</label>
@@ -103,6 +106,7 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
             src={ReviewAndSubmitPic}
             alt="Review And Submit pic"
           />
+       
         </td>
       </tr>
     </table>

@@ -1,6 +1,5 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaCopyright } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, } from 'react-icons/fa';
 import whiteLogo from "../../Images/mmtc-logo-white.png";
-import footerImg from "../../Images/footerImg.png";
 import Nih from "../../Images/NIH.png";
 import CareEv from "../../Images/CareEvolution.png";
 
