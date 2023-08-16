@@ -28,7 +28,7 @@ export default function ReqQuestion5({ demoPage, setDemoPage }) {
 
     // Update the context with the zip code value
     handleUserChange({
-      target: { name: "zipCode", value: zipCode },
+      target: { name: "zipcode", value: zipCode },
     });
 
     // Move to the next page
