@@ -7,6 +7,7 @@ import backArrow from "../../../Images/Button - Back to Step 2.png";
 import DataChart from "../../DataChart/DataChart";
 
 export default function FinalSubmission({ demoPage, setDemoPage }) {
+  
   const iconStyle = {
     width: "4.25rem",
     height: "4.25rem",
