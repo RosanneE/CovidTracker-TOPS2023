@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { FormContext } from "../../Context/FormContext";
@@ -13,10 +13,11 @@ const DataChart = () => {
   const [isLoading, setIsLoading] = useState(false);
   // This is getting the data but zipcode is not labeled as expected
   const newUser = useContext(FormContext)
+  const [zipCodeInput, setZipCodeInput] = useState(null)
   
   const findFIPS = async (zipCode, type = 2) => {
     const url = `https://www.huduser.gov/hudapi/public/usps?type=${type}&query=${zipCode}`
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ3NTkxODc3ZTAxM2FjZjhhMzUzYTY0YzcxOGY3MGIyYzljMWVhYjBjOTliNWE0NzIzYmE0ZDBiYmZjNDhkOGYxMGZiMDg1NGIyM2Q3ZWU3In0.eyJhdWQiOiI2IiwianRpIjoiNDc1OTE4NzdlMDEzYWNmOGEzNTNhNjRjNzE4ZjcwYjJjOWMxZWFiMGM5OWI1YTQ3MjNiYTRkMGJiZmM0OGQ4ZjEwZmIwODU0YjIzZDdlZTciLCJpYXQiOjE2OTIwMzQ4ODMsIm5iZiI6MTY5MjAzNDg4MywiZXhwIjoyMDA3NjU0MDgzLCJzdWIiOiI1NjAxNSIsInNjb3BlcyI6W119.JacEPIzzNZDQvk_0STKfTT-JuRDsVYW3ERKfR18-EcUpH5H_znFMirmivU4TQ3FKEZhDT0GK9AMS_g6hUGRB0Q"
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgwOTRhMjdkZTQ0NGJmNWVhZTZjOTI4Nzk2NjY5ZGMxYjY2MjMwZTI3MmFmMTM1NjViMWMwMWQ0ZDgyNTVkMzhhNzcyYTMyMTIyNjRhODQ0In0.eyJhdWQiOiI2IiwianRpIjoiODA5NGEyN2RlNDQ0YmY1ZWFlNmM5Mjg3OTY2NjlkYzFiNjYyMzBlMjcyYWYxMzU2NWIxYzAxZDRkODI1NWQzOGE3NzJhMzIxMjI2NGE4NDQiLCJpYXQiOjE2OTIxNTAxODcsIm5iZiI6MTY5MjE1MDE4NywiZXhwIjoyMDA3NzY5Mzg3LCJzdWIiOiI1NjUwMyIsInNjb3BlcyI6W119.IOeiCm_hYlXZLgr2QQQo0CsOGbCgLK8zY1fn0xIkPVaubK2s2IiU1hpjiU7eIDmZHCbAz9Co9m3DFdBvey-TVA"
 
     const headers = {
       Authorization: `Bearer ${token}`
@@ -35,7 +36,7 @@ const DataChart = () => {
       const results = responseData.data.results;
 
       const fipsCodes = results.map((result) => result.geoid.substring(0, 5))
-
+      console.log(fipsCodes)
       return fipsCodes;
     } catch (error) {
       console.error("Error fetching FIPS code:", error)
@@ -49,6 +50,14 @@ const DataChart = () => {
   const fetchData = async () => {
     try {
       setIsLoading(true);
+
+      // Fetch FIPS code based on the provided zipcode
+      const fipsCodes = await findFIPS(zipCodeInput)
+
+      // Use the first FIPS code if available
+      if (fipsCodes.length > 0) {
+        setCountyFipsCode(fipsCodes[0])
+      }
 
       const response = await fetch(
         `https://data.cdc.gov/resource/n8mc-b4w4.json?$limit=1000000&county_fips_code=${countyFipsCode}`
@@ -76,6 +85,12 @@ const DataChart = () => {
 
   const sortedMonths = govData.months.sort((a, b) => new Date(a) - new Date(b));
 
+  // useEffect(() => {
+  //   if(newUser.zipCode) {
+  //     fetchData();
+  //   }
+  // }, [newUser.zipCode])
+  
   return (
     <div>
       <div>
@@ -127,8 +142,10 @@ const DataChart = () => {
       <input
         type="text"
         placeholder="Enter FIPS Code"
-        value={countyFipsCode}
-        onChange={(event) => setCountyFipsCode(event.target.value)}
+        // value={countyFipsCode}
+        value={zipCodeInput}
+        // onChange={(event) => setCountyFipsCode(event.target.value)}
+        onChange={(event) => setZipCodeInput(event.target.value)}
       />
       <button
         className="blueButton"
