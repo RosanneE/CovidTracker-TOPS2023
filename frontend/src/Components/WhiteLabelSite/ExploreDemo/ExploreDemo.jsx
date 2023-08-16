@@ -55,7 +55,7 @@ const ExploreDemo = (props) => {
     },
     {
       id: 2,
-      screenShot: slide_2, //TODO import screenshots
+      screenShot: slide_2,
       step: "Step 2: Test selection (required)",
       description: `User selects brand of test they took.`,
       examples: [
@@ -64,7 +64,7 @@ const ExploreDemo = (props) => {
     },
     {
       id: 3,
-      screenShot: slide_3, //TODO import screenshots
+      screenShot: slide_3,
       step: "Step 3: Required questions",
       description: `User reports when they took the test, their age, and their home ZIP code. Once they’ve entered that information, they can submit their result.`,
       examples: [
@@ -73,7 +73,7 @@ const ExploreDemo = (props) => {
     },
     {
       id: 4,
-      screenShot: slide_4, //TODO import screenshots
+      screenShot: slide_4,
       step: "Step 4: Optional questions",
       description: `User can choose to share more information about themselves on this page.`,
       examples: [
@@ -82,28 +82,28 @@ const ExploreDemo = (props) => {
     },
     {
       id: 5,
-      screenShot: slide_5, //TODO import screenshots
+      screenShot: slide_5,
       step: "Step 5: Optional contact info",
       description: `User can choose to share their contact information.`,
       examples: [],
     },
     {
       id: 6,
-      screenShot: slide_6, //TODO import screenshots
+      screenShot: slide_6,
       step: "Step 6: Negative test result",
       description: `If user reported a negative result, they receive information about why it’s a good idea to test again in 48 hours.`,
       examples: [],
     },
     {
       id: 7,
-      screenShot: slide_7, //TODO import screenshots
+      screenShot: slide_7,
       step: "Step 6: Positive test result",
       description: `If user reported a positive result, they receive information about CDC guidelines for isolation and masking after testing positive.`,
       examples: [],
     },
     {
       id: 8,
-      screenShot: slide_8, //TODO import screenshots
+      screenShot: slide_8, 
       step: "Stand-alone site example",
       description: `On a stand-alone site, your organization's logo and imagery would appear in place of the MakeMyTestCount branding.`,
       examples: [
@@ -114,7 +114,7 @@ const ExploreDemo = (props) => {
     },
     {
       id: 9,
-      screenShot: slide_9, //TODO import screenshots
+      screenShot: slide_9,
       step: "Modal pop-up example",
       description: `When you embed a JavaScript plug-in, the tool appears as a pop-up modal.`,
       examples: [

@@ -35,17 +35,10 @@ const DataChart = () => {
     }
   };
 
-  const sortedMonths = govData.months.sort((a, b) => new Date(a) - new Date(b))
+  const sortedMonths = govData.months.sort((a, b) => new Date(a) - new Date(b));
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Enter FIPS Code"
-        value={countyFipsCode}
-        onChange={(event) => setCountyFipsCode(event.target.value)}
-      />
-      <button className="blueButton" onClick={fetchData} style={{padding: "1rem", lineHeight:"1rem"}}>Get Data</button>
       <div>
         {isLoading ? (
           <p>Loading...</p>
@@ -55,39 +48,59 @@ const DataChart = () => {
               labels: sortedMonths,
               datasets: [
                 {
-                  label: "# of Cases",
-                  data: sortedMonths.map(month => govData.caseCounts[month] || 0),
+                  label: "Number of Cases per Month for County:___",
+                  data: sortedMonths.map(
+                    (month) => govData.caseCounts[month] || 0
+                  ),
                   backgroundColor: "rgba(255, 99, 132, 0.2)",
                   borderColor: "rgba(255, 99, 132, 1)",
                   borderWidth: 1,
                 },
               ],
             }}
+            options={{
+              scales: {
+                x: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: "Month",
+                    font: {
+                      // size: 14,
+                      weight: "bold",
+                    },
+                  },
+                },
+                y: {
+                  beginAtZero: true, // Start y-axis from 0
+                  title: {
+                    display: true,
+                    text: "Number of Cases",
+                  },
+                },
+              },
+            }}
           />
         ) : (
           <p>No data available.</p>
         )}
       </div>
+      <input
+        type="text"
+        placeholder="Enter FIPS Code"
+        value={countyFipsCode}
+        onChange={(event) => setCountyFipsCode(event.target.value)}
+      />
+      <button
+        className="blueButton"
+        onClick={fetchData}
+        style={{ padding: "1rem", lineHeight: "1rem" }}
+      >
+        Get Data
+      </button>
     </div>
   );
 };
 
 export default DataChart;
 // 48453 is Travis County FIPS code
-
-// .then((response) => {
-//   // console.log(response)
-//   return response.json();
-// })
-// .then((data) => {
-//   console.log(data);
-//   // Process the fetched data and update  state
-//   const months = data.map((entry) => entry.case_month);
-//   const cases = data.length;
-//   console.log(months);
-//   console.log(cases);
-//   setGovData({ months: months, cases: cases });
-// })
-// .catch((error) => {
-//   console.error("Error fetching data:", error);
-// });
