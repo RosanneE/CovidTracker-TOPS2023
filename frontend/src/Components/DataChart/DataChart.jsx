@@ -12,8 +12,8 @@ const DataChart = () => {
   // Loading text
   const [isLoading, setIsLoading] = useState(false);
   // This is getting the data but zipcode is not labeled as expected
-  const newUser = useContext(FormContext)
-  const [zipCodeInput, setZipCodeInput] = useState(null)
+  const {newUser} = useContext(FormContext)
+  const [zipCodeInput, setZipCodeInput] = useState(newUser.zipcode)
   
   const findFIPS = async (zipCode, type = 2) => {
     const url = `https://www.huduser.gov/hudapi/public/usps?type=${type}&query=${zipCode}`
@@ -86,10 +86,11 @@ const DataChart = () => {
   const sortedMonths = govData.months.sort((a, b) => new Date(a) - new Date(b));
 
   // useEffect(() => {
-  //   if(newUser.zipCode) {
+  //   if(newUser.zipcode) {
+  //     setZipCodeInput(newUser.zipcode);
   //     fetchData();
   //   }
-  // }, [newUser.zipCode])
+  // }, [newUser.zipcode])
   
   return (
     <div>
@@ -133,6 +134,14 @@ const DataChart = () => {
                   },
                 },
               },
+              plugins: {
+                tooltip: {
+                  callbacks: {
+                    title: () => 'CDC COVID-12 Data',
+                    afterLabel: () => 'Data Source: CDC COVID-12 Data. Centers for Disease Control and Prevention.'
+                  }
+                }
+              }
             }}
           />
         ) : (
