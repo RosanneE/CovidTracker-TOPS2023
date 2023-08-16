@@ -1,10 +1,10 @@
 import "../CustomSite/CustomSite.css";
 import { useContext, useState, useEffect } from "react";
 import { FormContext } from "../../../Context/FormContext";
-import inspectingResults from "../../../Images/Inspecting_results.png";
+// import inspectingResults from "../../../Images/Inspecting_results.png";
 import CustomeSiteFooter from "./CustomeSiteFooter/CustomSiteFooter";
 
-const CustomSite = ({ siteTheme, logoUrl }) => {
+const CustomSite = ({ siteTheme, logoUrl, coverPhoto, setCoverPhoto }) => {
   const { newSite } = useContext(FormContext);
 
 
@@ -62,7 +62,7 @@ const CustomSite = ({ siteTheme, logoUrl }) => {
       {/* Header - Organization name is custom */}
 
       <div id="miniSiteHeader" >
-        <img src={logoUrl} alt="" />
+        <img className="miniSiteHeaderImg" src={logoUrl} alt="Your Logo Goes Here" />
         <h4 style={{ color: h1Color }}>
           {newSite.org_name
             ? newSite.org_name
@@ -111,7 +111,8 @@ const CustomSite = ({ siteTheme, logoUrl }) => {
         </div>
         <div id="customSite-rightside">
           <img
-            src={inspectingResults}
+            className="miniSiteCoverImg"
+            src={coverPhoto}
             alt="People inspecting their test results"
           />
         </div>

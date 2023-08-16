@@ -1,7 +1,5 @@
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
 import stockImage from "../../../../Images/Inspecting_results.png";
-import tissue from "../../../../Images/sick-tissue.png";
-import happy from "../../../../Images/happy.png";
 import "../CriticalQuestions.css";
 import { useState, useContext } from "react";
 import { FormContext } from "../../../../Context/FormContext";
@@ -73,7 +71,7 @@ export default function ReqQuestion1({ demoPage, setDemoPage }) {
           <img
             src={stockImage}
             alt="Hands on a table"
-            style={{ maxWidth: "100%", width: "width: 32.5rem;", marginTop: "2rem" }}
+            style={{ maxWidth: "100%", width: "32.5rem", marginTop: "2rem" }}
           />
           </div>
       </div>
