@@ -1,9 +1,8 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import whiteLogo from "../../../Images/mmtc-logo-white.png";
-import footerImg from "../../../Images/footerImg.png";
-import Nih from "../../../Images/NIH.png";
-import CareEv from "../../../Images/CareEvolution.png";
+import whiteLogo from "../../../../Images/mmtc-logo-white.png";
+import Nih from "../../../../Images/NIH.png";
+import CareEv from "../../../../Images/CareEvolution.png";
 
 
 
@@ -62,7 +61,7 @@ function CustomeSiteFooter({ siteTheme }) {
           data secure.
         </p>
       </div>
-      {/* <img src={footerImg} alt="footerImg" className='image-with-border' /> */}
+   
       <img src={whiteLogo} alt="whiteLogo" style={{ height: 22, width: 55, marginTop: "5px" }} />
       <p className='footer-text' style={{ color: 'white', fontSize: 8, fontFamily: 'Noto Sans', marginTop: "5px" }}>A collaboration between:</p>
       <div className='img-div'>

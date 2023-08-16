@@ -1,6 +1,6 @@
 //PARTNER/WHITELABEL PAGE
 
-import React, { useState } from "react";
+import { useState } from "react";
 import screenshot1 from "../../../Images/Screen Shot 2023-05-21 at 10.28 1.png";
 import screenshot2 from "../../../Images/Screen Shot 2023-05-21 at 10.28 2.png";
 import "../PartnerWhiteLabel/PartnerWhiteLabel.css"

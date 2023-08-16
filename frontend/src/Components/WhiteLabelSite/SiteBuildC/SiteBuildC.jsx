@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import "./SiteBuildC.css";
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
 import bright from "../../../Images/customeSiteBriteColor.png";
@@ -8,7 +8,8 @@ import clean from "../../../Images/customeSiteCleanColor.png";
 import natural from "../../../Images/customSiteNaturalColor.png";
 import { FormContext } from "../../../Context/FormContext";
 import CustomSite from "../CustomSite/CustomSite";
-import ImageUpload from "../CustomSite/ImageUpload/ImageUpload";
+import ImageUpload from "../ImageUpload/ImageUpload";
+
 // import Amplify from 'aws-amplify';
 // import awsconfig from './aws-exports';
 // import { Storage } from 'aws-amplify';
@@ -16,6 +17,7 @@ import ImageUpload from "../CustomSite/ImageUpload/ImageUpload";
 export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
   const [siteTheme, setSiteTheme] = useState("classic");
+  const [logoUrl, setlogoUrl ] = useState("../../../Images/buttecountylogo.png");
 
   const handleThemeChange = (event) => {
     const selectedTheme = event.target.value;
@@ -56,7 +58,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
         <div className="siteBuildCGrid">
           <div className="formLeftGrid">
             <div className="customSite">
-              <CustomSite siteTheme={siteTheme} />
+              <CustomSite siteTheme={siteTheme} logoUrl={logoUrl}  />
             </div>
 
             {/* ---------------color selection-------------------------*/}
@@ -131,13 +133,14 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
               <div className="siteBuildFormLabel">
                 <label htmlFor="postiveTestLink">Logo</label>
               </div>
-              <input
+              {/* <input
                 type="file"
                 id="logo"
                 name="logo"
                 onChange={handlePartnerChange}
                 className="siteBuildFormInputC"
-              />
+              /> */}
+              <ImageUpload logoUrl={logoUrl} setlogoUrl={setlogoUrl} />
               <div className="siteBuildFormLabel">
                 <label htmlFor="negativeTestLink">Cover Photo</label>
                 <p className="siteBuildPC">
@@ -197,7 +200,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
           </div>
         </div>
       </div>
-      <ImageUpload />
+      {/* <ImageUpload /> */}
     </>
   );
 }
