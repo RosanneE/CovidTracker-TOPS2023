@@ -8,10 +8,9 @@ const DataChart = () => {
   const [govData, setGovData] = useState({ months: [], cases: [] });
   // data from huds for cdc
   const [countyFipsCode, setCountyFipsCode] = useState("");
-  // Loading text
   const [isLoading, setIsLoading] = useState(false);
-  // This is getting the data but zipcode is not labeled as expected
   const { newUser } = useContext(FormContext);
+  // initial data is from user input in form from context. Will update with input from dataChart
   const [zipCodeInput, setZipCodeInput] = useState(newUser.zipcode);
 
   const findFIPS = async (zipCode, type = 2) => {
@@ -163,7 +162,6 @@ const DataChart = () => {
       >
         Get Data
       </button>
-      {/* {console.log(newUser)} */}
     </div>
   );
 };
