@@ -19,7 +19,7 @@ import { FormProvider } from "./Context/FormContext";
 
 import Explore from "./Pages/Explore/Explore";
 import DataChart from "./Components/DataChart/DataChart";
-import ExploreDemo from "./Components/WhiteLabelSite/ExploreDemo/ExploreDemo";
+import FinalSubmission from "./Components/Reporting/FinalSubmission/FinalSubmission";
 
 function App() {
   const location = useLocation();
@@ -35,11 +35,10 @@ function App() {
           <Route path="/" element={<Reporting />} />
           <Route path="/ReviewAndSubmit" element={<ReviewAndSubmit />} />
           <Route path="/RequestConfirmation" element={<RequestConfirmation />} />
-          <Route path="/Explore" element={<Explore />} />
 
           {/* -----------------We should delete these once we are done with the build ---------- */}
           <Route path="/DataChart" element={<DataChart />} />
-          <Route path="/ExploreDemo" element={<ExploreDemo />} />
+          <Route path="/FinalSubmission" element={<FinalSubmission />} />
         </Routes>
       </FormProvider>
       {!isHomePage && <SiteBanner />}
