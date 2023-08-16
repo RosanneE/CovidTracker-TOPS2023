@@ -141,7 +141,7 @@ const DataChart = () => {
       </div>
       <input
         type="text"
-        placeholder="Enter FIPS Code"
+        placeholder="Enter ZIP Code"
         // value={countyFipsCode}
         value={zipCodeInput}
         // onChange={(event) => setCountyFipsCode(event.target.value)}
@@ -154,7 +154,7 @@ const DataChart = () => {
       >
         Get Data
       </button>
-      {console.log(newUser)}
+      {/* {console.log(newUser)} */}
     </div>
   );
 };
