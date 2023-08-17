@@ -13,9 +13,6 @@ import LeftArrow from "../../../Images/LeftArrow.png";
 export default function SiteBuildC({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
 
-
-
-
   const handleThemeChange = (event) => {
     handlePartnerChange({
       target: { name: "color_theme", value: event.target.value },
