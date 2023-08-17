@@ -3,6 +3,7 @@ import "./SiteBuildB.css";
 import statusBar from "../../../Images/SiteBuildStatusBarB.png";
 import { FormContext } from "../../../Context/FormContext";
 import LeftArrow from "../../../Images/LeftArrow.png";
+import RightArrow from "../../../Images/RightArrow.png";
 
 export default function SiteBuildB({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
@@ -36,7 +37,12 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
       <div className="siteBuildFormB">
         <div className="formHeaderB">
           <h2>COVID-19 Resources</h2>
-          <p onClick={() => setPageNumber(2)} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Skip this step {"\u003E"}</p>
+          <p onClick={() => setPageNumber(2)} style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+            Skip this step  {" "} <img
+              style={{ paddingRight: "0.5rem" }}
+              src={RightArrow}
+              alt="Right arrow" />
+          </p>
         </div>
         <form action="">
           <div className="siteBuildFormLabelB">

@@ -1,0 +1,60 @@
+/* Request Confirmation */
+
+.requestConfirmationBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.requestH2 {
+    color: #00426B;
+    text-align: center;
+    font-family: Bitter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+.requestP {
+  color: #00426b;
+  text-align: left;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 10px 150px;
+}
+
+@media (max-width: 768px) {
+  .requestP {
+  margin: 20px 70px;
+  }
+  .requestH2 {
+    color: #00426B;
+    text-align: center;
+    font-family: Bitter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 50px 20px;
+}
+}
+
+
+.requestTextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.modalInput {
+  width: 632px;
+  height: 50px;
+  border-radius: 7px;
+  border: 1px solid #8D8D8D;
+  margin: 10px 0 20px 0;
+}

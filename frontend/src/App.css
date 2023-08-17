@@ -117,6 +117,7 @@ h3 {
   gap: 5px;
   align-items: center;
   margin-left: auto;
+  margin-right: 40px;
   
 }
 .nav-list-item-icon {
@@ -147,7 +148,7 @@ h3 {
 
 /* Media query for smaller screens (mobile) */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .nav-list {
     display: none; /* Hide the menu by default on mobile screens */
   }
@@ -264,6 +265,11 @@ h3 {
   .siteBanner {
     display: flex;
     margin-top: 12rem;
+  }
+
+  .nav-list-right {
+    margin-right: 0px;
+    
   }
 
 }

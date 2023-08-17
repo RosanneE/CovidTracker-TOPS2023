@@ -23,13 +23,13 @@ function Nav(props) {
             <Link to='/' >Home</Link>
           </li>
           <li className='nav-list-item'>
-            <Link to='#' >Report My Test</Link>
+            <Link to='/' >Report My Test</Link>
           </li>
           <li className='nav-list-item'>
-            <Link to='#' >FAQs</Link>
+            <Link to='/partner-page#faq-section' >FAQs</Link>
           </li>
           <li className='nav-list-item'>
-            <Link to='#' >About Us</Link>
+            <Link to='/partner-page#about-us-section' >About Us</Link>
           </li>
           <li className='nav-list-item'>
             <Link to='/partner-page' >For Partners</Link>
