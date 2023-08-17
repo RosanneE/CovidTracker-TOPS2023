@@ -1,27 +1,17 @@
 /* Request Confirmation */
 
-#backlinkBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem;
-}
-#leftAngleArrow {
-    margin-right: 1%;
-}
-
 .requestConfirmationBox {
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 12%;
-  margin-bottom: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
 }
 
 #requestH2 {
     color: #00426B;
     text-align: center;
     font-family: Bitter;
-    font-size: 2.5rem;
+    font-size: 40px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -30,13 +20,19 @@
   color: #00426b;
   text-align: center;
   font-family: Noto Sans;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6875rem;
-  width: 39rem;
-
+  margin: 10px 250px;
 }
+
+@media (max-width: 768px) {
+  #requestP {
+  margin: 20px 70px;
+  }
+}
+
+
 #requestTextBox {
     display: flex;
     flex-direction: column;

@@ -36,6 +36,21 @@
     line-height: normal;
     
   }
+  @media (max-width: 768px) {
+    .whyUseMMTCHeader1 {
+      margin: 50px 50px 20px 50px;
+      color: #00426b;
+      text-align: center;
+      font-family: Bitter;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      
+    }
+
+  }
+
   
   .whyUseMMTCHeader3 {
     margin-top: 1rem;
@@ -73,10 +88,9 @@
     color: #00426b;
     text-align: center;
     font-family: Noto Sans;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    /* line-height: 2.313rem; */
     
   }
   

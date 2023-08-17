@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./SiteBuildA.css";
 import statusBar from "../../../Images/SiteBuildStatusBarA.png";
 import { FormContext } from "../../../Context/FormContext";
+import LeftArrow from "../../../Images/LeftArrow.png";
 
 export default function SiteBuildA({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
@@ -9,8 +10,15 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
   return (
     <>
       <div className="backtoPartnerPageA">
-        {/* don't forget to update this link before production */}
-        <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
+       
+        <p onClick={() => setPageNumber(0)}>
+          <img
+            style={{ paddingRight: "0.5rem" }}
+            src={LeftArrow}
+            alt="Left arrow"
+          />{" "}
+          Back to Partner Page
+        </p>
       </div>
 
       <div className="siteBuildHeaderA">
@@ -21,8 +29,8 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
         </p>
         <img
           src={statusBar}
-          alt=""
-          style={{ maxWidth: "90%"}}
+          alt="Status Bar: 1. Basic Info"
+          style={{ maxWidth: "90%", marginBottom: "50px" }}
         />
       </div>
 
@@ -50,7 +58,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="org_name" id ="org_name_label">
+              <label htmlFor="org_name" id="org_name_label">
                 Organization Name<span style={{ color: "red" }}>*</span>
               </label>
             </div>
@@ -65,7 +73,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="email" id ="email_label">
+              <label htmlFor="email" id="email_label">
                 Email<span style={{ color: "red" }}>*</span>
               </label>
             </div>
@@ -80,8 +88,8 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="site_origin" id ="site_origin_label">Site Origin</label>
-              <p id ="site_origin_paragraph">Used to record where users come from</p>
+              <label htmlFor="site_origin" id="site_origin_label">Site Origin<span style={{ color: "red" }}>*</span></label>
+              <p id="site_origin_paragraph">Used to record where users come from</p>
             </div>
             <input
               type="text"
@@ -94,8 +102,8 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="email" id ="home_link_label">Home Link</label>
-              <p id ="home_link_paragraph">
+              <label htmlFor="email" id="home_link_label">Home Link</label>
+              <p id="home_link_paragraph">
                 Users of your stand-alone site who click on your logo will be directed to this
                 URL
               </p>
@@ -112,9 +120,21 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
 
             {/* ------------ buttons updated the pageNuber useState --------- */}
             <div className="siteBuildContinueButtonA">
-              <p onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', color: '#00426b'}}>{"\u003C"} Go back</p>
+              <p onClick={() => setPageNumber(pageNumber - 1)}
+                style={{
+                  cursor: 'pointer',
+                  fontSize: '20px',
+                  color: '#00426b',
+                  textDecoration: 'underline'
+                }}>
+                <img
+                  style={{ paddingRight: "0.5rem" }}
+                  src={LeftArrow}
+                  alt="Left arrow"
+                />{" "}
+                Go back</p>
               <button className="siteBuildBlueButtonA" id="siteBuildBlueButtonA" onClick={() => setPageNumber(3)}>
-                Continue
+                Continue &gt;
               </button>
             </div>
           </form>

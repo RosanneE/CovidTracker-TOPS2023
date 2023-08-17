@@ -1,15 +1,33 @@
 /* Back to Partner Page Link */
-.backtoPartnerPage {
-  margin-left: 90px;
+
+.backtoPartnerPageB {
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  margin: 50px 0;
   color: #00426b;
+  margin: 20px 0;
+  align-items: center;
 }
 
-.backtoPartnerPage:hover {
+.backtoPartnerPageB>p {
+  margin-left: 100px;
+  text-decoration: underline;
+}
+
+.backtoPartnerPageB:hover {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .backToPartnerPageB {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .backToPartnerPageB>p {
+    margin-left: 0;
+  }
+}
+
 
 /* Site Build Header */
 .siteBuildHeaderB>h1 {
@@ -17,24 +35,21 @@
   text-align: center;
   font-family: Bitter;
   font-size: 64px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 /* Site Builder Header */
-.siteBuilderHeaderB {
+.siteBuildHeaderB {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  margin-bottom: 3px;
+  margin-bottom: 50px;
+  
 }
 
-.siteBuilderHeader>p {
-  margin-bottom: 50px;
-}
 
 /* Site Build Form */
 .siteBuildFormB {
@@ -59,7 +74,7 @@
   .siteBuildFormB>form {
     width: 400px;
   }
-  
+
 }
 
 /* Site Build Form Input */
@@ -68,18 +83,15 @@
   height: 50px;
   border-radius: 7px;
   border: 1px solid #8D8D8D;
-  padding: 1rem;
-  margin: 1.5rem;
+  margin-bottom: 50px;
+
 }
 
 @media (max-width: 768px) {
   .siteBuildFormInputB {
     width: 400px;
     height: 40px;
-    border-radius: 7px;
-    border: 1px solid #8D8D8D;
-    padding: 1rem;
-    margin: 1.5rem;
+
   }
 }
 
@@ -89,12 +101,12 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 /* Site Build Form Label */
 .siteBuildFormLabelB>label {
   color: #00426b;
   font-family: Noto Sans;
   font-style: normal;
-  line-height: 25px;
   font-size: 18px;
   font-weight: 400;
   display: flex;
@@ -105,8 +117,8 @@
   color: #00426b;
   font-family: Noto Sans;
   font-size: 14px;
-  margin-top: .25rem;
   text-align: left;
+  margin: 10px 0;
 }
 
 
@@ -115,8 +127,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
-  width: 70%;
+  margin: 50px 0;
+  width: 632px;
   color: #00426b;
 }
 
@@ -157,28 +169,16 @@
   color: #fff;
   text-align: center;
   font-family: Noto Sans;
-  font-size: 1.25rem;
-  font-style: normal;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.25rem;
   border: none;
-  border-radius: 1.875rem;
+  border-radius: 30px;
   background: #0058b7;
-  min-height: 3.75rem;
-  padding: 1.25rem 4.313rem;
+  width: 176px;
+  height: 60px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin: 1.25rem;
-}
-
-@media (max-width: 768px) {
-  .siteBuildBlueButtonB {
-    margin: .75rem;
-    min-height: 1.75rem;
-    padding: 1rem 3rem;
-    font-size: 1rem;
-  }
 }
 
 
@@ -194,21 +194,36 @@
   color: #00426b;
   font-family: Noto Sans;
   font-size: 14px;
-  margin: 0 10rem;
+  margin: 0 150px 50px 150px;
 }
 
 @media (max-width: 768px) {
   .headerPB {
-    margin: 1rem 2rem;
+    margin: 50px;
   }
 }
 
 
+.backToPartnerPage {
+  width: 100%;
+  display: flex;
+  color: #00426b;
+  margin: 20px 0;
+
+}
+
+.backToPartnerPage>p {
+  margin-left: 100px;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
-  .backtoPartnerPageB {
-    margin-left: 90px;
-    display: flex;
+  .backToPartnerPage {
     align-items: center;
-    margin: 1rem 0;
+    justify-content: center;
+  }
+
+  .backToPartnerPage>p {
+    margin-left: 0;
   }
 }

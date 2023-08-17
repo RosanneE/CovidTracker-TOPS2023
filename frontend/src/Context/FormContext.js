@@ -1,5 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 
+const BUTTE_COUNTY_LOGO = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/563797ae-11e1-4959-92a1-bbf329840028.image"
+const COVER_PHOTO_DEFAULT = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/52a55cbb-abeb-4dab-9c26-661ee0e9b5d6.image"
+
 // Creates context to manage form state and functions
 export const FormContext = createContext();
 
@@ -14,8 +17,8 @@ export const FormProvider = ({ children }) => {
     positive_test_link: "",
     negative_test_link: "",
     more_info_link: "",
-    logo: "",
-    cover_photo: "",
+    logo: BUTTE_COUNTY_LOGO,
+    cover_photo: COVER_PHOTO_DEFAULT,
     custom_message: "",
     social_sharing_message: "",
     color_theme: "",
