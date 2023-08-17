@@ -189,6 +189,7 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
             </Col>
           </Row>
         </div>
+      <p onClick={()=>setDemoPage(0)} style={{textDecoration: "underline"}}>Return to the front page</p>
       </div>
     </div>
   );
