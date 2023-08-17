@@ -3,11 +3,16 @@
 .reviewAndSubmit {
   background-color: #F7F9FA;
   width: 100%;
+  
+}
+
+.reviewAndSubmitTable {
+    margin: 50px 0 0 0;
 }
 
 table {
     text-align: center;
-    padding: 3rem 8rem 4rem;
+    
 }
 
 td {
@@ -31,8 +36,8 @@ label {
     border-top: none;
     border-left: none;
     border-right: none;
-    height: 1.6rem; 
-    width: 100%;
+    height: 66px; 
+    width: 456px;
     font-family: Noto Sans; 
 }
 
@@ -54,10 +59,26 @@ h3 {
 
 .goBackSubmit {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px 50px 50px;
+    width: 456px;
 }
 
-.goBack{
-    margin-top: 1.3rem;
-}
+
+.siteBuildBlueButtonReview {
+    color: #fff;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    background: #0058b7;
+    width: 230px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  

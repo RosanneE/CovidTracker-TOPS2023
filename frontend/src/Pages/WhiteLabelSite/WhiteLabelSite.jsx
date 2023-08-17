@@ -27,6 +27,8 @@ export default function WhiteLabelPage(props) {
 
     useEffect(() => {
         localStorage.setItem("pageNumber", pageNumber.toString());
+        const targetY = window.innerHeight * 0.2;
+        window.scrollTo(0, targetY);
     }, [pageNumber]);
 
 

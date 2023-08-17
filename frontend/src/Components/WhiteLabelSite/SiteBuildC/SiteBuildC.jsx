@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import "./SiteBuildC.css";
 import statusBar from "../../../Images/SiteBuildStatusBarC.png";
 import { FormContext } from "../../../Context/FormContext";
@@ -6,19 +6,17 @@ import CustomSite from "../CustomSite/CustomSite";
 import ImageUploadLogo from "../ImageUpload/ImageUploadLogo";
 import ImageUploadCover from "../ImageUpload/ImageUploadCover";
 import ChangeSiteTheme from "./ChangeSiteTheme/ChangeSiteTheme";
+import LeftArrow from "../../../Images/LeftArrow.png";
 
-const BUTTE_COUNTY_LOGO = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/563797ae-11e1-4959-92a1-bbf329840028.image"
-const COVER_PHOTO_DEFAULT = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/52a55cbb-abeb-4dab-9c26-661ee0e9b5d6.image"
+
 
 export default function SiteBuildC({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
-  const [siteTheme, setSiteTheme] = useState("classic");
-  const [logoUrl, setlogoUrl ] = useState(BUTTE_COUNTY_LOGO);
-  const [coverPhoto, setCoverPhoto] = useState(COVER_PHOTO_DEFAULT)
+
+
+
 
   const handleThemeChange = (event) => {
-    const selectedTheme = event.target.value;
-    setSiteTheme(selectedTheme);
     handlePartnerChange({
       target: { name: "color_theme", value: event.target.value },
     });
@@ -26,13 +24,20 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
 
   return (
     <>
-      <div className="backtoPartnerPage">
-        <p onClick={() => setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
+      <div className="backtoPartnerPageC">
+      <p onClick={() => setPageNumber(0)}>
+          <img
+            style={{ paddingRight: "0.5rem" }}
+            src={LeftArrow}
+            alt="Left arrow"
+          />{" "}
+          Back to Partner Page
+        </p>
       </div>
 
       <div className="siteBuildHeaderC">
         <h1>Request a Stand-Alone Site </h1>
-        <p className="siteBuildPC">
+        <p className="siteBuildHeaderPC">
           After you submit this form our team will reach out to you to start the the process
           and clarify any additional details.
         </p>
@@ -57,14 +62,12 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
         <div className="siteBuildCGrid">
           <div className="formLeftGrid">
             <div className="customSite">
-              <CustomSite siteTheme={siteTheme} 
-              logoUrl={logoUrl} 
-              coverPhoto={coverPhoto} setCoverPhoto={setCoverPhoto} />
+              <CustomSite />
             </div>
 
             {/* ---------------color selection-------------------------*/}
 
-            <ChangeSiteTheme handleThemeChange={ handleThemeChange } siteTheme={siteTheme} />
+            <ChangeSiteTheme handleThemeChange={handleThemeChange} />
 
           </div>
 
@@ -75,15 +78,9 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
               <div className="siteBuildFormLabel">
                 <label htmlFor="imageUploadLogo" style={{ marginBottom: "10px" }}>Logo</label>
               </div>
-              {/* <input
-                type="file"
-                id="logo"
-                name="logo"
-                onChange={handlePartnerChange}
-                className="siteBuildFormInputC"
-              /> */}
+
               <div className="logoUpload">
-                <ImageUploadLogo setlogoUrl={setlogoUrl} id="imageUploadLogo" />
+                <ImageUploadLogo id="imageUploadLogo" />
               </div>
               <div className="siteBuildFormLabel">
                 <label htmlFor="imageUploadCover">Cover Photo</label>
@@ -91,17 +88,11 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
                   {/* ---------------- need to build a gallery? ------------- */}
                   Not sure where to start? <a href="/">Browse our gallery</a>
                 </p>
-              <div className="coverPhotoUpload">
-                <ImageUploadCover setCoverPhoto={setCoverPhoto} id="imageUploadCover" />
+                <div className="coverPhotoUpload">
+                  <ImageUploadCover id="imageUploadCover" />
+                </div>
               </div>
-              </div>
-              {/* <input
-                type="file"
-                id="cover_photo"
-                name="cover_photo"
-                onChange={handlePartnerChange}
-                className="siteBuildFormInputC"
-              /> */}
+
               <div className="siteBuildFormLabel">
                 <label htmlFor="custom_message">Custom Message</label>
                 <p className="siteBuildPC">
@@ -124,8 +115,8 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
                 <label htmlFor="social_sharing_message">Social Sharing Message Message</label>
                 <p className="siteBuildPC">This will appear whenever your site is shared</p>
               </div>
-            
-              <textarea       
+
+              <textarea
                 rows="4"
                 id="social_sharing_message"
                 name="social_sharing_message"
@@ -137,17 +128,21 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
                 Visit the site to join your community 
                 in reporting your at-home test results. "
               />
-         
+
 
               <div className="siteBuildContinueButtonC">
                 <p
                   onClick={() => setPageNumber(pageNumber - 1)}
-                  style={{ cursor: "pointer", color: "#00426b" }}
+                  style={{ cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline' }}
                 >
-                  {"\u003C"} Go back
+                  <img
+                    style={{ paddingRight: "0.5rem" }}
+                    src={LeftArrow}
+                    alt="Left arrow"
+                  />{" "} Go back
                 </p>
                 <button className="siteBuildBlueButtonC" onClick={() => setPageNumber(5)}>
-                  Review & Submit
+                  Review & Submit &gt;
                 </button>
               </div>
             </form>

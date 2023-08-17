@@ -23,7 +23,11 @@ export default function Reporting() {
 
   useEffect(() => {
     localStorage.setItem("demoPage", demoPage.toString());
+    const targetY = window.innerHeight * 0.2;
+    window.scrollTo(0, targetY);
   }, [demoPage]);
+
+
 
   return (
     <div>

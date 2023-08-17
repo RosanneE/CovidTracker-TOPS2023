@@ -2,15 +2,22 @@ import { useContext } from "react";
 import "./SiteBuildB.css";
 import statusBar from "../../../Images/SiteBuildStatusBarB.png";
 import { FormContext } from "../../../Context/FormContext";
+import LeftArrow from "../../../Images/LeftArrow.png";
 
 export default function SiteBuildB({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
 
   return (
     <>
-      <div className="backtoPartnerPage">
-        {/* don't forget to update this link before production */}
-        <p onClick={()=> setPageNumber(0)}>{"\u003C"} Back to Partner Page </p>
+      <div className="backtoPartnerPageB">
+        <p onClick={() => setPageNumber(0)}>
+          <img
+            style={{ paddingRight: "0.5rem" }}
+            src={LeftArrow}
+            alt="Left arrow"
+          />{" "}
+          Back to Partner Page
+        </p>
       </div>
 
       <div className="siteBuildHeaderB">
@@ -22,14 +29,14 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
         <img
           src={statusBar}
           alt=""
-          style={{ maxWidth: "90%"}}
+          style={{ maxWidth: "90%" }}
         />
       </div>
 
       <div className="siteBuildFormB">
         <div className="formHeaderB">
           <h2>COVID-19 Resources</h2>
-          <p onClick={() => setPageNumber(2)} style={{cursor: 'pointer'}}>Skip this step {"\u003E"}</p>
+          <p onClick={() => setPageNumber(2)} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Skip this step {"\u003E"}</p>
         </div>
         <form action="">
           <div className="siteBuildFormLabelB">
@@ -85,9 +92,22 @@ export default function SiteBuildB({ pageNumber, setPageNumber }) {
             placeholder="Example: http://mysite.com/covidinfo.html"
           />
           <div className="siteBuildContinueButtonB">
-            <p className="siteBuildPB" onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', fontSize: '20px', color: '#00426b'}}>{"\u003C"} Go back</p>
+            <p className="siteBuildPB"
+              onClick={() => setPageNumber(pageNumber - 1)}
+              style={{
+                cursor: 'pointer',
+                fontSize: '20px',
+                color: '#00426b',
+                textDecoration: 'underline'
+              }}>
+              <img
+                style={{ paddingRight: "0.5rem" }}
+                src={LeftArrow}
+                alt="Left arrow"
+              />{" "}
+              Go back</p>
             <button className="siteBuildBlueButtonB" onClick={() => setPageNumber(4)}>
-              Continue
+              Continue &gt;
             </button>
           </div>
         </form>

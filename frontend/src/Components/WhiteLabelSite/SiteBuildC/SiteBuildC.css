@@ -1,9 +1,29 @@
-.backtoPartnerPage {
-  margin-left: 90px;
+.backtoPartnerPageC {
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  color: #00426b;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.backtoPartnerPageC>p {
+  margin-left: 100px;
+  text-decoration: underline;
+}
+
+.backtoPartnerPageC:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .backToPartnerPageC {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .backToPartnerPageC>p {
+    margin-left: 0;
+  }
 }
 
 .siteBuildHeaderC>h1 {
@@ -11,24 +31,40 @@
   text-align: center;
   font-family: Bitter;
   font-size: 64px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
-.siteBuilderHeaderC {
+.siteBuildHeaderPC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 14px;
+  margin: 0 150px 50px 150px;
+}
+
+@media (max-width: 768px) {
+  .siteBuildHeaderPC {
+    margin: 50px;
+  }
+  .siteBuildHeaderC>h1 {
+    margin: 0 50px;
+  }
+
+}
+
+
+.siteBuildHeaderC {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: center;
   margin-bottom: 50px;
+  
 }
-
-.siteBuilderHeaderC>p {
-  margin-bottom: 50px;
-}
-
 
 .siteBuildFormC {
   display: flex;
@@ -57,7 +93,8 @@
 }
 
 
-.logoUpload, .coverPhotoUpload{
+.logoUpload,
+.coverPhotoUpload {
   width: 367px;
   border-radius: 7px;
   border: 1px solid #8D8D8D;
@@ -90,7 +127,7 @@ form:second-child {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .siteBuildFormLabel {
@@ -166,22 +203,22 @@ form:second-child {
   color: #fff;
   text-align: center;
   font-family: Noto Sans;
-  font-size: 1rem;
-  font-style: normal;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.25rem;
-  /* 100% */
   border: none;
-  border-radius: 1.875rem;
+  border-radius: 30px;
   background: #0058b7;
-  min-height: 2.5rem;
-  padding: .62rem 2.18rem;
+  width: 230px;
+  height: 60px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin: .625rem;
 }
 
+
+.siteBuildBlueButtonC:hover {
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .siteBuildBlueButtonC {
     margin: .75rem;
@@ -320,13 +357,13 @@ form:second-child {
   text-align: center;
 }
 
-.radioOption label {
+.radioOption>label {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-bottom: 5px;
+  margin: 50px 0;
   font-size: 20px;
   color: #00426b;
   font-weight: 600;

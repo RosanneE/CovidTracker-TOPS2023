@@ -9,7 +9,7 @@ import { FormContext } from "../../../Context/FormContext";
 const CDNURL = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/"
 
 
-export default function ImageUploadLogo({ setlogoUrl }) {
+export default function ImageUploadLogo() {
   const { handlePartnerChange } = useContext(FormContext);
 
 
@@ -19,18 +19,17 @@ export default function ImageUploadLogo({ setlogoUrl }) {
     const { data, error } = await supabase.storage
       .from('images')
       .upload(uuidv4() + ".image", imageFile) //uuidv4() creates random string
-    console.log('data', data)
+    // console.log('data', data)
     if (error) {
-      console.log(error)
+      // console.log(error)
       alert("Error uploading file to Supabase")
     } else if (data) {
       const imageKey = data.path;
       const imageURL = CDNURL + imageKey;
-      setlogoUrl(imageURL);
       handlePartnerChange({
         target: { name: "logo", value: imageURL },
       });
-      console.log("Image URL:", imageURL);
+      // console.log("Image URL:", imageURL);
     }
   }
 

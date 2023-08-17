@@ -5,7 +5,7 @@ import { FormContext } from "../../../Context/FormContext";
 import CustomeSiteFooter from "./CustomeSiteFooter/CustomSiteFooter";
 
 
-const CustomSite = ({ siteTheme  }) => {
+const CustomSite = () => {
   const { newSite } = useContext(FormContext);
 
 
@@ -54,7 +54,7 @@ const CustomSite = ({ siteTheme  }) => {
       }
     }
     miniColorChange(newSite.color_theme);
-  }, [siteTheme, setTextColor, newSite.color_theme]);
+  }, [setTextColor, newSite.color_theme]);
 
 
 
@@ -120,7 +120,7 @@ const CustomSite = ({ siteTheme  }) => {
         </div>
       </div>
       <div className="ustomeSiteFooter">
-        <CustomeSiteFooter siteTheme={siteTheme} />
+        <CustomeSiteFooter />
       </div>
     </div>
 
