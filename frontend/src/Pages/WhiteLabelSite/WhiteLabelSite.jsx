@@ -7,6 +7,7 @@ import ReviewAndSubmit from "../../Components/WhiteLabelSite/ReviewAndSubmit/Rev
 import RequestConfirmation from "../../Components/WhiteLabelSite/RequestConfirmation/RequestConfirmation";
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
+import Modal from "../../Components/WhiteLabelSite/Modal/Modal";
 
 
 export default function WhiteLabelPage(props) {
@@ -72,6 +73,13 @@ export default function WhiteLabelPage(props) {
                 setPageNumber={setPageNumber}
                 navigateToReviewAndSubmit={navigateToReviewAndSubmit}
             /> : ""}
+
+            {pageNumber === 21 ? <Modal
+                pageNumber={pageNumber}
+                setPageNumber={setPageNumber}
+                navigateToReviewAndSubmit={navigateToReviewAndSubmit}
+            /> : ""}
+            
 
         </div>
     )

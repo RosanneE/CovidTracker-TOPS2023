@@ -7,6 +7,7 @@ import ImageUploadLogo from "../ImageUpload/ImageUploadLogo";
 import ImageUploadCover from "../ImageUpload/ImageUploadCover";
 import ChangeSiteTheme from "./ChangeSiteTheme/ChangeSiteTheme";
 import LeftArrow from "../../../Images/LeftArrow.png";
+import RightArrow from "../../../Images/RightArrow.png";
 
 
 
@@ -22,7 +23,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
   return (
     <>
       <div className="backtoPartnerPageC">
-      <p onClick={() => setPageNumber(0)}>
+        <p onClick={() => setPageNumber(0)}>
           <img
             style={{ paddingRight: "0.5rem" }}
             src={LeftArrow}
@@ -51,9 +52,11 @@ export default function SiteBuildC({ pageNumber, setPageNumber }) {
           </div>
           <p
             onClick={() => setPageNumber(pageNumber + 1)}
-            style={{ cursor: "pointer", color: "#00426b", marginRight: "5px" }}
-          >
-            Skip this step {"\u003E"}
+            style={{ cursor: "pointer", color: "#00426b", marginRight: "20px", textDecoration: 'underline' }}>
+            Skip this step  {" "} <img
+              style={{ paddingRight: "0.5rem" }}
+              src={RightArrow}
+              alt="Right arrow" />
           </p>
         </div>
         <div className="siteBuildCGrid">

@@ -24,13 +24,13 @@ export default function DesignStart({ pageNumber, setPageNumber }) {
         {/* ------------ buttons updated the pageNuber useState --------- */}
         <div className="buttonsDesignDesign">
           <button className="siteBuildBlueButtonDesign" onClick={() => setPageNumber(2)}>Stand Alone Site</button>
-          <button className="siteBuildBlueButtonDesign" onClick={() => setPageNumber(2)}>Modal Pop-Up</button>
+          <button className="siteBuildBlueButtonDesign" onClick={() => setPageNumber(21)}>Modal Pop-Up</button>
         </div>
 
         <p className="designStartP">Not sure what works best for you?</p>
 
         <p className="designStartP">
-          Learn more about
+          Learn more about{" "} 
           <a href="https://uxplanet.org/modal-vs-page-a-decision-making-framework-34453e911129">
             Stand-Alone vs Modal Pop-Ups
           </a>

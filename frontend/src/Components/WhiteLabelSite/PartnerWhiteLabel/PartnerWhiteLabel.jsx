@@ -121,7 +121,7 @@ function PartnerPage({ pageNumber, setPageNumber }) {
 
       {/* ------------------------------------------------------------ */}
 
-      <div className="exploreTheTool">
+      <div className="exploreTheTool" id="about-us-section">
         <img src={vector1} className="top-left" alt="Top left border" />
         <img src={vector3} className="top-right" alt="Top right border" />
         <img src={vector2} className="bottom-left" alt="Bottom left border" />
@@ -138,7 +138,7 @@ function PartnerPage({ pageNumber, setPageNumber }) {
 
       {/* ------------------------------------------------------------ */}
 
-      <div className="whyUseMMTC">
+      <div className="whyUseMMTC" id="faq-section">
         <h2 className="partnerH2">Why Use MakeMyTestCount?</h2>
         <p>
           It’s simple, secure, standardized, scalable, and cost- and effort-free
