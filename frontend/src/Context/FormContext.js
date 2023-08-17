@@ -21,7 +21,7 @@ export const FormProvider = ({ children }) => {
     cover_photo: COVER_PHOTO_DEFAULT,
     custom_message: "",
     social_sharing_message: "",
-    color_theme: "",
+    color_theme: "classic",
   };
 
   const storedPartnerState = JSON.parse(

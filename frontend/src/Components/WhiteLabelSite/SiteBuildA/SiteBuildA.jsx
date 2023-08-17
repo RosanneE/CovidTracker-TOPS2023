@@ -102,7 +102,7 @@ export default function SiteBuildA({ pageNumber, setPageNumber }) {
             />
 
             <div className="siteBuildFormLabelA">
-              <label htmlFor="email" id="home_link_label">Home Link</label>
+              <label htmlFor="home_link" id="home_link_label">Home Link</label>
               <p id="home_link_paragraph">
                 Users of your stand-alone site who click on your logo will be directed to this
                 URL
