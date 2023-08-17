@@ -82,10 +82,15 @@
   font-style: normal;
 }
 
+form:second-child {
+  margin-bottom: 5px;
+}
+
 .siteBuildPC {
   color: #00426b;
   font-family: Noto Sans;
   font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .siteBuildFormLabel {
@@ -129,6 +134,7 @@
 
 .formRightGrid {
   grid-column-start: 2;
+
 }
 
 .formLeftHeader {
@@ -265,7 +271,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 50px;
     height: auto;
   }
 

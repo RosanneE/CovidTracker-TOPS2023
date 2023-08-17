@@ -1,15 +1,16 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import whiteLogo from "../../../../Images/mmtc-logo-white.png";
 import Nih from "../../../../Images/NIH.png";
 import CareEv from "../../../../Images/CareEvolution.png";
-
+import { FormContext } from "../../../../Context/FormContext";
 
 
 function CustomeSiteFooter({ siteTheme }) {
   const [footerColor, setFooterColor] = useState('#1f304f');
   const [subFooterColor, setSubFooterColor] = useState('#E7F4F8')
   const [subFooterText, setSubFooterText] = useState('#00426B')
+  const { newSite } = useContext(FormContext);
 
   useEffect(() => {
     function footerColorChange(siteTheme) {
@@ -39,8 +40,8 @@ function CustomeSiteFooter({ siteTheme }) {
         setSubFooterText('#4C4C4C');
       }
     }
-    footerColorChange(siteTheme);
-  }, [siteTheme, setFooterColor]);
+    footerColorChange(newSite.color_theme);
+  }, [newSite.color_theme, setFooterColor]);
 
   return (
     <footer className="footerContainerCustom"

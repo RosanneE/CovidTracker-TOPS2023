@@ -1,14 +1,16 @@
 // import { createClient } from '@supabase/supabase-js'
-// import { useState } from 'react'
+import { useContext } from 'react'
 import { v4 as uuidv4 } from "uuid";
 import supabase from '../../Supabase/Supabase';
+import { FormContext } from "../../../Context/FormContext";
+
 
 
 const CDNURL = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/"
 
 
 export default function ImageUploadLogo({ setlogoUrl }) {
-
+  const { handlePartnerChange } = useContext(FormContext);
 
 
   async function handleUpload(event) {
@@ -25,6 +27,9 @@ export default function ImageUploadLogo({ setlogoUrl }) {
       const imageKey = data.path;
       const imageURL = CDNURL + imageKey;
       setlogoUrl(imageURL);
+      handlePartnerChange({
+        target: { name: "logo", value: imageURL },
+      });
       console.log("Image URL:", imageURL);
     }
   }

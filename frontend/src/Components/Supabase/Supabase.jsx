@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+// require("dotenv").config();
 
 //This is used to interact with the API/storage
 

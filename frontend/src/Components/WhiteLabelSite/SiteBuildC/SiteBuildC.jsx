@@ -10,7 +10,7 @@ import ChangeSiteTheme from "./ChangeSiteTheme/ChangeSiteTheme";
 const BUTTE_COUNTY_LOGO = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/563797ae-11e1-4959-92a1-bbf329840028.image"
 const COVER_PHOTO_DEFAULT = "https://rouoteoqwehgnrgbeigu.supabase.co/storage/v1/object/public/images/52a55cbb-abeb-4dab-9c26-661ee0e9b5d6.image"
 
-export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReviewAndSubmit }) {
+export default function SiteBuildC({ pageNumber, setPageNumber }) {
   const { newSite, handlePartnerChange } = useContext(FormContext);
   const [siteTheme, setSiteTheme] = useState("classic");
   const [logoUrl, setlogoUrl ] = useState(BUTTE_COUNTY_LOGO);
@@ -19,6 +19,9 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
   const handleThemeChange = (event) => {
     const selectedTheme = event.target.value;
     setSiteTheme(selectedTheme);
+    handlePartnerChange({
+      target: { name: "color_theme", value: event.target.value },
+    });
   };
 
   return (
@@ -54,7 +57,9 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
         <div className="siteBuildCGrid">
           <div className="formLeftGrid">
             <div className="customSite">
-              <CustomSite siteTheme={siteTheme} logoUrl={logoUrl} coverPhoto={coverPhoto} setCoverPhoto={setCoverPhoto} />
+              <CustomSite siteTheme={siteTheme} 
+              logoUrl={logoUrl} 
+              coverPhoto={coverPhoto} setCoverPhoto={setCoverPhoto} />
             </div>
 
             {/* ---------------color selection-------------------------*/}
@@ -68,7 +73,7 @@ export default function SiteBuildC({ pageNumber, setPageNumber, navigateToReview
           <div className="formRightGrid">
             <form action="">
               <div className="siteBuildFormLabel">
-                <label htmlFor="imageUploadLogo">Logo</label>
+                <label htmlFor="imageUploadLogo" style={{ marginBottom: "10px" }}>Logo</label>
               </div>
               {/* <input
                 type="file"
