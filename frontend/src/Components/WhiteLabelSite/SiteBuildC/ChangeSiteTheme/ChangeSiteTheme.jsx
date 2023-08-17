@@ -3,9 +3,11 @@ import deep from "../../../../Images/customSiteDeepColor.png";
 import classic from "../../../../Images/customeSiteClassicColor.png";
 import clean from "../../../../Images/customeSiteCleanColor.png";
 import natural from "../../../../Images/customSiteNaturalColor.png";
-
+import { useContext } from "react";
+import { FormContext } from "../../../../Context/FormContext";
 
 export default function ChangeSiteTheme({ handleThemeChange }) {
+  const { newSite  } = useContext(FormContext);
 
   return (
     <div>
@@ -19,6 +21,7 @@ export default function ChangeSiteTheme({ handleThemeChange }) {
               type="radio"
               name="color"
               value="classic"
+              checked={newSite.color_theme === 'classic'}
               onChange={handleThemeChange}
             />
           </label>
