@@ -4,7 +4,8 @@ import { FormContext } from "../../../Context/FormContext";
 // import inspectingResults from "../../../Images/Inspecting_results.png";
 import CustomeSiteFooter from "./CustomeSiteFooter/CustomSiteFooter";
 
-const CustomSite = ({ siteTheme, logoUrl, coverPhoto, setCoverPhoto }) => {
+
+const CustomSite = ({ siteTheme  }) => {
   const { newSite } = useContext(FormContext);
 
 
@@ -52,17 +53,18 @@ const CustomSite = ({ siteTheme, logoUrl, coverPhoto, setCoverPhoto }) => {
         setHeaderColor('#E7F4F8');
       }
     }
-    miniColorChange(siteTheme);
-  }, [siteTheme, setTextColor]);
+    miniColorChange(newSite.color_theme);
+  }, [siteTheme, setTextColor, newSite.color_theme]);
 
 
 
   return (
     <div className="miniSite">
+      
       {/* Header - Organization name is custom */}
 
       <div id="miniSiteHeader" >
-        <img className="miniSiteHeaderImg" src={logoUrl} alt="Your Logo Goes Here" />
+        <img className="miniSiteHeaderImg" src={newSite.logo} alt="Your Logo Goes Here" />
         <h4 style={{ color: h1Color }}>
           {newSite.org_name
             ? newSite.org_name
@@ -112,7 +114,7 @@ const CustomSite = ({ siteTheme, logoUrl, coverPhoto, setCoverPhoto }) => {
         <div id="customSite-rightside">
           <img
             className="miniSiteCoverImg"
-            src={coverPhoto}
+            src={newSite.cover_photo}
             alt="People inspecting their test results"
           />
         </div>

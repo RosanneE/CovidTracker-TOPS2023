@@ -38,13 +38,16 @@ function PartnerPage({ pageNumber, setPageNumber }) {
 
       {/* ------------------------------------------------------------ */}
 
+        <div className="partnerHeader">
+
+          <h2 className="partnerH2">Partnering Options</h2>
+          <p>
+            It doesn’t have to be complicated. If your tech is limited, simply add
+            a link <br />
+            to MakeMyTestCount.org on your website. Want more? It's all free.
+          </p>
+        </div>
       <div className="partneringOptions">
-        <h2 className="partnerH2">Partnering Options</h2>
-        <p>
-          It doesn’t have to be complicated. If your tech is limited, simply add
-          a link <br />
-          to MakeMyTestCount.org on your website. Want more? It's all free.
-        </p>
         <table align="center">
           <tbody>
             <tr>
