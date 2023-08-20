@@ -32,96 +32,94 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
           After you submit this form our team will reach out to you to start the the process
           and clarify any additional details.
         </p>
-        <img src={statusBar} alt="" style={{ maxWidth: "90%" }} />
+        <img src={statusBar} alt="Status Bar: Submit" style={{ maxWidth: "90%" }} />
       </div>
 
+      <div className="reviewAndSubmit">
+        <div className="reviewAndSubmitGrid">
+          <div className="reviewLeftGrid">
 
-      <div className="reviewAndSubmitTable">
-        <table className="reviewAndSubmit">
-          <tbody className="reviewAndSubmitTBody">
-            <tr>
-              <td>
-                <div>
-                  <div className="reviewAndSubmitDiv">
-                    <h3>Review & Submit</h3>
-                    <p>Please review your contact information</p>
-                    <div style={{ textAlign: "right" }}>
 
-                      <p onClick={() => setPageNumber(2)}>Edit info</p>
+            <h3>Review & Submit</h3>
+            <p>Please review your contact information</p>
+            <div style={{ textAlign: "right" }}>
 
-                    </div>
+              <p onClick={() => setPageNumber(2)}>Edit info</p>
 
-                    <div>
-                      <label>Contact Name</label>
-                      <input
-                        className="reviewAndSubmitInput"
-                        type="text"
-                        name="contact_name"
-                        value={newSite.contact_name}
-                        onChange={handlePartnerChange}
-                      />
-                    </div>
-                    <div>
-                      <label>Organization Name</label>
-                      <input
-                        className="reviewAndSubmitInput"
-                        type="text"
-                        name="org_name"
-                        value={newSite.org_name}
-                        onChange={handlePartnerChange}
-                      />
-                    </div>
-                    <div>
-                      <label>Email</label>
-                      <input
-                        className="reviewAndSubmitInput"
-                        type="email"
-                        name="email"
-                        value={newSite.email}
-                        onChange={handlePartnerChange}
-                      />
-                    </div>
-                    <div>
-                      <label>Home Link</label>
-                      <input
-                        className="reviewAndSubmitInput"
-                        type="text"
-                        name="home_link"
-                        value={newSite.home_link}
-                        onChange={handlePartnerChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="goBackSubmit">
-                    <div className="goBack">
-                      <p onClick={() => setPageNumber(pageNumber - 1)} style={{cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline'}}>
-                        <img
-                          style={{ paddingRight: "0.5rem" }}
-                          src={LeftArrow}
-                          alt="Left arrow"
-                        />{" "}
-                        Go Back
-                      </p>
-                    </div>
-                    <button
-                      className="siteBuildBlueButtonReview  dissolveEffect"
-                      onClick={handleSubmit}
-                    >
-                      Submit request
-                    </button>
-                  </div>
-                </div>
-              </td>
-              <td>
+            </div>
 
-                <CustomSite />
+    
+              <label>Contact Name</label>
+              <input
+                className="reviewAndSubmitInput"
+                type="text"
+                name="contact_name"
+                value={newSite.contact_name}
+                onChange={handlePartnerChange}
+              />
+       
+          
+              <label>Organization Name</label>
+              <input
+                className="reviewAndSubmitInput"
+                type="text"
+                name="org_name"
+                value={newSite.org_name}
+                onChange={handlePartnerChange}
+              />
+         
+         
+              <label>Email</label>
+              <input
+                className="reviewAndSubmitInput"
+                type="email"
+                name="email"
+                value={newSite.email}
+                onChange={handlePartnerChange}
+              />
+         
+       
+              <label>Home Link</label>
+              <input
+                className="reviewAndSubmitInput"
+                type="text"
+                name="home_link"
+                value={newSite.home_link}
+                onChange={handlePartnerChange}
+              />
+           
 
-              </td>
-            </tr>
-          </tbody>
-        </table>
+
+            <div className="goBackSubmit">
+              <div className="goBack">
+                <p onClick={() => setPageNumber(pageNumber - 1)} style={{ cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline' }}>
+                  <img
+                    style={{ paddingRight: "0.5rem" }}
+                    src={LeftArrow}
+                    alt="Left arrow"
+                  />{" "}
+                  Go Back
+                </p>
+              </div>
+              <button
+                className="siteBuildBlueButtonReview  dissolveEffect"
+                onClick={handleSubmit}
+              >
+                Submit request
+              </button>
+            </div>
+          </div>
+
+          <div className="reviewCustomSite">
+            <div className="reviewCustomSiteFlex">
+              <CustomSite />
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   );
 }
 
