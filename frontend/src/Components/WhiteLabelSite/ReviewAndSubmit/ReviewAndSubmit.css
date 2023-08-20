@@ -1,33 +1,67 @@
 /* Review and Submit Page CSS */
-
 .reviewAndSubmit {
-  background-color: #F7F9FA;
-  width: 100%;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F9FA;
+    width: 100%;
+    height: auto;
+    padding: 50px;
 }
 
-.reviewAndSubmitTable {
-    margin: 50px 0 0 0;
+.reviewAndSubmitGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F7F9FA;
+    width: 100%;
 }
 
-table {
-    text-align: center;
-    
+.reviewLeftGrid {
+    grid-column-start: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-td {
-   text-align: center;
-   width: 500px;
-    
+.reviewCustomSite {
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-label {
+
+@media (max-width: 2000px) {
+    .reviewAndSubmitGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .reviewLeftGrid {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .reviewCustomSite {
+        
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+}
+
+
+
+
+.reviewLabel {
     color: #8D8D8D;
     font-family: Noto Sans;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.6875rem; /* 192.857% */
+    line-height: 1.6875rem;
+    /* 192.857% */
 }
 
 .reviewAndSubmitInput {
@@ -36,9 +70,9 @@ label {
     border-top: none;
     border-left: none;
     border-right: none;
-    height: 66px; 
+    height: 66px;
     width: 456px;
-    font-family: Noto Sans; 
+    font-family: Noto Sans;
 }
 
 .reviewAndSubmitDiv {
@@ -46,16 +80,12 @@ label {
     margin: 0rem 5rem 0rem 5rem;
     color: #00426b;
 }
+
 .reviewAndSubmitDiv>p {
     font-family: Noto Sans;
     color: #00426b;
 }
 
-h3 {
-    margin-bottom: 2px;
-    color: #00426b;
-    font-family: Bitter;
-}
 
 .goBackSubmit {
     display: flex;
@@ -80,5 +110,4 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-  }
-  
+}
