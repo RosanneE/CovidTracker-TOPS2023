@@ -39,55 +39,61 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
         <div className="reviewAndSubmitGrid">
           <div className="reviewLeftGrid">
 
-
-            <h3>Review & Submit</h3>
-            <p>Please review your contact information</p>
-            <div style={{ textAlign: "right" }}>
-
-              <p onClick={() => setPageNumber(2)}>Edit info</p>
+            <div className="reviewFormHeader">
+              <h3>Review & Submit</h3>
+              <p>Please review your contact information</p>
+              <div className="reviewEdit">
+                <p onClick={() => setPageNumber(2)}>Edit info</p>
+              </div>
 
             </div>
 
-    
-              <label>Contact Name</label>
+            <div className="reviewInputs">
+              <label htmlFor="reviewContactName">Contact Name</label>
               <input
                 className="reviewAndSubmitInput"
+                id="reviewContactName"
                 type="text"
                 name="contact_name"
                 value={newSite.contact_name}
                 onChange={handlePartnerChange}
               />
-       
-          
-              <label>Organization Name</label>
+
+
+              <label htmlFor="reviewOrganizationName">Organization Name</label>
               <input
                 className="reviewAndSubmitInput"
+                id="reviewOrganizationName"
                 type="text"
                 name="org_name"
                 value={newSite.org_name}
                 onChange={handlePartnerChange}
               />
-         
-         
-              <label>Email</label>
+
+
+              <label htmlFor="reviewEmail">Email</label>
               <input
                 className="reviewAndSubmitInput"
+                id="reviewEmail"
                 type="email"
                 name="email"
                 value={newSite.email}
                 onChange={handlePartnerChange}
               />
-         
-       
-              <label>Home Link</label>
+
+
+              <label  htmlFor="reviewHomeLink">Home Link</label>
               <input
                 className="reviewAndSubmitInput"
+                id="reviewHomeLink"
                 type="text"
                 name="home_link"
                 value={newSite.home_link}
                 onChange={handlePartnerChange}
               />
-           
+
+
+            </div>
 
 
             <div className="goBackSubmit">
