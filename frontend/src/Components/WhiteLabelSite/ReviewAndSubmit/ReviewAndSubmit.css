@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #F7F9FA;
-    width: 100%;
+    width: auto;
 }
 
 .reviewLeftGrid {
@@ -33,21 +33,28 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1150px) {
     .reviewAndSubmitGrid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
 
     .reviewLeftGrid {
-        grid-row-start: 1;
+        grid-row-start: 2;
         grid-column-start: 1;
     }
 
     .reviewCustomSite {
-        
+        grid-row-start: 1;
         grid-column-start: 1;
-        grid-row-start: 2;
+    }
+
+    .reviewAndSubmitInput {
+        width: 250px;
+    }
+
+    .goBackSubmit {
+        flex-direction: column;
     }
 }
 
@@ -59,7 +66,7 @@
 
 }
 
-.reviewFormHeader>h3{
+.reviewFormHeader>h3 {
     color: #00426b;
     font-family: Noto Sans;
     font-size: 30px;
@@ -69,7 +76,7 @@
 
 }
 
-.reviewFormHeader>p{
+.reviewFormHeader>p {
     color: #00426b;
     font-family: Noto Sans;
     font-size: 18px;
@@ -77,15 +84,16 @@
     text-align: left;
 }
 
-.reviewEdit{
+.reviewEdit {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
+    width: 90%;
+    
 }
 
 
-.reviewEdit>p{
+.reviewEdit>p {
     color: #00426b;
     font-family: Noto Sans;
     font-size: 18px;
@@ -93,7 +101,7 @@
     text-decoration: underline;
 }
 
-.reviewInputs {
+.reviewForm{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -101,13 +109,12 @@
 }
 
 
-.reviewInputs>label {
+.reviewForm>label {
     color: #8D8D8D;
     font-family: Noto Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-   
 }
 
 .reviewAndSubmitInput {
@@ -122,17 +129,7 @@
     margin-bottom: 20px;
 }
 
-.reviewAndSubmitDiv {
-    text-align: left;
-    margin: 0rem 5rem 0rem 5rem;
-    color: #00426b;
-}
 
-.reviewAndSubmitDiv>p {
-    font-family: Noto Sans;
-    color: #00426b;
-    font-size: 18px;
-}
 
 
 .goBackSubmit {
