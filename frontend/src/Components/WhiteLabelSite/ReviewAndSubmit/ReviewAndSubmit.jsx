@@ -48,7 +48,7 @@ function ReviewAndSubmit({ pageNumber, setPageNumber }) {
 
             </div>
 
-            <div className="reviewInputs">
+            <div className="reviewForm">
               <label htmlFor="reviewContactName">Contact Name</label>
               <input
                 className="reviewAndSubmitInput"
