@@ -73,3 +73,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 git push heroku main
 make-test-count
+
+
+## Deploy your changes
+Make some changes to the code you just cloned and deploy them to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master

@@ -45,12 +45,12 @@ client
 // Add middleware to parse the POST data of the body
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "frontend/build")));
 
-if (process.env.NODE_ENV == "production") {
-  // serve static content
-  //npm run build
-  app.use(express.static(path.join(__dirname, "frontend/build")));
-}
+// if (process.env.NODE_ENV == "production") {
+//   // serve static content
+//   //npm run build
+// }
 
 
 // ========================
