@@ -5,13 +5,13 @@
   "main": "index.js",
   "engines": {
     "node": "19.7.0",
-    "npm": "9.6.6"
+    "npm": "9.8.1"
   },
   "scripts": {
     "script": "knex migrate:latest",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
+    "dev": "nodemon server.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "",
