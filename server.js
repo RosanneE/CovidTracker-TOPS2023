@@ -45,12 +45,15 @@ client
 // Add middleware to parse the POST data of the body
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "frontend/build")));
+// temp to run locally like production to check for errors
+// app.use(express.static(path.join(__dirname, "frontend/build")));
 
-// if (process.env.NODE_ENV == "production") {
-//   // serve static content
-//   //npm run build
-// }
+
+if (process.env.NODE_ENV == "production") {
+  // serve static content
+  //npm run build
+  app.use(express.static(path.join(__dirname, "frontend/build")));
+}
 
 
 // ========================
@@ -200,4 +203,3 @@ app.get("*", (req, res) => {
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
 
-  
