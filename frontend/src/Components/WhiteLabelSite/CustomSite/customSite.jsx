@@ -119,7 +119,7 @@ const CustomSite = () => {
           />
         </div>
       </div>
-      <div className="ustomeSiteFooter">
+      <div className="CustomeSiteFooter">
         <CustomeSiteFooter />
       </div>
     </div>
