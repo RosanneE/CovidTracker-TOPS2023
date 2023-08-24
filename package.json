@@ -9,7 +9,7 @@
   },
   "scripts": {
     "script": "knex migrate:latest",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
