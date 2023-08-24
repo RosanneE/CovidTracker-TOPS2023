@@ -49,7 +49,7 @@ export const FormProvider = ({ children }) => {
 
     const data = JSON.stringify(newSite);
 
-    return fetch("http://localhost:5423/partners", {
+    return fetch("/partners", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -73,7 +73,10 @@ export const FormProvider = ({ children }) => {
     test_result: null,
     test_taken: null,
     test_date: null,
-    zipcode: null,
+    // I was getting an error so I switched this to null. 
+    // the error was happening because the data fetch for the graph uses this too
+    // so that input can't be null
+    zipcode: "",
     symptoms: null,
     sex: null,
     race: null,
@@ -101,7 +104,7 @@ export const FormProvider = ({ children }) => {
 
     const data = JSON.stringify(newUser);
 
-    fetch("http://localhost:5423/users", {
+    fetch("/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

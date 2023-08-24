@@ -101,9 +101,12 @@
 }
 
 .opQuestionsDiv {
-  width: 65rem;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .optionalQuestionsButtons {
@@ -123,15 +126,30 @@
 
 .optionalQuestionsButtons:hover {
   color: #0058b7;
+ 
 }
 
 .optionalArrow {
   position: relative;
   top: 2.6rem;
   left: -34.5rem;
+  
 }
 
+.displayNone{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 18px;
+  font-family: Noto Sans;
+  color: #00426B;
+  margin: 0 100px;
+}
 
+.displayNone>p{
+  text-align: left;
+}
 
 
 
@@ -157,6 +175,10 @@
 
   .displayMobile {
     display: block;
+  }
+
+  .displayNone {
+    display: none;
   }
 
   .optionalArrow {

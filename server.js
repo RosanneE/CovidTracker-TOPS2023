@@ -1,5 +1,9 @@
 const express = require("express");
 const { Client } = require("pg");
+const path = require("path")
+
+//process.env.NODE_ENV => for heroku production or undefined
+
 
 // Create a new Express application
 const app = express();
@@ -40,6 +44,14 @@ client
 
 // Add middleware to parse the POST data of the body
 app.use(express.json());
+
+
+if (process.env.NODE_ENV == "production") {
+  // serve static content
+  //npm run build
+  app.use(express.static(path.join(__dirname, "frontend/build")));
+}
+
 
 // ========================
 // Route handlers
@@ -179,5 +191,13 @@ app.post("/users", async (req, res) => {
   }
 });
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/build/index.html"))
+});
+
+
 // Start the server, listening on the specified port.
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+
+  

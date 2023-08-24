@@ -28,28 +28,36 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
             marginBottom: "2rem",
             fontSize: "1.3rem",
           }}
-        ><br/><br/>
+        ><br /><br />
           Help your community by answering the following optional-questions anonymously.
         </p>
 
-        <p className="displayNone" style={{ textAlign: "left", fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
-          <strong>Data that is shared here is anonymous</strong> and is not tied to any
-          information that identifies you individually. <br/><br/> Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a secure national database that also receives COVID-19 test results from labs and doctors' offices.<br/><br/>
-          The data may be shared with <strong>researchers</strong> and <strong>support teams</strong> working on the MakeMyTestCount initiative.<br/><br/>
-          Public health teams at the state and local level can also get data from
-          MakeMyTestCount and <strong>your response can help officials make important health decisions.</strong><br/><br/>
-        </p>
+        <div className="displayNone">
+          <p><strong>Data that is shared here is anonymous</strong> and is not tied to any
+            information that identifies you individually.
+          </p>
+          <p>
+            Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a secure national database that also receives COVID-19 test results from labs and doctors' offices.
+          </p>
+          <p>
+            The data may be shared with <strong>researchers</strong> and <strong>support teams</strong> working on the MakeMyTestCount initiative.
+          </p>
+          <p>
+            Public health teams at the state and local level can also get data from
+            MakeMyTestCount and <strong>your response can help officials make important health decisions.</strong>
+          </p>
+        </div>
 
-        <p className="displayNoneDesktop displayMobile" style={{ textAlign: "left", fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
+        <div className="displayNoneDesktop displayMobile" style={{ textAlign: "left", fontSize: "1.125rem", fontFamily: "Noto Sans" }}>
           <ul>
-          <li><strong>Data that is shared here is anonymous</strong> and is not tied to any
-          information that identifies you individually.</li> <br/>
-          <li>Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a secure national database that also receives COVID-19 test results from labs and doctors' offices.</li><br/>
-          <li>The data may be shared with <strong>researchers</strong> and <strong>support teams</strong> working on the MakeMyTestCount initiative.</li><br/>
-          <li>Public health teams at the state and local level can also get data from
-          MakeMyTestCount and <strong>your response can help officials make important health decisions.</strong></li>
+            <li><strong>Data that is shared here is anonymous</strong> and is not tied to any
+              information that identifies you individually.</li> <br />
+            <li>Data collected through MakeMyTestCount is de-identified and sent to HHS Protect, a secure national database that also receives COVID-19 test results from labs and doctors' offices.</li><br />
+            <li>The data may be shared with <strong>researchers</strong> and <strong>support teams</strong> working on the MakeMyTestCount initiative.</li><br />
+            <li>Public health teams at the state and local level can also get data from
+              MakeMyTestCount and <strong>your response can help officials make important health decisions.</strong></li>
           </ul>
-        </p>
+        </div>
 
       </div>
       <div className="nextButtonDiv">
