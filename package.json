@@ -2,7 +2,7 @@
   "name": "covid-test-tracker-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "19.7.0",
     "npm": "9.8.1"
