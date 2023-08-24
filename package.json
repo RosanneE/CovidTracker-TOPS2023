@@ -1,10 +1,29 @@
 {
+  "name": "covid-test-tracker-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "19.7.0",
+    "npm": "9.6.6"
+  },
+  "scripts": {
+    "script": "knex migrate:latest",
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "heroku-postbuild": "cd frontend && npm install $$ npm run build"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@aws-amplify/ui-react": "^5.1.0",
-    "@supabase/supabase-js": "^2.32.0",
-    "aws-amplify": "^5.3.7",
-    "bootstrap": "^5.3.1",
-    "react-bootstrap": "^2.8.0",
-    "react-chartjs-2": "^5.2.0"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "knex": "^2.5.0",
+    "pg": "^8.11.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
   }
 }

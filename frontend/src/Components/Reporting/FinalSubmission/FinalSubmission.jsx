@@ -117,16 +117,18 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
           className="optionalContactQuestion"
           style={{ marginTop: "1rem", color: "#00426B" }}
         >
-          <p>
-            <table>
+
+          <table>
+            <tbody>
               <tr>
                 <td style={{ textAlign: "left" }}>Positive</td>
                 <td style={{ textAlign: "right" }}>5/20/2023</td>
               </tr>
-            </table>
-            <br />
-            <br />
-          </p>
+            </tbody>
+          </table>
+          <br />
+          <br />
+
         </div>
 
         <h3 className="optionalH3">When To Test</h3>
@@ -189,7 +191,7 @@ export default function FinalSubmission({ demoPage, setDemoPage }) {
             </Col>
           </Row>
         </div>
-      <p onClick={()=>setDemoPage(0)} style={{textDecoration: "underline"}}>Return to the front page</p>
+        <p onClick={() => setDemoPage(0)} style={{ textDecoration: "underline" }}>Return to the front page</p>
       </div>
     </div>
   );

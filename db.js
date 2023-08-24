@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 // Import the Pool class from the 'pg' module.
 // The Pool class is used to create a pool of reusable connections to a PostgreSQL database.
 // const { Pool } = require("pg");
@@ -31,6 +31,6 @@ const knexfile = require("./knexfile")
 
 const env = process.env.NODE_ENV || "development"
 const configOptions = knexfile[env];
->>>>>>> testingConnection
+// >>>>>>> testingConnection
 
 module.exports = knex(configOptions)
